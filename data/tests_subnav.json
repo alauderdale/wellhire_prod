@@ -4,8 +4,8 @@
 	  	"link":"/tests"
 	  },
 
-	  {"title":"Job Links", 
-	  	"link":"#"
+	  {"title":"Manage Job Links", 
+	  	"link":"/job-links"
 	  }
 	]
 }
