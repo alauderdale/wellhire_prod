@@ -834,6 +834,8 @@ ul.nav-pills{
 ul.nav-pills{
   &.sub-nav-links{
     margin-top:0;
+    margin-bottom:$baseline;
+    font-size:.6em;
   }
 
 }

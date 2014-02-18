@@ -7,3 +7,8 @@
 		%li{:class => (current_page.data.title === ltl.title) ? "active" : ""}
 			%a{:href=>"#{ltl.link}"}
 				= ltl.title
+%p
+	= current_page.data.description
+
+%a.btn.btn-primary
+	= current_page.data.link_title
