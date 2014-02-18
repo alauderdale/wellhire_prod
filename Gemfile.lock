@@ -20,6 +20,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     eventmachine (1.0.3)
+    eventmachine (1.0.3-java)
     execjs (1.4.0)
       multi_json (~> 1.0)
     fssm (0.2.10)
@@ -27,11 +28,13 @@ GEM
       tilt
     hike (1.2.3)
     http_parser.rb (0.5.3)
+    http_parser.rb (0.5.3-java)
     http_router (0.10.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.6.1)
     json (1.7.7)
+    json (1.7.7-java)
     listen (0.7.3)
     maruku (0.6.1)
       syntax (>= 1.0.0)
@@ -83,7 +86,13 @@ GEM
     padrino-helpers (0.10.7)
       i18n (~> 0.6)
       padrino-core (= 0.10.7)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
+    puma (2.7.1-java)
+      rack (>= 1.1, < 2.0)
     rack (1.4.5)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-livereload (0.3.13)
       rack
     rack-protection (1.5.0)
@@ -116,6 +125,7 @@ GEM
       rack
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
@@ -125,3 +135,5 @@ DEPENDENCIES
   middleman (~> 3.0.14)
   middleman-bourbon
   middleman-livereload (~> 3.0.1)
+  puma
+  rack-contrib

@@ -48,6 +48,7 @@ helpers do
   end
 
 
+
 end
 
 set :css_dir, 'stylesheets'
@@ -55,6 +56,10 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+set :build_dir, "tmp"
+
+activate :directory_indexes
 
 activate :livereload
 
