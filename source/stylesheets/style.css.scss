@@ -726,7 +726,7 @@ section{
         &.navbar-item{
           background:transparent;
           color:shade(white,10%);
-          padding:$baseline;
+          padding:$baseline $baseline/1.9;
           font-size:.9em;
           &:hover , &:focus{
             color:white;
@@ -816,7 +816,7 @@ ul.nav-pills{
 //navbar
 .main-nav{
   a.navbar-item{
-    padding:$baseline $baseline/1.7!important;
+    padding:$baseline $baseline/2!important;
   }
   .btn{
     display:none!important;
