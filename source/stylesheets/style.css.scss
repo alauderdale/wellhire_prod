@@ -760,7 +760,28 @@ section{
 }
 
 
+//subnav
 
+ul.nav-pills{
+  &.sub-nav-links{
+    margin-top:-65px;
+  }
+  li{
+    &.active{
+      a{
+        background-color:$primary-color;
+      }
+    }
+      &.active , &:hover{
+        a{
+          border-radius:0;
+        }
+      }
+    a{
+      text-decoration:none;
+    }
+  }
+}
 
 
 
@@ -809,6 +830,13 @@ section{
 
 @media (max-width: 767px) {
 
+//subnav
+ul.nav-pills{
+  &.sub-nav-links{
+    margin-top:0;
+  }
+
+}
 
 
 }
