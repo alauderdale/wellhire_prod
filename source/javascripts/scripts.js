@@ -1,7 +1,10 @@
 $(document).ready(function(){
 
 	//fancybox
-	$(".fancybox").fancybox();
+	$(".fancybox").fancybox({
+		openEffect: "elastic",
+		closeEffect: "elastic"
+	});
 	
 	$('.fb-video').fancybox({
         padding: 0,
