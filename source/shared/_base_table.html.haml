@@ -1,0 +1,64 @@
+:javascript
+	$(document).ready(function() {
+		$('#table').dataTable( {
+			"bLengthChange": false,
+			"bFilter": true
+
+		} );
+	} );
+
+.margin-top
+	.table-responsive
+		%table#table.display.table.table-striped.table-hover{border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+			%thead
+				%tr
+					%th
+						Name
+					%th
+						Email
+					%th
+						Type
+					%th
+						Job Role
+					%th
+						Status
+					%th
+						Tests
+					%th
+						Date Created
+					%th
+						Action
+
+			%tbody
+				- 98.times do
+					%tr
+						%td.half-padding-top.half-padding-bottom
+							%a{:href=>"#"}
+								%strong
+									=lorem.name
+						%td.half-padding-top.half-padding-bottom
+							%a{:href=>"#"}
+								=lorem.email
+						%td.half-padding-top.half-padding-bottom 
+							Prehire
+						%td.half-padding-top.half-padding-bottom 
+							Designer
+						%td.half-padding-top.half-padding-bottom 
+							Active
+						%td.half-padding-top.half-padding-bottom 
+							4
+						%td.half-padding-top.half-padding-bottom 
+							= lorem.date 
+						%td.half-padding-top.half-padding-bottom 
+							.btn-group
+								%button.btn.btn-xs.btn-info{type: "button"} 
+									View
+								%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
+									%span.caret
+									%span.sr-only Toggle Dropdown
+								%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
+									%li
+										%a{href: "#"} Delete
+									%li
+										%a{href: "#"} Mark as Inactive
+						

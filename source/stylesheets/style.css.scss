@@ -134,7 +134,7 @@ $text-column-gutter-width: $baseline;
 
 body{
   font: 100% $medium-font-name;
-  font-size:11pt;
+  font-size:14px;
   color: $text-color;
   //for fixed navbar
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
@@ -634,7 +634,6 @@ a{
   font-size:1em;
   letter-spacing:.5px;
   color:white!important;
-  padding:$baseline/2 $baseline;
   &.btn-primary{
     background-color:$secondary-color;
     border-color:$secondary-color;
@@ -785,11 +784,40 @@ ul.nav-pills{
 
 
 
+//dropdowns
+
+.dropdown-menu{
+  a{
+    text-decoration:none;
+  }
+}
 
 
+//pagination
+
+.pagination{
+  .active{
+    a{
+      background-color:$primary-color;
+    }
+  }
+}
 
 
+//footer
 
+footer{
+  font-size:.9em;
+  ul{
+    li{
+      color:#666;
+      a{
+        text-decoration:none;
+
+      }
+    }
+  }
+}
 
 
 
