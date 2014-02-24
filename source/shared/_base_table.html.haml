@@ -23,9 +23,9 @@
 						Status
 					%th
 						Tests
-					%th
+					%th.hidden-sm.hidden-xs
 						Date Created
-					%th
+					%th{:style=>"width:15%;"}
 						Action
 
 			%tbody
@@ -46,9 +46,9 @@
 							Active
 						%td.half-padding-top.half-padding-bottom 
 							4
-						%td.half-padding-top.half-padding-bottom 
+						%td.half-padding-top.half-padding-bottom.hidden-sm.hidden-xs
 							= lorem.date 
-						%td.half-padding-top.half-padding-bottom 
+						%td.half-padding-top.half-padding-bottom
 							.btn-group
 								%button.btn.btn-xs.btn-info{type: "button"} 
 									View
