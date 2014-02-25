@@ -782,6 +782,13 @@ ul.nav-pills{
   }
 }
 
+//avatars
+
+img.avatar-sm{
+    width: 30px;
+    height:30px;
+  }
+
 
 
 //dropdowns
@@ -820,6 +827,31 @@ footer{
 }
 
 
+//base tabeles 
+
+input.table-search{
+  background: url(../images/search.png) 10px center no-repeat;
+  padding-left:40px;
+}
+
+table{
+  //specific classes for the dynamic tables 
+  &.dynamic-table{
+    border-bottom:3px $gray-color!important;
+  }
+  &.table{
+    th{
+      text-transform:uppercase;
+      font-family:$light-font-name;
+      background-color:tint($primary-color,90%)!important;
+      border-right:1px solid $gray-color;
+      color:$primary-color;
+      &:last-of-type{
+        border-right:none;
+      }
+    }
+  }
+}
 
 
 

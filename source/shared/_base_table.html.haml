@@ -8,7 +8,7 @@
 
 %div
 	.table-responsive
-		%table#table.display.table.table-striped.table-hover{border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+		%table#table.display.table.table-striped.table-hover.margin-top.border-bottom{border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
 			%thead
 				%tr
 					%th
@@ -25,15 +25,15 @@
 						Tests
 					%th.hidden-sm.hidden-xs
 						Date Created
-					%th{:style=>"width:15%;"}
+					%th
 						Action
-
 			%tbody
 				- 98.times do
 					%tr
 						%td.half-padding-top.half-padding-bottom
 							%a{:href=>"#"}
 								%strong
+									=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
 									=lorem.name
 						%td.half-padding-top.half-padding-bottom
 							%a{:href=>"#"}

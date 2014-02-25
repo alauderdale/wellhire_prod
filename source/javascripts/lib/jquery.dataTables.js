@@ -2076,7 +2076,7 @@
 			var sSearchStr = oSettings.oLanguage.sSearch;
 			sSearchStr = (sSearchStr.indexOf('_INPUT_') !== -1) ?
 			  sSearchStr.replace('_INPUT_', '<input type="text" />') :
-			  sSearchStr==="" ? '<input placeholder="search" class="form-control" type="text" />' : sSearchStr+' <input type="text" />';
+			  sSearchStr==="" ? '<input placeholder="search" class="form-control table-search" type="text" />' : sSearchStr+' <input type="text" />';
 			
 			var nFilter = document.createElement( 'div' );
 			nFilter.className = oSettings.oClasses.sFilter;
