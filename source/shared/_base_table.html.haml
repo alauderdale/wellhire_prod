@@ -11,7 +11,7 @@
 
 		var oDataTable = $('#table').dataTable().columnFilter({
 			aoColumns:[
-				{ sSelector: "#nameFilter", type:"select"  },
+				{ sSelector: "#nameFilter", type:"type"  },
 				{ sSelector: "#typeFilter", type:"select" },
 				{ sSelector: "#jobRoleFilter", type:"select" },
 				{ sSelector: "#statusFilter", type:"select" },
@@ -22,7 +22,7 @@
 		});
 
 
-		$('#filter-popover').click(function() {
+		$('.filter-toggle').click(function() {
 			$('#filter-inner').toggleClass('hidden');
 		});
 
@@ -38,7 +38,7 @@
 
 
 #filter-wrapper
-	%button#filter-popover.btn.btn-info{:rel=>"popover"}
+	%button#filter-popover.filter-toggle.btn.btn-info{:rel=>"popover"}
 		Filter
 		%span.caret
 	//filter hmtl
@@ -62,8 +62,10 @@
 					Date:
 				%p#dateFilter
 				%hr
-				%button#clear-filter.btn.btn-default
-					Reset
+			%button#clear-filter.btn.btn-default
+				Reset
+			%button.btn.btn-primary.filter-toggle
+				Apply
 
 
 
