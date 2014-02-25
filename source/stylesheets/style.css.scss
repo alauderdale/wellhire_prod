@@ -624,6 +624,9 @@ a{
       color:rgba(255,255,255,.7);
     }
   }
+  &.no-underline-link{
+    text-decoration:none;
+  }
 }
 
 //buttons
@@ -836,10 +839,10 @@ input.table-search{
 
 table{
   //specific classes for the dynamic tables 
-  &.dynamic-table{
-    border-bottom:3px $gray-color!important;
-  }
   &.table{
+    ul.dropdown-menu{
+      left:-85px!important;
+    }
     th{
       text-transform:uppercase;
       font-family:$light-font-name;

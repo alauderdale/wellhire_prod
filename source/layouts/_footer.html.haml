@@ -9,7 +9,7 @@
 								%li
 									© 2014 Wellhire All rights reserved.
 								%li
-									%a{:href=>"index.html"}
+									%a{"data-toggle"=>"modal", :href=>"/info/terms", "data-target"=>"#termsModal"}
 										Terms
 								%li
 									%a{:href=>"contact.html"}
@@ -17,3 +17,5 @@
 								%li
 									%a{:href=>"log_in.html"}
 										FAQs
+
+#termsModal.modal.fade{"aria-hidden" => "true", role: "dialog"}
