@@ -1,49 +1,70 @@
 :javascript
 	$(document).ready(function() {
-		$.extend( $.fn.dataTable.defaults, {
-			"bLengthChange": false
-		} );
-
-
-		$('#table').dataTable().columnFilter({aoColumns:[
-				{ sSelector: "#nameFilter", type:"select",bSmart: true  },
-				{ sSelector: "#typeFilter", type:"select" },
-				{ sSelector: "#jobRoleFilter", type:"select" },
-				{ sSelector: "#statusFilter", type:"select" },
-				{ sSelector: "#testsFilter", type:"select" },
-				{ sSelector: "#dateFilter", type:"date-range" },
-				null,
-				]}
-			);
-
 
 		$.datepicker.regional[""].dateFormat = 'D M dd, yy';
 		$.datepicker.setDefaults($.datepicker.regional['']);
 
-		$('#filter-popover').popover({ 
-			html : true, 
-			content: function() {
-			return $('#popover_content_wrapper').html();
-		}
+		$.extend( $.fn.dataTable.defaults, {
+			"bLengthChange": false,
+			"sType": "html"
+		} );
+
+
+		var oDataTable = $('#table').dataTable().columnFilter({
+			aoColumns:[
+				{ sSelector: "#nameFilter", type:"select",  },
+				{ sSelector: "#typeFilter", type:"select" },
+				{ sSelector: "#jobRoleFilter", type:"select" },
+				{ sSelector: "#statusFilter", type:"select" },
+				null,
+				{ sSelector: "#dateFilter", type:"date-range" },
+				null
+			]
 		});
+
+
+		$('#filter-popover').click(function() {
+			$('#filter-inner').toggleClass('hidden');
+		});
+
+
+
+		$("#clear-filter").click(function(e) {
+			
+		});
+
 
 	} );
 
 
-//filter html
-#popover_content_wrapper{:style=>"display:none;"}
 
-%p#nameFilter
-%p#typeFilter
-%p#jobRoleFilter
-%p#statusFilter
-%p#testsFilter
-%p#dateFilter
-
-
-%button#filter-popover.btn.btn-info{:rel=>"popover"}
-	Filter
-	%span.caret
+#filter-wrapper
+	%button#filter-popover.btn.btn-info{:rel=>"popover"}
+		Filter
+		%span.caret
+	//filter hmtl
+	.bottom.popover.hidden#filter-inner{:style=>"display:block; top:50px; min-width:400px;"}
+		.arrow{:style=>"left:13%;"}
+		.padded
+			%form#form
+				%label
+					Candidate:
+				%p#nameFilter
+				%label
+					Type:
+				%p#typeFilter
+				%label
+					Job Role:
+				%p#jobRoleFilter
+				%label
+					Status:
+				%p#statusFilter
+				%label
+					Date:
+				%p#dateFilter
+				%hr
+			%button#clear-filter.btn.btn-default
+				Reset
 
 
 
@@ -69,15 +90,15 @@
 					%th
 						Action
 			%tbody
-				- 98.times do
+				- 20.times do
 					%tr
 						%td.half-padding-top.half-padding-bottom
 							%a{:href=>"#"}
+								=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
 								%strong
-									=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
 									=lorem.name
-									%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
-										%i.fa.fa-envelope-o
+								%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
+									%i.fa.fa-envelope-o
 
 						%td.half-padding-top.half-padding-bottom 
 							Prehire
@@ -101,7 +122,7 @@
 										%a{href: "#"} Delete
 									%li
 										%a{href: "#"} Mark as Inactive
-				%tfoot
+				%tfoot.hidden
 					%tr
 						%th
 							Name
