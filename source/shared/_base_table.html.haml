@@ -5,14 +5,13 @@
 		$.datepicker.setDefaults($.datepicker.regional['']);
 
 		$.extend( $.fn.dataTable.defaults, {
-			"bLengthChange": false,
-			"sType": "html"
+			"bLengthChange": false
 		} );
 
 
 		var oDataTable = $('#table').dataTable().columnFilter({
 			aoColumns:[
-				{ sSelector: "#nameFilter", type:"select",  },
+				{ sSelector: "#nameFilter", type:"select"  },
 				{ sSelector: "#typeFilter", type:"select" },
 				{ sSelector: "#jobRoleFilter", type:"select" },
 				{ sSelector: "#statusFilter", type:"select" },
@@ -63,8 +62,8 @@
 					Date:
 				%p#dateFilter
 				%hr
-			%button#clear-filter.btn.btn-default
-				Reset
+				%button#clear-filter.btn.btn-default
+					Reset
 
 
 
@@ -93,13 +92,12 @@
 				- 20.times do
 					%tr
 						%td.half-padding-top.half-padding-bottom
+							=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
 							%a{:href=>"#"}
-								=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
 								%strong
 									=lorem.name
-								%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
-									%i.fa.fa-envelope-o
-
+							%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
+								%i.fa.fa-envelope-o
 						%td.half-padding-top.half-padding-bottom 
 							Prehire
 						%td.half-padding-top.half-padding-bottom 
