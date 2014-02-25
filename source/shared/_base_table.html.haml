@@ -17,6 +17,8 @@
 			);
 
 
+		$.datepicker.regional[""].dateFormat = 'D M dd, yy';
+		$.datepicker.setDefaults($.datepicker.regional['']);
 
 		$('#filter-popover').popover({ 
 			html : true, 
@@ -86,7 +88,7 @@
 						%td.half-padding-top.half-padding-bottom 
 							4
 						%td.half-padding-top.half-padding-bottom.hidden-sm.hidden-xs
-							= lorem.date 
+							= lorem.date
 						%td.half-padding-top.half-padding-bottom
 							.btn-group
 								%button.btn.btn-xs.btn-info{type: "button"} 
