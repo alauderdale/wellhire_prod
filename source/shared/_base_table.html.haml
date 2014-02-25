@@ -3,8 +3,49 @@
 		$.extend( $.fn.dataTable.defaults, {
 			"bLengthChange": false
 		} );
-		$('#table').dataTable({});
+
+
+		$('#table').dataTable().columnFilter({aoColumns:[
+				{ sSelector: "#nameFilter", type:"select",bSmart: true  },
+				{ sSelector: "#typeFilter", type:"select" },
+				{ sSelector: "#jobRoleFilter", type:"select" },
+				{ sSelector: "#statusFilter", type:"select" },
+				{ sSelector: "#testsFilter", type:"select" },
+				{ sSelector: "#dateFilter", type:"date-range" },
+				null,
+				]}
+			);
+
+
+
+		$('#filter-popover').popover({ 
+			html : true, 
+			content: function() {
+			return $('#popover_content_wrapper').html();
+		}
+		});
+
 	} );
+
+
+//filter html
+#popover_content_wrapper{:style=>"display:none;"}
+
+%p#nameFilter
+%p#typeFilter
+%p#jobRoleFilter
+%p#statusFilter
+%p#testsFilter
+%p#dateFilter
+
+
+%button#filter-popover.btn.btn-info{:rel=>"popover"}
+	Filter
+	%span.caret
+
+
+
+
 
 %div
 	.table-responsive
@@ -58,5 +99,21 @@
 										%a{href: "#"} Delete
 									%li
 										%a{href: "#"} Mark as Inactive
+				%tfoot
+					%tr
+						%th
+							Name
+						%th
+							Type
+						%th
+							Job Role
+						%th
+							Status
+						%th
+							Tests
+						%th.hidden-sm.hidden-xs
+							Date Created
+						%th
+							Action
 
 						
