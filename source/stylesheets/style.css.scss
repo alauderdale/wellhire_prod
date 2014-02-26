@@ -834,13 +834,25 @@ footer{
 
 //table filter
 
-button.table-filter{
-
+.yadcf-filter-reset-button{
+  background:none;
+  border:none;
+  color:$primary-color;
+  text-decoration:underline;
+  &:focus{
+    outline:none;
+  }
 }
+
+//wh table
 
 input.table-search{
   background: url(../images/search.png) 10px center no-repeat;
   padding-left:40px;
+}
+
+.dataTables_info{
+  margin-top:$baseline;
 }
 
 table{
