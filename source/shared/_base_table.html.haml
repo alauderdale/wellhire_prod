@@ -9,17 +9,12 @@
 		} );
 
 
-		var oDataTable = $('#table').dataTable().columnFilter({
-			aoColumns:[
-				{ sSelector: "#nameFilter", type:"select"  },
-				{ sSelector: "#typeFilter", type:"select" },
-				{ sSelector: "#jobRoleFilter", type:"select" },
-				{ sSelector: "#statusFilter", type:"select" },
-				null,
-				{ sSelector: "#dateFilter", type:"date-range" },
-				null
+		var oDataTable = $('#table').dataTable().yadcf([
+				{column_number : 0, column_data_type: "html", html_data_type: "text", filter_container_id: "name_filter_container"},
+				{column_number : 5, filter_type: "date", filter_container_id: "date_filter_container"}
 			]
-		});
+		);
+
 
 
 		$('.filter-toggle').click(function() {
@@ -42,30 +37,11 @@
 		Filter
 		%span.caret
 	//filter hmtl
-	.bottom.popover.hidden#filter-inner{:style=>"display:block; top:50px; min-width:400px;"}
+	.bottom.popover#filter-inner{:style=>"display:block; top:50px; min-width:400px;"}
 		.arrow{:style=>"left:13%;"}
 		.padded
-			%form#form
-				%label
-					Candidate:
-				%p#nameFilter
-				%label
-					Type:
-				%p#typeFilter
-				%label
-					Job Role:
-				%p#jobRoleFilter
-				%label
-					Status:
-				%p#statusFilter
-				%label
-					Date:
-				%p#dateFilter
-				%hr
-			%button#clear-filter.btn.btn-default
-				Reset
-			%button.btn.btn-primary.filter-toggle
-				Apply
+			#name_filter_container
+			#date_filter_container
 
 
 
@@ -94,10 +70,8 @@
 				- 20.times do
 					%tr
 						%td.half-padding-top.half-padding-bottom
-							=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
-							%a{:href=>"#"}
-								%strong
-									=lorem.name
+							%a{:href=>"google.com"}
+								= lorem.name
 							%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
 								%i.fa.fa-envelope-o
 						%td.half-padding-top.half-padding-bottom 
@@ -140,3 +114,4 @@
 							Action
 
 						
+							/ =image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
