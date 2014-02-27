@@ -859,6 +859,9 @@ footer{
     .arrow:after{
       border-bottom-color:tint($primary-color,95%)!important;
     }
+    .chosen-container{
+      width: auto!important;
+    }
   }
 }
 

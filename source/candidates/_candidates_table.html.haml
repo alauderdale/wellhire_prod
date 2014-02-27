@@ -2,18 +2,26 @@
 	$(document).ready(function() {
 
 
-		var whDatatable = $('#table').dataTable().yadcf([
-
-				{column_number : 0, column_data_type: "html", html_data_type: "text",filter_default_label:"Select a Name", filter_container_id: "name_filter_container"},
-
-				{column_number : 1, filter_container_id: "type_filter_container"},
-
-				{column_number : 2, filter_container_id: "job_role_filter_container"},
-
-				{column_number : 5, filter_type: "date",date_format: "D M dd, yy", filter_container_id: "date_filter_container"}
-
-			]
-		);
+		var whDatatable = $('#table').dataTable().yadcf([{
+			column_number : 0,
+			select_type: 'chosen', 
+			column_data_type: "html", 
+			html_data_type: "text",
+			filter_default_label:"Select a Name", 
+			filter_container_id: "name_filter_container"
+		}, {
+			column_number : 1, 
+			select_type: 'chosen', 
+			filter_container_id: "type_filter_container"
+		}, {
+			column_number : 2, 
+			select_type: 'chosen', 
+			filter_container_id: "job_role_filter_container"
+		}, {
+			column_number : 5, 
+			filter_type: "date",date_format: "D M dd, yy", 
+			filter_container_id: "date_filter_container"
+		}]);
 
 	} );
 
@@ -36,7 +44,7 @@
 						.form-group
 							%label
 								Type:
-							#type_filter_container
+							#type_filter_container.full-width
 						.form-group
 							%label
 								Job Role:
@@ -58,7 +66,7 @@
 		%input#filter.form-control.table-search{:placeholder=>"Search Candidates"}
 
 .wh-table-wrapper
-	%table#table.display.table.table-striped.table-hover.margin-top.border-bottom.footable{"data-filter"=>"#filter", border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+	%table#table.display.table.table-hover.margin-top.border-bottom{"data-filter"=>"#filter", border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
 		%thead
 			%tr
 				%th

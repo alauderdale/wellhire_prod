@@ -22,7 +22,7 @@ $(document).ready(function(){
 	} );
 
 	///responsive tables!!!
-	$('.footable').footable();
+	$('table').footable();
 
 
 });
