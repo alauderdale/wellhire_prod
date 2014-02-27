@@ -8,16 +8,17 @@ $(document).ready(function(){
 	});
 
 	////clear the filter
-	$("#clear-filter").click(function(e) {
-		
+	$("#clear-filter").click(function() {
+		$('.yadcf-filter-reset-button').click();
+		return false;
+
 	});
 
 	////Set Table defaults
 	$.extend( $.fn.dataTable.defaults, {
 		"bLengthChange": false,
 		//we use footables plugin here
-		"bPaginate": false,
-		"bFilter": false
+		"bPaginate": false
 	} );
 
 	///responsive tables!!!

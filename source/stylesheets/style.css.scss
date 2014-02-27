@@ -869,6 +869,11 @@ input.table-search{
   padding-left:40px;
 }
 
+//hide the default search
+.dataTables_filter{
+  display:none!important;
+}
+
 .dataTables_info{
   margin-top:$baseline;
 }

@@ -1,7 +1,7 @@
 :javascript
 	$(document).ready(function() {
 
-		//datatables code
+
 		var whDatatable = $('#table').dataTable().yadcf([
 
 				{column_number : 0, column_data_type: "html", html_data_type: "text",filter_default_label:"Select a Name", filter_container_id: "name_filter_container"},
@@ -48,17 +48,17 @@
 				%hr
 				.clearfix
 					.pull-left
-						%button.btn.btn-info{:onclick=>""}
-							Clear
+						%button.btn.btn-info#clear-filter
+							Reset
 					.pull-right
 						%button.btn.btn-primary.filter-toggle{:onclick=>"return:false;"}
 							Close
 
 	.wh-table-search-wrapper.pull-right
-		%input#filter.form-control.table-search{:placeholder=>"Search"}
+		%input#filter.form-control.table-search{:placeholder=>"Search Candidates"}
 
 .wh-table-wrapper
-	%table#table.display.table.table-striped.table-hover.margin-top.border-bottom.footable{"data-filter"=>"#filter",border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+	%table#table.display.table.table-striped.table-hover.margin-top.border-bottom.footable{"data-filter"=>"#filter", border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
 		%thead
 			%tr
 				%th
