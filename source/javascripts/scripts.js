@@ -15,7 +15,9 @@ $(document).ready(function(){
 	////Set Table defaults
 	$.extend( $.fn.dataTable.defaults, {
 		"bLengthChange": false,
+		//we use footables plugin here
 		"bPaginate": false,
+		"bFilter": false
 	} );
 
 	///responsive tables!!!

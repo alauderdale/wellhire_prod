@@ -854,10 +854,6 @@ footer{
 
 
 .wh-table-filter-wrapper{
-  .wh-table-filter-button{
-    position:absolute;
-    z-index: 300;
-  }
   .wh-filter-inner{
     background-color:tint($primary-color,95%);
     .arrow:after{
