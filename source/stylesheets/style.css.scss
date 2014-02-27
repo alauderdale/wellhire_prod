@@ -867,7 +867,7 @@ footer{
 
 //wh table
 
-input.table-search{
+input.wh-table-search{
   background: url(../images/search.png) 10px center no-repeat;
   padding-left:40px;
 }
@@ -953,9 +953,11 @@ ul.nav-pills{
 
 }
 
+.wh-table-search-wrapper{
+  width: 100%!important;
+  margin-bottom:0;
+}
+
 
 }
 
-@media (max-width: 320px) {
-
-}
