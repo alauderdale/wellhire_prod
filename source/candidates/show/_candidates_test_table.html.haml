@@ -22,6 +22,11 @@
 			column_number : 3, 
 			select_type: 'chosen',  
 			filter_container_id: "average_filter_container"
+		}, {
+
+			column_number : 4, 
+			filter_type: "date",date_format: "D M dd, yy", 
+			filter_container_id: "date_filter_container"
 
 		}]);
 
@@ -55,6 +60,10 @@
 							%label
 								Average:
 							#average_filter_container
+						.form-group
+							%label
+								Date Taken:
+							#date_filter_container
 				%hr
 				.clearfix
 					.pull-left
@@ -79,6 +88,8 @@
 					Score
 				%th{"data-hide"=>"phone"}
 					Average
+				%th{"data-hide"=>"phone"}
+					Date Taken
 		%tbody
 			%tr.success
 				%td.half-padding-top.half-padding-bottom 
@@ -90,6 +101,8 @@
 					\%100
 				%td.half-padding-top.half-padding-bottom 
 					\%60
+				%td.half-padding-top.half-padding-bottom 
+					= lorem.date
 			%tr
 				%td.half-padding-top.half-padding-bottom 
 					%a{:href=>"#"}
@@ -100,6 +113,8 @@
 					\%23
 				%td.half-padding-top.half-padding-bottom 
 					\%94
+				%td.half-padding-top.half-padding-bottom 
+					= lorem.date
 			%tr
 				%td.half-padding-top.half-padding-bottom 
 					%a{:href=>"#"}
@@ -110,6 +125,8 @@
 					\%100
 				%td.half-padding-top.half-padding-bottom 
 					\%80
+				%td.half-padding-top.half-padding-bottom 
+					= lorem.date
 			%tfoot.hidden
 				%tr
 					%th
