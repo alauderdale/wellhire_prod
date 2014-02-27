@@ -17,5 +17,10 @@ $(document).ready(function(){
 		"bLengthChange": false
 	} );
 
+	///responsive tables!!!
+	$(function () {
+		$('.footable').footable();
+	});
+
 
 });
