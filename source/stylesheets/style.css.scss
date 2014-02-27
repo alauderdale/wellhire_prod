@@ -661,6 +661,14 @@ a{
       border-color:white!important;
     }
   }
+  &.btn-info{
+    color:black!important;
+    border:1px solid $gray-color!important;
+    background-color:tint($gray-color,50%) !important;
+    &:focus{
+      outline:none;
+    }
+  }
 }
 
 .btn-xl{
@@ -844,6 +852,16 @@ footer{
   }
 }
 
+.wh-table-filter-wrapper{
+  margin-bottom:-34px; 
+  .wh-filter-inner{
+    background-color:tint($primary-color,95%);
+    .arrow:after{
+      border-bottom-color:tint($primary-color,95%)!important;
+    }
+  }
+}
+
 //wh table
 
 input.table-search{
@@ -874,7 +892,13 @@ table{
   }
 }
 
+//pagination
 
+.pagination{
+  a{
+    border:none!important;
+  }
+}
 
 
 

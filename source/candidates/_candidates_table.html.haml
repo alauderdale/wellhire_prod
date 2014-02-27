@@ -1,11 +1,7 @@
 :javascript
 	$(document).ready(function() {
 
-
-		$.extend( $.fn.dataTable.defaults, {
-			"bLengthChange": false
-		} );
-
+		//datatables code
 
 		var whDatatable = $('#table').dataTable().yadcf([
 				{column_number : 0, column_data_type: "html", html_data_type: "text",filter_default_label:"Select a Name", filter_container_id: "name_filter_container"},
@@ -17,20 +13,6 @@
 				{column_number : 5, filter_type: "date",date_format: "D M dd, yy", filter_container_id: "date_filter_container"}
 			]
 		);
-
-
-
-		$('.filter-toggle').click(function() {
-			$('#filter-inner').toggleClass('hidden');
-		});
-
-
-
-		$("#clear-filter").click(function(e) {
-			
-		});
-
-
 	} );
 
 
@@ -40,7 +22,7 @@
 		Filter
 		%span.caret
 
-	.bottom.popover.hidden#filter-inner{:style=>"display:block; top:50px;"}
+	.bottom.popover.hidden.wh-filter-inner{:style=>"display:block; top:50px;"}
 		.arrow{:style=>"left:13%;"}
 		.padded
 			%form#wh-filter-form
@@ -107,7 +89,7 @@
 						%td.half-padding-top.half-padding-bottom 
 							4
 						%td.half-padding-top.half-padding-bottom.hidden-sm.hidden-xs
-							= lorem.date
+							Wed Feb 26, 2014
 						%td.half-padding-top.half-padding-bottom
 							.btn-group
 								%button.btn.btn-xs.btn-info{type: "button"} 
