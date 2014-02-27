@@ -1,0 +1,19 @@
+;;;
+
+"layout": "modal_small"
+  
+;;;
+
+
+
+.modal-dialog
+	.modal-content
+		.modal-body
+			%p
+				%i.fa.fa-exclamation-circle.text-danger.modal-icon
+				= text
+		.modal-footer
+			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
+				Cancel
+			%button.btn.btn-primary.pull-right{"data-dismiss" => "modal", type: "button"} 
+				Confirm

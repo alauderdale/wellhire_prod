@@ -7,12 +7,61 @@
 
 
 .modal-dialog
-  .modal-content
-    .modal-header
-      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-      %h4#myModalLabel.modal-title Edit Candidate
-    .modal-body
-      \...
-    .modal-footer
-      %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-      %button.btn.btn-primary{type: "button"} Save changes
+	.modal-content
+		.modal-header
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+			%h2.modal-title 
+				Edit Candidate
+		.modal-body
+			%form.form-horizontal{role: "form"}
+				.form-group
+					%label.col-sm-5.control-label 
+						Candidate Email
+					.col-sm-7
+						%input.form-control{placeholder: "Ex: john@doe.com"}
+				.form-group
+					%label.col-sm-5.control-label 
+						First Name
+					.col-sm-7
+						%input.form-control
+				.form-group
+					%label.col-sm-5.control-label 
+						Last Name
+					.col-sm-7
+						%input.form-control
+				.form-group
+					%label.col-sm-5.control-label 
+						Phone Number
+					.col-sm-7
+						%input.form-control
+				.form-group
+					%label.col-sm-5.control-label 
+						Zip Code
+					.col-sm-7
+						%input.form-control
+				.form-group
+					%label.col-sm-5.control-label 
+						Candidate Type
+					.col-sm-7
+						%select.form-control
+							%option
+								Prehire
+							%option
+								Employee Development
+				.form-group
+					%label.col-sm-5.control-label 
+						job Role
+					.col-sm-7
+						%select.form-control.half-margin-bottom
+							%option
+								Not Specified
+						%a{:href=>"#"}
+							+ New Job Role
+		.modal-footer
+			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
+				Cancel
+			%button.btn.btn-info.pull-left{"data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markCandidateInactiveModal"}
+				Mark as Inactive
+			%button.btn.btn-primary.pull-right{"data-dismiss" => "modal", type: "button"} 
+				Save Changes
+

@@ -20,7 +20,13 @@ $(document).ready(function(){
 	} );
 
 	///responsive tables!!!
-	$('table').footable();
+	$('table').footable({
+		breakpoints: {
+				tablet_landscape: 1199,
+				tablet_portrait: 991,
+        phone: 767
+    }
+  });
 
 
 });

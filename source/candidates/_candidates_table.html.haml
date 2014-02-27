@@ -79,7 +79,7 @@
 					Status
 				%th{"data-hide"=>"phone"}
 					Tests
-				%th{"data-hide"=>"phone,tablet"}
+				%th{"data-hide"=>"phone"}
 					Date Created
 				%th{"data-hide"=>"phone"}
 					Action
@@ -114,7 +114,7 @@
 									%a{href: "/"} 
 										Completed Tests
 								%li
-									%a{href: "#"} 
+									%a{"data-toggle"=>"modal", :href=>"/candidates/edit", "data-target"=>"#editCandidateModal"}
 										Quick Edit
 			%tfoot.hidden
 				%tr
