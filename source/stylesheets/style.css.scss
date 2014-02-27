@@ -663,7 +663,7 @@ a{
   }
   &.btn-info{
     color:black!important;
-    border:1px solid $gray-color!important;
+    border:1px solid shade($gray-color,10%)!important;
     background-color:tint($gray-color,50%) !important;
     &:focus{
       outline:none;
@@ -852,8 +852,8 @@ footer{
   }
 }
 
+
 .wh-table-filter-wrapper{
-  margin-bottom:-34px; 
   .wh-filter-inner{
     background-color:tint($primary-color,95%);
     .arrow:after{
@@ -867,6 +867,11 @@ footer{
 input.table-search{
   background: url(../images/search.png) 10px center no-repeat;
   padding-left:40px;
+}
+
+//hide the default search
+.dataTables_filter{
+  display:none!important;
 }
 
 .dataTables_info{
@@ -894,11 +899,11 @@ table{
 
 //pagination
 
-.pagination{
-  a{
-    border:none!important;
-  }
-}
+// .pagination{
+//   a{
+//     border:none!important;
+//   }
+// }
 
 
 
