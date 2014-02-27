@@ -18,35 +18,39 @@
 
 
 .wh-table-filter-wrapper
-	%button#filter-popover.filter-toggle.btn.btn-info{:rel=>"popover"}
+	%button#filter-popover.filter-toggle.wh-table-filter-button.btn.btn-info{:rel=>"popover"}
 		Filter
 		%span.caret
 
-	.bottom.popover.hidden.wh-filter-inner{:style=>"display:block; top:50px;"}
+	.bottom.popover.hidden.wh-filter-inner.full-width{:style=>"display:block; top:50px;"}
 		.arrow{:style=>"left:13%;"}
 		.padded
-			%form#wh-filter-form
-				.form-group
-					%label
-						Name:
-					#name_filter_container
-				.form-group
-					%label
-						Type:
-					#type_filter_container
-				.form-group
-					%label
-						Job Role:
-					#job_role_filter_container
-				.form-group
-					%label
-						Date Created:
-					#date_filter_container
+			.wh-filter-form-wrapper
+				%form#wh-filter-form
+					.form-group
+						%label
+							Name:
+						#name_filter_container
+					.form-group
+						%label
+							Type:
+						#type_filter_container
+					.form-group
+						%label
+							Job Role:
+						#job_role_filter_container
+					.form-group
+						%label
+							Date Created:
+						#date_filter_container
 			%hr
-			%button.btn.btn-default{:onclick=>""}
-				Clear
-			%button.btn.btn-primary.filter-toggle{:onclick=>"return:false;"}
-				Close
+			.clearfix
+				.pull-left
+					%button.btn.btn-info{:onclick=>""}
+						Clear
+				.pull-right
+					%button.btn.btn-primary.filter-toggle{:onclick=>"return:false;"}
+						Close
 
 
 
@@ -91,7 +95,7 @@
 						%td.half-padding-top.half-padding-bottom.hidden-sm.hidden-xs
 							Wed Feb 26, 2014
 						%td.half-padding-top.half-padding-bottom
-							.btn-group
+							.btn-group.btn-block
 								%button.btn.btn-xs.btn-info{type: "button"} 
 									View
 								%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}

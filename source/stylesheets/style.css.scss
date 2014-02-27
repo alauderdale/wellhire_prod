@@ -663,7 +663,7 @@ a{
   }
   &.btn-info{
     color:black!important;
-    border:1px solid $gray-color!important;
+    border:1px solid shade($gray-color,10%)!important;
     background-color:tint($gray-color,50%) !important;
     &:focus{
       outline:none;
@@ -852,8 +852,12 @@ footer{
   }
 }
 
+
 .wh-table-filter-wrapper{
-  margin-bottom:-34px; 
+  .wh-table-filter-button{
+    position:absolute;
+    z-index: 300;
+  }
   .wh-filter-inner{
     background-color:tint($primary-color,95%);
     .arrow:after{
