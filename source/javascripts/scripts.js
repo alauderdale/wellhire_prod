@@ -14,13 +14,12 @@ $(document).ready(function(){
 
 	////Set Table defaults
 	$.extend( $.fn.dataTable.defaults, {
-		"bLengthChange": false
+		"bLengthChange": false,
+		"bPaginate": false,
 	} );
 
 	///responsive tables!!!
-	$(function () {
-		$('.footable').footable();
-	});
+	$('.footable').footable();
 
 
 });
