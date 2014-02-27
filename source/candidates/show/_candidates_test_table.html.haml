@@ -1,0 +1,122 @@
+:javascript
+	$(document).ready(function() {
+
+
+		var whDatatable = $('#table').dataTable().yadcf([{
+			column_number : 0,
+			select_type: 'chosen', 
+			column_data_type: "html", 
+			html_data_type: "text",
+			filter_default_label:"Select a Result", 
+			filter_container_id: "result_filter_container"
+		}, {
+			column_number : 1, 
+			select_type: 'chosen', 
+			filter_container_id: "attempt_filter_container"
+		}, {
+			column_number : 2, 
+			select_type: 'chosen', 
+			filter_container_id: "score_filter_container"
+		}, {
+
+			column_number : 3, 
+			select_type: 'chosen',  
+			filter_container_id: "average_filter_container"
+
+		}]);
+
+	} );
+
+
+.margin-bottom.clearfix
+	.wh-table-filter-wrapper.pull-left.hidden-xs
+		%button#filter-popover.filter-toggle.wh-table-filter-button.btn.btn-info{:rel=>"popover"}
+			Filter
+			%span.caret
+
+		.bottom.popover.hidden.wh-filter-inner.full-width{:style=>"display:block; top:50px;"}
+			.arrow{:style=>"left:13%;"}
+			.padded
+				.wh-filter-form-wrapper
+					%form#wh-filter-form
+						.form-group
+							%label
+								Result:
+							#result_filter_container
+						.form-group
+							%label
+								Attempts:
+							#attempt_filter_container
+						.form-group
+							%label
+								Score:
+							#score_filter_container
+						.form-group
+							%label
+								Average:
+							#average_filter_container
+				%hr
+				.clearfix
+					.pull-left
+						%button.btn.btn-info#clear-filter
+							Reset
+					.pull-right
+						%button.btn.btn-primary.filter-toggle{:onclick=>"return:false;"}
+							Close
+
+	.wh-table-search-wrapper.pull-right
+		%input#filter.form-control.wh-table-search{:placeholder=>"Search"}
+
+.wh-table-wrapper
+	%table#table.display.table.table-hover.margin-top.border-bottom{"data-filter"=>"#filter", border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+		%thead
+			%tr
+				%th
+					Result
+				%th{"data-hide"=>"phone"}
+					Attempts
+				%th{"data-hide"=>"phone"}
+					Score
+				%th{"data-hide"=>"phone"}
+					Average
+		%tbody
+			%tr.success
+				%td.half-padding-top.half-padding-bottom 
+					%a{:href=>"#"}
+						Business Skills II
+				%td.half-padding-top.half-padding-bottom 
+					1
+				%td.half-padding-top.half-padding-bottom 
+					\%100
+				%td.half-padding-top.half-padding-bottom 
+					\%60
+			%tr
+				%td.half-padding-top.half-padding-bottom 
+					%a{:href=>"#"}
+						Business Skills I
+				%td.half-padding-top.half-padding-bottom 
+					3
+				%td.half-padding-top.half-padding-bottom 
+					\%23
+				%td.half-padding-top.half-padding-bottom 
+					\%94
+			%tr
+				%td.half-padding-top.half-padding-bottom 
+					%a{:href=>"#"}
+						Test Title
+				%td.half-padding-top.half-padding-bottom 
+					30
+				%td.half-padding-top.half-padding-bottom 
+					\%100
+				%td.half-padding-top.half-padding-bottom 
+					\%80
+			%tfoot.hidden
+				%tr
+					%th
+						Result
+					%th
+						Attempts
+					%th
+						Score
+					%th
+						Average

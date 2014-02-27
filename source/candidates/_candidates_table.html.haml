@@ -44,7 +44,7 @@
 						.form-group
 							%label
 								Type:
-							#type_filter_container.full-width
+							#type_filter_container
 						.form-group
 							%label
 								Job Role:
@@ -88,7 +88,7 @@
 				%tr
 					%td.half-padding-top.half-padding-bottom
 						=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
-						%a{:href=>"#"}
+						%a{:href=>"/candidates/show"}
 							= lorem.name
 						%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
 							%i.fa.fa-envelope-o
@@ -104,7 +104,7 @@
 						Wed Feb 26, 2014
 					%td.half-padding-top.half-padding-bottom
 						.btn-group
-							%button.btn.btn-xs.btn-info{type: "button"} 
+							%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
 								View
 							%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
 								%span.caret
@@ -132,4 +132,3 @@
 						Date Created
 					%th
 						Action
-	%ul.pagination.pull-right

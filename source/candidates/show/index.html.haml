@@ -1,0 +1,22 @@
+;;;
+
+"title": "About This Candidate", 
+"subnav_data": "candidate_profile_subnav"
+	
+;;;
+
+
+%section.no-padding-top
+	.container
+		.row
+			.col-lg-12
+				=partial"/candidates/show/pager"
+				=partial"/candidates/show/candidate_profile_header"
+		.row
+			.col-lg-12
+				%h3
+					Summary
+				-4.times do
+					%p
+					= lorem.paragraphs 1
+				
