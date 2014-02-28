@@ -22,9 +22,10 @@ $(document).ready(function(){
 	///responsive tables!!!
 	$('table').footable({
 		breakpoints: {
-				tablet_landscape: 1199,
-				tablet_portrait: 991,
-        phone: 767
+				lg: 1200,
+				md: 992,
+        sm: 768,
+        xs: 480
     }
   });
 

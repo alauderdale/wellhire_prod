@@ -681,7 +681,7 @@ a{
 //sections
 
 section{
-  padding:$baseline*2 0;
+  padding:$baseline 0;
   &.invert-section{
     h1,h2,h3,h4,h5,h6,p{
       color:white;
@@ -796,6 +796,9 @@ ul.nav-pills{
       }
     a{
       text-decoration:none;
+      &:hover{
+        background:transparent;
+      }
     }
   }
 }
@@ -824,10 +827,18 @@ img.avatar-lg{
 
 //pagination
 
-.pagination{
-  .active{
+ul.pagination{
+  li{
+      .active{
+        a{
+          background-color:$primary-color;
+        }
+      }
     a{
-      background-color:$primary-color;
+      border:none!important;
+      &:hover{
+        background:transparent!important;
+      }
     }
   }
 }
@@ -924,7 +935,9 @@ table{
 
 //responsify
 
-@media (max-width: 1199px) {
+
+//lg
+@media (max-width: 1200px) {
 
 .main-nav{
   i{
@@ -935,8 +948,8 @@ table{
 
 }
 
-
-@media (max-width: 991px) {
+//md
+@media (max-width: 992px) {
 
 //navbar
 .main-nav{
@@ -952,24 +965,38 @@ table{
 }
 
 
+//sm
+@media (max-width: 768px) {
 
-@media (max-width: 767px) {
+  //subnav
+  ul.nav-pills{
+    &.sub-nav-links{
+      margin-top:0;
+      margin-bottom:$baseline;
+      font-size:.8em;
+    }
 
-//subnav
-ul.nav-pills{
-  &.sub-nav-links{
-    margin-top:0;
-    margin-bottom:$baseline;
-    font-size:.8em;
   }
 
+  .wh-table-search-wrapper{
+    width: 100%!important;
+    margin-bottom:0;
+  }
+
+
 }
 
-.wh-table-search-wrapper{
-  width: 100%!important;
-  margin-bottom:0;
-}
 
-
+//xs
+@media (max-width: 480px) {
+  section{
+    padding:$baseline/2 0;
+  }
+  .navbar-brand{
+    padding-top:8px;
+    .logo{
+      width:90px;
+    }
+  } 
 }
 
