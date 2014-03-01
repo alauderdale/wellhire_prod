@@ -80,7 +80,7 @@
 						%select.form-control.half-margin-bottom
 							%option
 								Not Specified
-						%a{:href=>"#"}
+						%a{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
 							+ New Job Role
 		.modal-footer
 			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 

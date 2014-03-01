@@ -1,33 +1,21 @@
 :javascript
 	$(document).ready(function() {
 
-
 		var whDatatable = $('#table').dataTable().yadcf([{
-			column_number : 0,
+			column_number : 0, 
+			filter_type: "date",date_format: "D M dd, yy", 
+			filter_container_id: "date_filter_container"
+		}, {
+			column_number : 1,
 			select_type: 'chosen', 
 			column_data_type: "html", 
 			html_data_type: "text",
-			filter_default_label:"Select a Result", 
-			filter_container_id: "result_filter_container"
-		}, {
-			column_number : 1, 
-			select_type: 'chosen', 
-			filter_container_id: "attempt_filter_container"
+			filter_default_label:"Select a Test", 
+			filter_container_id: "test_filter_container"
 		}, {
 			column_number : 2, 
 			select_type: 'chosen', 
-			filter_container_id: "score_filter_container"
-		}, {
-
-			column_number : 3, 
-			select_type: 'chosen',  
-			filter_container_id: "average_filter_container"
-		}, {
-
-			column_number : 4, 
-			filter_type: "date",date_format: "D M dd, yy", 
-			filter_container_id: "date_filter_container"
-
+			filter_container_id: "attempt_filter_container"
 		}]);
 
 	} );
@@ -46,24 +34,16 @@
 					%form#wh-filter-form
 						.form-group
 							%label
-								Result:
-							#result_filter_container
+								Date Completed:
+							#date_filter_container
+						.form-group
+							%label
+								Test:
+							#test_filter_container
 						.form-group
 							%label
 								Attempts:
 							#attempt_filter_container
-						.form-group
-							%label
-								Score:
-							#score_filter_container
-						.form-group
-							%label
-								Average:
-							#average_filter_container
-						.form-group
-							%label
-								Date Taken:
-							#date_filter_container
 				%hr
 				.clearfix
 					.pull-left
@@ -81,17 +61,22 @@
 		%thead
 			%tr
 				%th
-					Result
-				%th{"data-hide"=>"sm"}
+					Date Completed
+				%th
+					Test
+				%th
 					Attempts
-				%th{"data-hide"=>"sm"}
+				%th
 					Score
-				%th{"data-hide"=>"sm"}
+				%th
 					Average
-				%th{"data-hide"=>"sm"}
-					Date Taken
+				%th
+					Actions
 		%tbody
-			%tr.success
+			%tr
+				%td
+					%a{:href=>"#"}
+						= lorem.date
 				%td
 					%a{:href=>"#"}
 						Business Skills II
@@ -102,14 +87,27 @@
 				%td
 					\%60
 				%td
-					= lorem.date
+					.btn-group
+						%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
+							View
+						%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
+							%span.caret
+							%span.sr-only Toggle Dropdown
+						%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
+							%li
+								%a{"data-toggle"=>"modal", :href=>"/candidates/edit", "data-target"=>"#editCandidateModal"}
+									Edit
 			%tfoot.hidden
 				%tr
 					%th
 						Result
+					%th
+						Test
 					%th
 						Attempts
 					%th
 						Score
 					%th
 						Average
+					%th
+						Actions

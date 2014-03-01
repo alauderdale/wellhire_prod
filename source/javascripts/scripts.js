@@ -5,7 +5,9 @@ $(document).ready(function(){
 	////toggle the filter button
 	$('.filter-toggle').click(function() {
 		$('.wh-filter-inner').toggleClass('hidden');
+		return false; 
 	});
+
 
 	////clear the filter
 	$("#clear-filter").click(function() {

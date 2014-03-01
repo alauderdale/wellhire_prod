@@ -1,8 +1,8 @@
 ;;;
 
-"title": "My Tests", 
+"title": "Test Assignments", 
 "subnav_data": "tests_subnav",
-"description": "Job Roles represent specific employment positions you would like to fill, and are assigned to Candidates.",
+"description": "This section displays all of the tests which have been assigned to candidates. Candidates who responded to assessments from your job postings are also presented below",
 "link_title": "+ Assign Tests"
 	
 ;;;
@@ -10,6 +10,12 @@
 
 %section
 	.container
-		.row
+		.row.margin-bottom
 			.col-lg-12
 				=partial "shared/subnav_with_links"
+				%a.btn.btn-default.btn-lg{"data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
+					%i.fa.fa-plus-circle
+					Assign Tests
+		.row
+			.col-lg-12
+				=partial "/tests/tests_table"

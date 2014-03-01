@@ -7,7 +7,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: "index.html"}
+      %a.navbar-brand{href: "/"}
         .logo
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
@@ -16,7 +16,7 @@
           %a.navbar-item{href: "/"} 
             %i.fa.fa-th-large
             Dashboard
-        %li.active
+        %li
           %a.navbar-item{href: "/candidates"} 
             %i.fa.fa-users
             My Candidates
@@ -30,7 +30,8 @@
             Results
         %li
           %a.btn.btn-default{href: "#"} 
-            + Assign Tests
+            %i.fa.fa-plus-circle
+            Assign Tests
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
           %a.dropdown-toggle.navbar-item{"data-toggle" => "dropdown", href: "#"}

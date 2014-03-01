@@ -5,13 +5,15 @@
 ;;;
 
 
-
-.modal-dialog
+.modal-dialog.modal-sm
 	.modal-content
-		.modal-body
-			%p
-				%i.fa.fa-exclamation-circle.text-danger.modal-icon
-				= text
+		.modal-body.no-padding-bottom
+			.row
+				.col-sm-3
+					%i.fa.fa-exclamation-circle.text-danger.modal-icon.half-margin-bottom
+				.col-sm-9
+					%p.no-margin-bottom
+						= text
 		.modal-footer
 			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
 				Cancel

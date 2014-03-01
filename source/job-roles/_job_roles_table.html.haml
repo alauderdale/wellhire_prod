@@ -5,20 +5,10 @@
 		var whDatatable = $('#table').dataTable().yadcf([{
 			column_number : 0,
 			select_type: 'chosen', 
-			column_data_type: "html", 
-			html_data_type: "text",
 			filter_default_label:"Select a Name", 
 			filter_container_id: "name_filter_container"
 		}, {
-			column_number : 1, 
-			select_type: 'chosen', 
-			filter_container_id: "type_filter_container"
-		}, {
-			column_number : 2, 
-			select_type: 'chosen', 
-			filter_container_id: "job_role_filter_container"
-		}, {
-			column_number : 5, 
+			column_number : 3, 
 			filter_type: "date",date_format: "D M dd, yy", 
 			filter_container_id: "date_filter_container"
 		}]);
@@ -43,14 +33,6 @@
 							#name_filter_container
 						.form-group
 							%label
-								Type:
-							#type_filter_container
-						.form-group
-							%label
-								Job Role:
-							#job_role_filter_container
-						.form-group
-							%label
 								Date Created:
 							#date_filter_container
 				%hr
@@ -71,63 +53,45 @@
 			%tr
 				%th
 					Name
-				%th{"data-hide"=>"phone"}
-					Type
-				%th{"data-hide"=>"phone"}
-					Job Role
-				%th{"data-hide"=>"phone"}
-					Status
-				%th{"data-hide"=>"phone"}
-					Tests
-				%th{"data-hide"=>"phone"}
+				%th
+					Description
+				%th
+					Candidates
+				%th
 					Date Created
-				%th{"data-hide"=>"phone"}
+				%th
 					Actions
 		%tbody
-			- 20.times do
+			- 3.times do
 				%tr
 					%td
-						=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
-						%a{:href=>"/candidates/show"}
-							= lorem.name
-						%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
-							%i.fa.fa-envelope-o
+						%a{"data-toggle"=>"modal", :href=>"/job-roles/edit", "data-target"=>"#editJobRoleModal"}
+							Designer
 					%td
-						Prehire
+						No Description
 					%td
-						Designer
+						3
 					%td
-						Active
-					%td
-						4
-					%td
-						Wed Feb 26, 2014
+						= lorem.date
 					%td
 						.btn-group
-							%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
-								View
+							%a.btn.btn-xs.btn-info{"data-toggle"=>"modal", :href=>"/job-roles/edit", "data-target"=>"#editJobRoleModal"}
+								Edit
 							%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
 								%span.caret
 								%span.sr-only Toggle Dropdown
 							%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
 								%li
-									%a{href: "/"} 
-										Completed Tests
-								%li
-									%a{"data-toggle"=>"modal", :href=>"/candidates/edit", "data-target"=>"#editCandidateModal"}
-										Edit
+									%a{"data-toggle"=>"modal", "data-target"=>"#removeJobRoleModalConfirm", :href=>"onclick(refutn false;)"}
+										Delete
 			%tfoot.hidden
 				%tr
 					%th
 						Name
 					%th
-						Type
+						Description
 					%th
-						Job Role
-					%th
-						Status
-					%th
-						Tests
+						Candidates
 					%th
 						Date Created
 					%th

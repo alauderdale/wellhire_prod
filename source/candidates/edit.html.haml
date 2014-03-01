@@ -18,27 +18,28 @@
 					%label.col-sm-5.control-label 
 						Candidate Email
 					.col-sm-7
-						%input.form-control{placeholder: "Ex: john@doe.com"}
+						%p.no-margin-bottom.text-muted{:style=>"margin-top:5px;"}
+							John@doe.com
 				.form-group
-					%label.col-sm-5.control-label 
+					%label.col-sm-5.control-label
 						First Name
 					.col-sm-7
-						%input.form-control
+						%input.form-control{value:"John"}
 				.form-group
 					%label.col-sm-5.control-label 
 						Last Name
 					.col-sm-7
-						%input.form-control
+						%input.form-control{value:"Doe"}
 				.form-group
 					%label.col-sm-5.control-label 
 						Phone Number
 					.col-sm-7
-						%input.form-control
+						%input.form-control{value:"999-333-0000"}
 				.form-group
 					%label.col-sm-5.control-label 
 						Zip Code
 					.col-sm-7
-						%input.form-control
+						%input.form-control{value:"80020"}
 				.form-group
 					%label.col-sm-5.control-label 
 						Candidate Type
@@ -55,7 +56,7 @@
 						%select.form-control.half-margin-bottom
 							%option
 								Not Specified
-						%a{:href=>"#"}
+						%a{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
 							+ New Job Role
 		.modal-footer
 			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 

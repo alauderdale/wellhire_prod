@@ -18,11 +18,20 @@
 									%a{:href=>"log_in.html"}
 										FAQs
 
+//global
 #termsModal.modal.fade{"aria-hidden" => "true", role: "dialog"}
 
 
 //modals
+
+//candidates
 #newCandidateModal.modal{"aria-hidden" => "true", role: "dialog"}
 #editCandidateModal.modal{"aria-hidden" => "true", role: "dialog"}
 #markCandidateInactiveModal.modal{"aria-hidden" => "true", role: "dialog"}
 	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to mark candidate John Doe as inactive?"}
+
+//job roles
+#newJobRoleModal.modal{"aria-hidden" => "true", role: "dialog"}
+#editJobRoleModal.modal{"aria-hidden" => "true", role: "dialog"}
+#removeJobRoleModalConfirm.modal{"aria-hidden" => "true", role: "dialog"}
+	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to delete this job role?"}
