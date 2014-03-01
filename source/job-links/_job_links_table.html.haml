@@ -91,7 +91,7 @@
 		%tbody
 			%tr
 				%td
-					%a{:href=>"#"}
+					%a{"data-toggle"=>"modal", :href=>"/job-links/show", "data-target"=>"#showJobLinkModal"}
 						= lorem.date
 				%td
 					%a{:href=>"#"}
@@ -104,15 +104,15 @@
 					Chris Scordo
 				%td
 					.btn-group
-						%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
+						%a.btn.btn-xs.btn-info{"data-toggle"=>"modal", :href=>"/job-links/show", "data-target"=>"#showJobLinkModal"} 
 							View
 						%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
 							%span.caret
 							%span.sr-only Toggle Dropdown
 						%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
 							%li
-								%a{"data-toggle"=>"modal", :href=>"/candidates/edit", "data-target"=>"#editCandidateModal"}
-									Edit
+								%a{:href=>"onclick(return; false)","data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markJobLinkInactiveModal"}
+									Mark Inactive
 			%tfoot.hidden
 				%tr
 					%th

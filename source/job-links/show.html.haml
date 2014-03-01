@@ -1,0 +1,26 @@
+;;;
+
+"layout": "modal_small"
+  
+;;;
+
+
+
+.modal-dialog
+	.modal-content
+		.modal-header
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+			%h2.modal-title 
+				Test Link
+		.modal-body
+			%p
+				Copy the TestLink below in to your online ads. Visitors can then click on it to take your assessment. You'll be notified each time a new candidate completes an assessment
+			%form.form-horizontal{role: "form"}
+				.form-group
+					%label.col-sm-5.control-label
+						Embed
+					.col-sm-7
+						%textarea.form-control{:rows=>"8", :readonly=>"readonly", value:"checkit"}
+		.modal-footer
+			%button.btn.btn-info.pull-left{"data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markJobLinkInactiveModal"}
+				Mark as Inactive
