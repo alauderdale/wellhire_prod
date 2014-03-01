@@ -1,6 +1,6 @@
 ;;;
 
-"title": "Manage Job Links", 
+"title": "Manage Job Posting Links", 
 "subnav_data": "tests_subnav",
 "description": "Review and edit candidates for your available Job Roles. Job Roles represent specific employment positions, add a job role for each open position you have.",
 "link_title": "+ New Job Link"
@@ -10,6 +10,12 @@
 
 %section
 	.container
-		.row
+		.row.margin-bottom
 			.col-lg-12
 				=partial "shared/subnav_with_links"
+				%a.btn.btn-primary.btn-lg{"data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
+					%i.fa.fa-plus-circle
+					New Job Link
+		.row
+			.col-lg-12
+				=partial "/job-links/job_links_table"

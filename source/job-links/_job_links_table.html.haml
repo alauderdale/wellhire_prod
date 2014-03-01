@@ -15,7 +15,15 @@
 		}, {
 			column_number : 2, 
 			select_type: 'chosen', 
-			filter_container_id: "attempt_filter_container"
+			filter_container_id: "role_filter_container"
+		}, {
+			column_number : 3, 
+			select_type: 'chosen', 
+			filter_container_id: "status_filter_container"
+		}, {
+			column_number : 4, 
+			select_type: 'chosen', 
+			filter_container_id: "created_by_filter_container"
 		}]);
 
 	} );
@@ -42,8 +50,16 @@
 							#test_filter_container
 						.form-group
 							%label
-								Attempts:
-							#attempt_filter_container
+								Role:
+							#role_filter_container
+						.form-group
+							%label
+								Status:
+							#status_filter_container
+						.form-group
+							%label
+								Created By:
+							#created_by_filter_container
 				%hr
 				.clearfix
 					.pull-left
@@ -61,31 +77,31 @@
 		%thead
 			%tr
 				%th
-					Date Completed
+					Date Created
 				%th
 					Test Name
 				%th
-					Attempts
+					Job Role
 				%th
-					Score
+					Ststus
 				%th
-					Average
+					Created By
 				%th
 					Actions
 		%tbody
 			%tr
 				%td
 					%a{:href=>"#"}
-					= lorem.date
+						= lorem.date
 				%td
 					%a{:href=>"#"}
 						Business Skills II
 				%td
-					1
+					Designer
 				%td
-					\%100
+					Active
 				%td
-					\%60
+					Chris Scordo
 				%td
 					.btn-group
 						%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
@@ -100,14 +116,14 @@
 			%tfoot.hidden
 				%tr
 					%th
-						Date Completed
+						Date
 					%th
 						Test Name
 					%th
-						Attempts
+						Role
 					%th
-						Score
+						Status
 					%th
-						Average
+						Created By
 					%th
 						Actions
