@@ -1,0 +1,21 @@
+;;;
+
+"layout": "modal_small"
+  
+;;;
+
+
+
+.modal-dialog
+	.modal-content
+		%nav.navbar-fixed-top.modal-header.navbar
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+			%h4.modal-title 
+				Add a TestLink to Your Job Posting
+		.modal-body
+			.padding-top
+				%p
+					= lorem.paragraphs 1
+		%nav.navbar-fixed-bottom.modal-footer.navbar
+			%button.btn.btn-gray{"data-dismiss" => "modal", type: "button"} Cancel
+			%button.btn.btn-primary{type: "button"} Create Link

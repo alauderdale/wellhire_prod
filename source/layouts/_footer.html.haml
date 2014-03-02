@@ -40,4 +40,6 @@
 //job links
 #showJobLinkModal.modal{"aria-hidden" => "true", role: "dialog"}
 #markJobLinkInactiveModal.modal{"aria-hidden" => "true", role: "dialog"}
-	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to mark this job link as inactive?"}
+	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to deactivate this job link?"}
+#newJobLinkModal.modal.fade.full-screen-modal{"aria-hidden" => "true", role: "dialog"}
+
