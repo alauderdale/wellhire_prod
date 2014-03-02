@@ -219,6 +219,10 @@ blockquote{
   margin-top:0;
 }
 
+h1.main-page-header{
+  margin-bottom:-40px!important;
+}
+
 //text columns
 
 .text-columns-2{
@@ -785,9 +789,6 @@ section{
 
 ul.nav-pills{
 
-  &.sub-nav-links{
-    margin-top:-65px;
-  }
   li{
     &.active{
       a{
@@ -997,9 +998,6 @@ table{
 //lg
 @media (max-width: 1200px) {
 
-.main-nav{
-}
-
 
 }
 
@@ -1024,13 +1022,15 @@ table{
 @media (max-width: 768px) {
 
   //subnav
+
+  h1.main-page-header{
+    margin-bottom:0!important;
+  }
+
   ul.nav-pills{
     &.sub-nav-links{
-      margin-top:0;
-      margin-bottom:$baseline;
       font-size:.8em;
     }
-
   }
 
   .wh-table-search-wrapper{
