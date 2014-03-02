@@ -998,9 +998,6 @@ table{
 @media (max-width: 1200px) {
 
 .main-nav{
-  i{
-    display:none!important;
-  }
 }
 
 
@@ -1011,6 +1008,9 @@ table{
 
 //navbar
 .main-nav{
+  i{
+    display:none!important;
+  }
   a.navbar-item{
     padding:$baseline $baseline/2!important;
   }
