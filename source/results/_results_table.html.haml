@@ -3,6 +3,8 @@
 
 		var whDatatable = $('#table').dataTable().yadcf([{
 			column_number : 0, 
+			column_data_type: "html", 
+			html_data_type: "text",
 			filter_type: "date",date_format: "D M dd, yy", 
 			filter_container_id: "date_filter_container"
 		}, {
@@ -10,20 +12,19 @@
 			select_type: 'chosen', 
 			column_data_type: "html", 
 			html_data_type: "text",
+			filter_default_label:"Select a Candidate", 
+			filter_container_id: "name_filter_container"
+		}, {
+			column_number : 2,
+			select_type: 'chosen', 
+			column_data_type: "html", 
+			html_data_type: "text",
 			filter_default_label:"Select a Test", 
 			filter_container_id: "test_filter_container"
 		}, {
-			column_number : 2, 
-			select_type: 'chosen', 
-			filter_container_id: "role_filter_container"
-		}, {
 			column_number : 3, 
 			select_type: 'chosen', 
-			filter_container_id: "status_filter_container"
-		}, {
-			column_number : 4, 
-			select_type: 'chosen', 
-			filter_container_id: "created_by_filter_container"
+			filter_container_id: "attempt_filter_container"
 		}]);
 
 	} );
@@ -46,20 +47,16 @@
 							#date_filter_container
 						.form-group
 							%label
+								Candidate Name:
+							#name_filter_container
+						.form-group
+							%label
 								Test Name:
 							#test_filter_container
 						.form-group
 							%label
-								Role:
-							#role_filter_container
-						.form-group
-							%label
-								Status:
-							#status_filter_container
-						.form-group
-							%label
-								Created By:
-							#created_by_filter_container
+								Attempts:
+							#attempt_filter_container
 				%hr
 				.clearfix
 					.pull-left
@@ -77,53 +74,63 @@
 		%thead
 			%tr
 				%th
-					Date Created
+					Date Completed
+				%th
+					Candidate
 				%th
 					Test Name
 				%th
-					Job Role
+					Attempts
 				%th
-					Status
+					Score
 				%th
-					Created By
+					Average
 				%th
 					Actions
 		%tbody
-			%tr
-				%td
-					%a{"data-toggle"=>"modal", :href=>"/job-links/show", "data-target"=>"#showJobLinkModal"}
-						= lorem.date
-				%td
-					%a{"data-toggle"=>"modal", :href=>"/tests/show", "data-target"=>"#showTestModal"}
-						Business Skills II
-				%td
-					Designer
-				%td.text-success
-					Active
-				%td
-					Chris Scordo
-				%td
-					.btn-group
-						%a.btn.btn-xs.btn-info{"data-toggle"=>"modal", :href=>"/job-links/show", "data-target"=>"#showJobLinkModal"} 
-							View
-						%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
-							%span.caret
-							%span.sr-only Toggle Dropdown
-						%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
-							%li
-								%a{:href=>"onclick(return; false)","data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markJobLinkInactiveModal"}
-									Mark Inactive
+			-5.times do
+				%tr
+					%td
+						%a{:href=>"#"}
+							Result from
+							= lorem.date
+					%td
+						=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
+						%a{:href=>"/candidates/show"}
+							= lorem.name
+					%td
+						%a{"data-toggle"=>"modal", :href=>"/tests/show", "data-target"=>"#showTestModal"}
+							Business Skills II
+					%td
+						1
+					%td
+						\%100
+					%td
+						\%60
+					%td
+						.btn-group
+							%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
+								View
+							%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
+								%span.caret
+								%span.sr-only Toggle Dropdown
+							%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
+								%li
+									%a{"data-toggle"=>"modal", :href=>"/candidates/edit", "data-target"=>"#editCandidateModal"}
+										Edit
 			%tfoot.hidden
 				%tr
 					%th
-						Date
+						Date Completed
+					%th
+						Candidate
 					%th
 						Test Name
 					%th
-						Role
+						Attempts
 					%th
-						Status
+						Score
 					%th
-						Created By
+						Average
 					%th
 						Actions

@@ -12,20 +12,20 @@
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-left
-        %li
+        %li{:class => (current_page.data.activeclass === "dashboard") ? "active" : ""}
           %a.navbar-item{href: "/"} 
             %i.fa.fa-th-large
             Dashboard
-        %li
+        %li{:class => (current_page.data.activeclass === "candidates") ? "active" : ""}
           %a.navbar-item{href: "/candidates"} 
             %i.fa.fa-users
             My Candidates
-        %li
+        %li{:class => (current_page.data.activeclass === "tests") ? "active" : ""}
           %a.navbar-item{href: "/tests"} 
             %i.fa.fa-check
             My Tests
-        %li
-          %a.navbar-item{href: "#"} 
+        %li{:class => (current_page.data.activeclass === "results") ? "active" : ""}
+          %a.navbar-item{href: "/results"} 
             %i.fa.fa-bar-chart-o
             Results
         %li
