@@ -13,4 +13,25 @@
 	.container
 		.row
 			.col-lg-12
-				=partial "shared/subnav_with_links"
+				=partial "/shared/subnav_with_links"
+		.row.margin-bottom
+			.col-lg-12
+				=partial "/dashboard/dashboard_teaser"
+				.page-header
+					%h3.no-margin-bottom
+						Incoming Activity
+				.wh-activity-stream
+					-5.times do
+						=partial"/dashboard/activity_item"
+					.wh-stream-item
+						.page-header.margin-top
+							%p
+								%a{:href=>"#"}
+									See All Incoming Activity...
+		.row
+			.col-lg-12
+				.page-header
+					%h3.no-margin-bottom
+						Top Candidates
+
+

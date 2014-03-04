@@ -690,7 +690,14 @@ a{
   padding:$baseline $baseline*2;
 }
 
+//alerts
 
+.alert{
+  &.alert-basic{
+    background-color: #f2f2f2;
+    border-color: $gray-color;
+  }
+}
 
 
 //sections
@@ -989,7 +996,26 @@ table{
   background-color:rgba(0,0,0,.4);
 }
 
+//activity
 
+.wh-activity-stream{
+  i{
+    font-size:2em;
+    position:relative;
+    top:3px;
+    &.wh-straem-icon{
+    }
+    &.fa-check{
+      color:#61cd40;
+    }
+  }
+  .stream-item-text{
+    padding-right:100px;
+  }
+  .stream-item-date{
+    margin-top:8px;
+  }
+}
 
 
 //responsify

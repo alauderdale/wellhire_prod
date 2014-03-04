@@ -2,6 +2,9 @@
 "link_title_list": [
 	  {"title":"Dashboard", 
 	  	"link":"/"
+	  },
+	  {"title":"Activity", 
+	  	"link":"/dashboard/activity"
 	  }
 	]
 }

@@ -1,0 +1,18 @@
+.alert.alert-basic
+	%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
+		&times;
+	.row.margin-top
+		.col-sm-6.margin-bottom
+			%h3
+				Get Testing
+			%p
+				Place a test link in your job post and assign new tests to your candidates.
+			%a.btn.btn-default.btn-lg{:href=>"#"}
+				Assign a Test
+		.col-sm-6.margin-bottom
+			%h3
+				Manage Candidates
+			%p
+				Add new candidates. Manage your job roles and candidate information.
+			%a.btn.btn-primary.btn-lg{:href=>"/candidates"}
+				Manage Candidates
