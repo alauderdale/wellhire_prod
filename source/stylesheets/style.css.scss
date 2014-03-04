@@ -1038,17 +1038,6 @@ table{
     margin-bottom:0;
   }
 
-
-}
-
-
-//xs
-@media (max-width: 480px) {
-
-  body{
-    padding-top:50px;
-  }
-
   section{
     padding:$baseline/2 0;
   }
@@ -1058,5 +1047,17 @@ table{
       width:90px;
     }
   } 
+
+  body{
+    padding-top:50px;
+  }
+
+}
+
+
+//xs
+@media (max-width: 480px) {
+
+
 }
 
