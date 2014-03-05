@@ -31,5 +31,11 @@ $(document).ready(function(){
     }
   });
 
+  //popovers
+  $('.click-popover-link').popover({
+  	trigger: "click",
+  	html: true
+  });
+
 
 });
