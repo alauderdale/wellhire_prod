@@ -53,3 +53,8 @@
 //members
 #newMemberModal.modal{"aria-hidden" => "true", role: "dialog"}
 #editMemberModal.modal{"aria-hidden" => "true", role: "dialog"}
+#markMemberInactiveModal.modal{"aria-hidden" => "true", role: "dialog"}
+	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to mark member John Doe as inactive?"}
+
+//payments
+#editPaymentModal.modal{"aria-hidden" => "true", role: "dialog"}

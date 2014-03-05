@@ -36,20 +36,13 @@
 						%input.form-control{:value=>"703-855-7808"}
 				.form-group
 					%label.col-sm-5.control-label 
-						Status
-					.col-sm-7
-						%select.form-control
-							%option
-								Active
-							%option
-								Inactive
-				.form-group
-					%label.col-sm-5.control-label 
 						Company POC
 					.col-sm-7
 						%input.half-margin-top{:type=>"checkbox"}
 		.modal-footer
 			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
 				Cancel
+			%button.btn.btn-info.pull-left{"data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markMemberInactiveModal"}
+				Mark as Inactive
 			%button.btn.btn-primary.pull-right{"data-dismiss" => "modal", type: "button"} 
 				Update User Info

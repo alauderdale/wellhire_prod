@@ -1,8 +1,8 @@
 ;;;
 
-"title": "Payments", 
+"title": "Payment Info", 
 "subnav_data": "account_subnav",
-"description": "Review and edit candidates for your available Job Roles. Job Roles represent specific employment positions, add a job role for each open position you have.",
+"description": "Displayed below is your current account usage, pricing, and payment activity.",
 "iconclass": "fa-credit-card"
 	
 ;;;
@@ -13,5 +13,77 @@
 		.row.margin-bottom
 			.col-lg-12
 				=partial "shared/subnav_with_links"
+				%a.btn.btn-primary.btn-lg{"data-toggle"=>"modal", :href=>"/account/payments/edit", "data-target"=>"#editPaymentModal"}
+					Update Payment Info
 		.row
 			.col-lg-12
+				.page-header
+					%h3.no-margin-bottom
+						Current Activity for SSI Solutions
+				%dl.dl-horizontal
+					%dt.margin-bottom
+						Current Period Cost:
+					%dd.margin-bottom
+						$19.98
+					%dt.margin-bottom
+						Tests Completed 
+						%br
+						this Period:
+					%dd.margin-bottom
+						%br
+						6
+					%dt.margin-bottom
+						Billing period 
+						%br
+						start date:
+					%dd.margin-bottom
+						%br
+						10/06/13
+					%dt.margin-bottom
+						Your account will  
+						%br
+						next be billed on:
+					%dd.margin-bottom
+						%br
+						11/06/13
+					%dt.margin-bottom
+						Life to date total 
+						%br
+						tests completed:	
+					%dd.margin-bottom
+						%br
+						8
+		.row
+			.col-lg-12
+				.page-header
+					%h3.no-margin-bottom
+						Current Pricing Information for SSI Solutions
+				%dl.dl-horizontal
+					%dt.margin-bottom
+						Monthly Fee:	
+					%dd.margin-bottom
+						$9.99
+					%dt.margin-bottom
+						Tests Included
+						%br
+						(per month):	
+					%dd.margin-bottom
+						%br
+						5
+					%dt.margin-bottom
+						Additional Test Cost:	
+					%dd.margin-bottom
+						$9.99
+					%dt.margin-bottom
+						Account Billing 
+						%br
+						Active:	  
+					%dd.margin-bottom
+						%br
+						%input{:type=>"checkbox", :disabled=>"disabled"}
+		.row
+			.col-lg-12
+				.page-header
+					%h3.no-margin-bottom
+						Monthly Totals
+				=partial"/account/monthly_totals_table"

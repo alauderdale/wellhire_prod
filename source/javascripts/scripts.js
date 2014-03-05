@@ -22,14 +22,7 @@ $(document).ready(function(){
 	} );
 
 	///responsive tables!!!
-	$('table').footable({
-		breakpoints: {
-				lg: 1200,
-				md: 992,
-        sm: 768,
-        xs: 480
-    }
-  });
+	$('table').footable();
 
   //popovers
   $('.click-popover-link').popover({

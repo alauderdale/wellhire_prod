@@ -37,7 +37,7 @@
 			- 20.times do
 				%tr
 					%td
-						cscordo@ssilogic.com
+						=lorem.email
 					%td
 						Chris
 					%td
@@ -49,7 +49,7 @@
 					%td.text-success
 						Active
 					%td
-						Mar 30, 2014
+						=lorem.date
 					%td
 						.btn-group
 							%a.btn.btn-xs.btn-info{"data-toggle"=>"modal", :href=>"/account/members/edit", "data-target"=>"#editMemberModal"}
@@ -59,7 +59,7 @@
 								%span.sr-only Toggle Dropdown
 							%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
 								%li
-									%a
+									%a{"data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markMemberInactiveModal"}
 										Mark Inactive
 			%tfoot.hidden
 				%tr
