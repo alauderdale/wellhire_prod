@@ -11,7 +11,7 @@
 	.container
 		.row
 			.col-lg-12
-				=partial"/candidates/show/pager"
+				=partial"/shared/pager", locals:{link:"/candidates",title:"My Candidates"}
 				=partial"/candidates/show/candidate_profile_header"
 		.row
 			.col-lg-12
@@ -29,8 +29,8 @@
 					.page-header
 						%h3.no-margin-bottom
 							Skills
-					%p
-						-50.times do
+					%h3
+						-20.times do
 							%span.label.label-info.half-margin-right{:style=>"white-space: normal;"}
 								=lorem.words 1
 				.margin-bottom
