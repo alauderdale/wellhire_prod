@@ -1,0 +1,28 @@
+.container
+	.row.margin-bottom
+		.col-lg-12
+			%h2.margin-bottom
+				%span.step
+					1.
+				Select the Job Role you'd like to test for.
+			.form-group
+				%label.col-sm-2.control-label.text-right
+					job Role:
+				.col-sm-4
+					%select.form-control.half-margin-bottom
+						%option
+							Designer
+						%option
+							Other Option
+					%a{"data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
+						+ New Job Role
+				.col-sm-6
+	.row
+		.col-lg-12
+			%h2.margin-bottom
+				%span.step
+					2.
+				Select the Test you'd like candidates to take.
+	.row
+		.col-lg-12
+			=partial"/job-links/job_link_test_select_table"

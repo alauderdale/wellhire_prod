@@ -31,13 +31,13 @@
 	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to mark candidate John Doe as inactive?"}
 
 //job roles
-#newJobRoleModal.modal{"aria-hidden" => "true", role: "dialog"}
+#newJobRoleModal.modal.front-modal{"aria-hidden" => "true", role: "dialog"}
 #editJobRoleModal.modal{"aria-hidden" => "true", role: "dialog"}
 #removeJobRoleModalConfirm.modal{"aria-hidden" => "true", role: "dialog"}
 	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to delete this job role?"}
 
 //tests
-#showTestModal.modal{"aria-hidden" => "true", role: "dialog"}
+#showTestModal.modal.front-modal{"aria-hidden" => "true", role: "dialog"}
 
 //job links
 #showJobLinkModal.modal{"aria-hidden" => "true", role: "dialog"}

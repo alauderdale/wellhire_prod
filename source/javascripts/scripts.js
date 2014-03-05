@@ -2,14 +2,14 @@ $(document).ready(function(){
 
 ////Jquery Datatable setup
 
-	////toggle the filter button
+	////toggle the filter button on tables not in popovers
 	$('.filter-toggle').click(function() {
 		$('.wh-filter-inner').toggleClass('hidden');
 		return false; 
 	});
 
 
-	////clear the filter
+	////clear the filter on tables not in popovers
 	$("#clear-filter").click(function() {
 		$('.yadcf-filter-reset-button').click();
 	});
