@@ -313,10 +313,10 @@ h1.main-page-header{
 //steps
 
 .step{
-  font-size:2em;
+  font-size:1.5em;
   font-family:$bold-font-name;
   position:relative;
-  top:10px;
+  top:5px;
 }
 
 // display
@@ -903,7 +903,7 @@ footer{
 
 
 .wh-table-filter-wrapper{
-  .wh-filter-inner{
+  .wh-filter-show{
     background-color:tint($primary-color,95%);
     .arrow:after{
       border-bottom-color:tint($primary-color,95%)!important;
