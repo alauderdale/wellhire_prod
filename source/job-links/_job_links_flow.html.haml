@@ -4,8 +4,11 @@
 			%span.step
 				1.
 			Select the Job Role you'd like to test for.
+			%small
+				%a{"data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
+					+ New Job Role
 	.form-group
-		%label.col-sm-2.control-label.text-right
+		%label.col-sm-2.control-label.text-right.quarter-margin-top
 			job Role:
 		.col-sm-4
 			%select.form-control.half-margin-bottom
@@ -13,8 +16,6 @@
 					Designer
 				%option
 					Other Option
-			%a{"data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
-				+ New Job Role
 		.col-sm-6
 .margin-bottom.clearfix
 	.page-header
