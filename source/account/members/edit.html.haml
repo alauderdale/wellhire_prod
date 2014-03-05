@@ -1,0 +1,55 @@
+;;;
+
+"layout": "modal_small"
+  
+;;;
+
+
+
+.modal-dialog
+	.modal-content
+		.modal-header
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+			%h2.modal-title 
+				Edit User Chris Scordo
+		.modal-body
+			%form.form-horizontal{role: "form"}
+				.form-group
+					%label.col-sm-5.control-label 
+						User Email
+					.col-sm-7
+						%input.form-control{value: "chris.scordo@wellhire.com", :readonly=>"readonly"}
+				.form-group
+					%label.col-sm-5.control-label
+						First Name
+					.col-sm-7
+						%input.form-control{:value=>"Chris"}
+				.form-group
+					%label.col-sm-5.control-label 
+						Last Name
+					.col-sm-7
+						%input.form-control{:value=>"Scordo"}
+				.form-group
+					%label.col-sm-5.control-label 
+						Phone Number
+					.col-sm-7
+						%input.form-control{:value=>"703-855-7808"}
+				.form-group
+					%label.col-sm-5.control-label 
+						Status
+					.col-sm-7
+						%select.form-control
+							%option
+								Active
+							%option
+								Inactive
+				.form-group
+					%label.col-sm-5.control-label 
+						Company POC
+					.col-sm-7
+						%input.half-margin-top{:type=>"checkbox"}
+		.modal-footer
+			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
+				Cancel
+			%button.btn.btn-primary.pull-right{"data-dismiss" => "modal", type: "button"} 
+				Update User Info
