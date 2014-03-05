@@ -22,10 +22,6 @@
 			column_number : 1,
 			filter_container_id: 'type2_filter_container',
 			filter_default_label:"Select a Type", 
-			} ,{
-			column_number : 2,
-			filter_container_id: 'time2_filter_container',
-			filter_default_label:"Select a Time", 
 		}]);
 
 	} );
@@ -46,10 +42,6 @@
 							%label
 								Test Type:
 							#type2_filter_container
-						.form-group
-							%label
-								Test Time:
-							#time2_filter_container
 				%hr
 				.clearfix
 					.pull-left
@@ -73,9 +65,9 @@
 				%th{"data-hide"=>"phone"}
 					Time
 				%th
-					Actions
+
 		%tbody
-			- 23.times do
+			-23.times do
 				%tr
 					%td
 						%a{"data-toggle"=>"modal", :href=>"/tests/show", "data-target"=>"#showTestModal"}
@@ -85,8 +77,9 @@
 					%td
 						20 Min
 					%td
-						%a.btn.btn-primary.btn-xs{href:"#"}
-							Select Yo
+						%label.btn.btn-success
+							%input{:type=>"radio",:name=>"options", :id=>"option1"}
+								Select
 			%tfoot.hidden
 				%tr
 					%th
@@ -96,4 +89,4 @@
 					%th
 						Time
 					%th
-						Actions
+
