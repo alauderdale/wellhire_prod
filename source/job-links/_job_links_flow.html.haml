@@ -1,5 +1,4 @@
-.container
-
+.margin-bottom.clearfix
 	.page-header
 		%h2.no-margin-bottom
 			%span.step
@@ -17,11 +16,11 @@
 			%a{"data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
 				+ New Job Role
 		.col-sm-6
-	.clearfix
+.margin-bottom.clearfix
 	.page-header
 		%h2.no-margin-bottom
 			%span.step
 				2.
 			Select the Test you'd like candidates to take.
-
+.margin-bottom
 	=partial"/job-links/job_link_test_select_table"
