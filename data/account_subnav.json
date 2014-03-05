@@ -1,0 +1,14 @@
+{
+"link_title_list": [
+	  {"title":"My Account", 
+	  	"link":"/account"
+	  },
+
+	  {"title":"Members", 
+	  	"link":"/account/members"
+	  },
+	  {"title":"Payments", 
+	  	"link":"/account/payments"
+	  }
+	]
+}
