@@ -1,13 +1,13 @@
-.row
+.row.margin-bottom
 	.col-lg-12
 		.page-header
-			%h3.no-margin-bottom
+			%h4.no-margin-bottom
 				1. Select the Job Role you'd like to test for.
 		.form-group
 			%label.col-sm-2.control-label.text-right
 				job Role:
 			.col-sm-4
-				%select.form-control.half-margin-bottom
+				%select.form-control.half-margin-bottom.input-sm
 					%option
 						Designer
 					%option
@@ -18,7 +18,7 @@
 .row
 	.col-lg-12
 		.page-header
-			%h3.no-margin-bottom
+			%h4.no-margin-bottom
 				2. Select the Test you'd like candidates to take.
 
 		=partial"/job-links/job_link_test_select_table"
