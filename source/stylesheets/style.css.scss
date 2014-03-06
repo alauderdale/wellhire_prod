@@ -698,6 +698,12 @@ a{
     background-color: #f2f2f2;
     border-color: $gray-color;
   }
+  i.alert-icon{
+    font-size:2em; 
+    position:relative; 
+    top:4px;
+    margin-right:$baseline/2;
+  }
 }
 
 
@@ -716,6 +722,7 @@ section{
 
 .navbar.main-nav{
   background-color:shade($primary-color,50%);
+  border-bottom:none;
   ul.navbar-nav{
     ul{
       &.dropdown-menu{
@@ -729,7 +736,7 @@ section{
           margin:0;
           a{
             color:white;
-            padding:$baseline/1.5 $baseline*2;
+            padding:$baseline/1.5 $baseline;
             &:hover{
               background-color:tint($primary-color,20%);
             }
@@ -1016,6 +1023,19 @@ table{
   .stream-item-date{
     margin-top:8px;
   }
+}
+
+//icons
+
+.large-icon{
+  font-size:4em;
+}
+
+.candidate-test-icon-default{
+  color:$primary-color!important;
+}
+.candidate-test-icon-success{
+  color:green!important;
 }
 
 
