@@ -6,17 +6,14 @@
 
 
 
-.modal-dialog
+.modal-dialog.modal-lg
 	.modal-content
-		%nav.navbar-fixed-top.modal-header.navbar
-			.container
-				%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-				%h4.modal-title 
-					Create a New Job Test Link
-		.modal-body
-			.padding-top
-				.container
-					=partial"/job-links/job_links_flow"
-		%nav.navbar-fixed-bottom.modal-footer.navbar
+		.modal-header
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+			%h1.modal-title 
+				Create a New Job Test Link
+		.modal-body{:style=>"max-height:400px; overflow:scroll;"}
+			=partial"/job-links/job_links_flow"
+		.modal-footer.no-margin-top
 			%button.btn.btn-gray{"data-dismiss" => "modal", type: "button"} Cancel
 			%button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Create Link

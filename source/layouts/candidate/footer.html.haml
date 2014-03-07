@@ -14,3 +14,5 @@
 
 //tests
 #showTestModal.modal{"aria-hidden" => "true", role: "dialog"}
+#confirmSubmitModal.modal{"aria-hidden" => "true", role: "dialog"}
+	=partial "/shared/confirm_modal_with_link", :locals=>{:text =>"Are you sure you want to submit your answers?", :link=>"/candidate_backend/tests/freeform", :btnclass=>"btn-success", :confirm_btn_text=>"Submit"}
