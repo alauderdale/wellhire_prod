@@ -1,0 +1,29 @@
+;;;
+
+"layout": "modal_small"
+  
+;;;
+
+
+
+.modal-dialog.modal-sm
+	.modal-content
+		.modal-body
+			.row
+				.col-sm-3
+					%i.fa.fa-check.text-success.modal-icon.half-margin-bottom.half-margin-top
+				.col-sm-9
+					%h2.no-margin-bottom
+						Confirm Test Assignments?
+			%hr
+			%form.form-horizontal{role: "form"}
+				.form-group
+					%label.col-xs-10.control-label 
+						Send me a copy of each candidate email invitation
+					.col-xs-2
+						%input.margin-top{:type=>"checkbox"}
+		.modal-footer.no-margin-top
+			%button.btn.btn-gray{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/tests/new/step_2", "data-target"=>"#newTestModalSelectCandidates"}
+				Back
+			%button.btn.btn-primary{"data-dismiss" => "modal"}
+				Confirm

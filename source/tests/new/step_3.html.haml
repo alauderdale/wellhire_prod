@@ -1,0 +1,21 @@
+;;;
+
+"layout": "modal_small"
+  
+;;;
+
+
+
+.modal-dialog.modal-lg
+	.modal-content
+		.modal-header
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+			%h1.modal-title 
+				Find and Assign Tests
+		.modal-body
+			=partial"/tests/new/freeform_modal"
+		.modal-footer.no-margin-top
+			%button.btn.btn-gray{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/tests/new/step_2", "data-target"=>"#newTestModalSelectCandidates"}
+				Back
+			%button.btn.btn-primary{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/tests/new/step_4", "data-target"=>"#newTestModaReview"}
+				Continue
