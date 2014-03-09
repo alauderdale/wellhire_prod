@@ -987,9 +987,11 @@ table{
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
   }
-  .modal-body{
-    max-height:400px; 
-    overflow:scroll;
+  &.modal-scroll{
+    .modal-body{
+      max-height:400px; 
+      overflow:scroll;
+    }
   }
 }
 

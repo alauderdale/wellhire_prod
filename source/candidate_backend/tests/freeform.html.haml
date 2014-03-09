@@ -13,15 +13,10 @@
 			.col-lg-12
 				.page-header
 					%h1.no-margin-bottom.pull-left
-						Test in Progress
-					%h4.no-margin-bottom.pull-right.pull-left-xs{:style=>"margin-top:18px;"}
-						.fa.fa-clock-o
-						Time Remaining: 
-						%strong
-							48:31
+						Test In Progress
 					.clearfix
 				.test-question-container.margin-top
-					.test-question.margin-bottom
+					.margin-bottom
 						%p
 							Freeform Questions
 					.test-freeform.margin-bottom
@@ -31,22 +26,22 @@
 									.form-group
 										%h4
 											1. What's Your Favorite...
-										%textarea.form-control{:rows=>"10"}
+										%textarea.form-control{:rows=>"5"}
 								%form.margin-bottom
 									.form-group
 										%h4
 											2. What's Your Favorite...
-										%textarea.form-control{:rows=>"10"}
+										%textarea.form-control{:rows=>"5"}
 							.col-sm-6
-					%hr
-					.test-footer
-						.row
-							.col-sm-4
-							.col-sm-8
-								%p.pull-right
-									%a.btn.btn-lg.btn-success.margin-bottom{:href=>"/candidate_backend/tests/freeform"}
-										Submit Responses & Give Feedback
-										%i.fa.fa-long-arrow-right
+				%hr
+				.test-footer
+					.row
+						.col-sm-4
+						.col-sm-8
+							%p.pull-right
+								%a.btn.btn-lg.btn-success.margin-bottom{:href=>"/candidate_backend/tests/feedback"}
+									Submit Responses & Give Feedback
+									%i.fa.fa-long-arrow-right
 
 				
 

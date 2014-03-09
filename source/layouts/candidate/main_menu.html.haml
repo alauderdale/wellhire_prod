@@ -13,7 +13,7 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-left
         %li{:class => (current_page.data.activeclass === "tests") ? "active" : ""}
-          %a.navbar-item{href: "/tests"} 
+          %a.navbar-item{href: "/candidate_backend"} 
             %i.fa.fa-check
             My Tests
         %li{:class => (current_page.data.activeclass === "profile") ? "active" : ""}
@@ -29,4 +29,4 @@
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{href: "#"} Sign Out
+              %a{href: "/"} Sign Out
