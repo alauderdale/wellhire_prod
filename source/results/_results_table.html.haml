@@ -108,16 +108,8 @@
 					%td
 						\%60
 					%td
-						.btn-group
-							%a.btn.btn-xs.btn-info{:href=>"/results/show"} 
-								View
-							%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
-								%span.caret
-								%span.sr-only Toggle Dropdown
-							%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
-								%li
-									%a{"data-toggle"=>"modal", :href=>"/candidates/edit", "data-target"=>"#editCandidateModal"}
-										Edit
+						%a.btn.btn-xs.btn-success{:href=>"/results/show"}
+							View Result
 			%tfoot.hidden
 				%tr
 					%th

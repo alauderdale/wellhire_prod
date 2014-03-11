@@ -193,14 +193,6 @@ h1{
   }
 }
 
-blockquote{
-  border:none;
-  padding:$baseline;
-  font-size: 4.5em; 
-  line-height:$baseline*3.5;
-  font-family:$regular-font-name;
-}
-
 .enhanced-font{
   font-size:1.2em;
 }
@@ -747,7 +739,6 @@ section{
   ul.navbar-nav{
     ul{
       &.dropdown-menu{
-        width: 100%;
         background-color:$primary-color;
         padding:0;
         margin:0;
@@ -801,8 +792,10 @@ section{
     padding:$baseline/2!important;
     margin:$baseline/2;
     font-size:.9em;
-    &:hover{
-      background-color:tint($primary-color,20%)!important;
+    &.btn-default{
+      &:hover{
+        background-color:tint($primary-color,20%)!important;
+      }
     }
   }
   img.avatar-sm{
@@ -819,6 +812,16 @@ section{
   background-size:100%;
   margin-top:3px;
 }
+
+.logo-sm{
+  background:url(../images/logo_sm.png) no-repeat 100%;
+  width: 42px;
+  height:22px;
+  background-size:100%;
+  position:relative;
+  top:7px;
+}
+
 
 
 //subnav
@@ -1148,6 +1151,7 @@ table{
 //sm
 @media (max-width: 768px) {
 
+
   //subnav
 
   h1.main-page-header{
@@ -1176,7 +1180,7 @@ table{
   } 
 
   body{
-    padding-top:50px;
+    padding-top:70px;
   }
 
 }
@@ -1186,6 +1190,37 @@ table{
 @media (max-width: 480px) {
   .pull-left-xs{
     float:left!important;
+  }
+}
+
+//devices
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  .modal-scroll{
+    .modal-body{
+      max-height:450px!important;
+      overflow:scroll;
+    }
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  .modal-scroll{
+    .modal-body{
+      max-height:700px!important;
+      overflow:scroll;
+    }
+  }
+  .filter-toggle{
+    margin-bottom:$baseline;
   }
 }
 

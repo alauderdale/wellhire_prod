@@ -92,37 +92,52 @@
 				%th{"data-hide"=>"phone"}
 					Actions
 		%tbody
-			- 20.times do
-				%tr
-					%td
-						=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
-						%a{:href=>"/candidates/show/tests_completed"}
-							= lorem.name
-						%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
-							%i.fa.fa-envelope-o
-					%td
-						%a{"data-toggle"=>"modal", :href=>"/tests/show", "data-target"=>"#showTestModal"}
-							Business Communication II
-					%td
-						Designer
-					%td
-						Complete
-					%td
-						Wed Feb 26, 2014
-					%td
-						.btn-group
-							%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
-								View
-							%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
-								%span.caret
-								%span.sr-only Toggle Dropdown
-							%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
-								%li
-									%a{href: "/"} 
-										Completed Tests
-								%li
-									%a{"data-toggle"=>"modal", :href=>"/candidates/edit", "data-target"=>"#editCandidateModal"}
-										Edit
+			%tr
+				%td
+					=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
+					%a{:href=>"/candidates/show/tests_completed"}
+						= lorem.name
+					%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
+						%i.fa.fa-envelope-o
+				%td
+					%a{"data-toggle"=>"modal", :href=>"/tests/show", "data-target"=>"#showTestModal"}
+						Business Communication II
+				%td
+					Designer
+				%td.text-success
+					Complete
+				%td
+					Wed Feb 26, 2014
+				%td
+					%a.btn.btn-xs.btn-success{:href=>"/candidates/show"} 
+						View Test Results
+			%tr
+				%td
+					=image_tag "/images/no_avatar_sm.png", :class=>"half-margin-right avatar-sm img-circle"
+					%a{:href=>"/candidates/show/tests_completed"}
+						= lorem.name
+					%a.half-margin-left.no-underline-link{:href=>"mailto:john@doe.com;"}
+						%i.fa.fa-envelope-o
+				%td
+					%a{"data-toggle"=>"modal", :href=>"/tests/show", "data-target"=>"#showTestModal"}
+						Business Communication II
+				%td
+					Designer
+				%td.text-warning
+					Pending
+				%td
+					Wed Feb 26, 2014
+				%td
+					.btn-group
+						%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
+							Send Reminder
+						%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
+							%span.caret
+							%span.sr-only Toggle Dropdown
+						%ul.dropdown-menu.dropdown-menu-right{role: "menu"}
+							%li
+								%a{href: "/"} 
+									Cancel Test
 			%tfoot.hidden
 				%tr
 					%th

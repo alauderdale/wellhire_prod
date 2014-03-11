@@ -1,14 +1,15 @@
 {
 "link_title_list": [
-	  {"title":"My Account", 
-	  	"link":"/account"
+	  {"title":"Account Activity", 
+	  	"link":"/account/"
 	  },
 
 	  {"title":"Members", 
 	  	"link":"/account/members/"
 	  },
-	  {"title":"Payment Info", 
-	  	"link":"/account/payments"
+	  
+	 	{"title":"My Profile", 
+	  	"link":"/account/my_account"
 	  }
 	]
 }

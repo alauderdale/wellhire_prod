@@ -96,16 +96,17 @@
 						Prehire
 					%td
 						Designer
-					%td
+					%td.text-success
 						Active
 					%td
-						4
+						%a{:href=>"/candidates/show/tests_completed"}
+							4
 					%td
 						Wed Feb 26, 2014
 					%td
 						.btn-group
 							%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
-								View
+								View 
 							%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
 								%span.caret
 								%span.sr-only Toggle Dropdown
