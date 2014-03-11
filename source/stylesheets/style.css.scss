@@ -1052,6 +1052,13 @@ table{
   background-color:rgba(0,0,0,.4);
 }
 
+//progress indicator
+
+.progress-indacator{
+  background:shade($primary-color,80%) url(../images/test-links/progress_indicator_bg.png) repeat-x 0px 35px;
+  padding:0;
+}
+
 //activity
 
 .wh-activity-stream{
