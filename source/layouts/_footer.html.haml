@@ -33,6 +33,7 @@
 #markCandidateInactiveModal.modal{"aria-hidden" => "true", role: "dialog"}
 	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to mark candidate John Doe as inactive?"}
 
+
 //job roles
 #newJobRoleModal.modal.front-modal{"aria-hidden" => "true", role: "dialog"}
 #editJobRoleModal.modal{"aria-hidden" => "true", role: "dialog"}
@@ -45,6 +46,8 @@
 #newTestModalSelectCandidates.modal-scroll.modal{"aria-hidden" => "true", role: "dialog"}
 #newTestModalFreeform.modal-scroll.modal{"aria-hidden" => "true", role: "dialog"}
 #newTestModaReview.modal{"aria-hidden" => "true", role: "dialog"}
+#sendCandidateReminderModal.modal{"aria-hidden" => "true", role: "dialog"}
+	=partial "shared/confirm_modal", :locals=>{:text =>"Send ccandidate reminder?"}
 
 //job links
 #showJobLinkModal.modal{"aria-hidden" => "true", role: "dialog"}

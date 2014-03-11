@@ -129,7 +129,7 @@
 					Wed Feb 26, 2014
 				%td
 					.btn-group
-						%a.btn.btn-xs.btn-info{:href=>"/candidates/show"} 
+						%a.btn.btn-xs.btn-info{:href=>"onclick(return; false)","data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#sendCandidateReminderModal"} 
 							Send Reminder
 						%button.btn.dropdown-toggle.btn-xs.btn-info{"data-toggle" => "dropdown", type: "button"}
 							%span.caret
