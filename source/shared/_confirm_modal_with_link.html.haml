@@ -15,7 +15,7 @@
 					%p.no-margin-bottom
 						= text
 		.modal-footer
-			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
+			%a.cursor-pointer.half-margin-right{"data-dismiss" => "modal"} 
 				Cancel
-			%a.btn.pull-right{ type: "button", :href=>"#{link}", :class=>"#{btnclass}"} 
+			%a.btn{ type: "button", :href=>"#{link}", :class=>"#{btnclass}"} 
 				= confirm_btn_text

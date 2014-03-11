@@ -56,13 +56,13 @@
 						%select.form-control.half-margin-bottom
 							%option
 								Not Specified
-						%a{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
+						%a{ "data-toggle"=>"modal", :href=>"/job-roles/new", "data-target"=>"#newJobRoleModal"}
 							+ New Job Role
 		.modal-footer
-			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
-				Cancel
 			%button.btn.btn-info.pull-left{"data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markCandidateInactiveModal"}
 				Mark as Inactive
-			%button.btn.btn-primary.pull-right{"data-dismiss" => "modal", type: "button"} 
+			%a.cursor-pointer.half-margin-right{"data-dismiss" => "modal"} 
+				Cancel
+			%button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} 
 				Save Changes
 

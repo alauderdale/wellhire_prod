@@ -40,9 +40,9 @@
 					.col-sm-7
 						%input.half-margin-top{:type=>"checkbox"}
 		.modal-footer
-			%button.btn.btn-info.pull-left{"data-dismiss" => "modal", type: "button"} 
-				Cancel
 			%button.btn.btn-info.pull-left{"data-dismiss" => "modal","data-toggle"=>"modal", "data-target"=>"#markMemberInactiveModal"}
 				Mark as Inactive
-			%button.btn.btn-primary.pull-right{"data-dismiss" => "modal", type: "button"} 
+			%a.cursor-pointer.half-margin-right{"data-dismiss" => "modal"} 
+				Cancel
+			%button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} 
 				Update User Info
