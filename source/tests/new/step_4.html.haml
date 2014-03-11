@@ -11,19 +11,20 @@
 		.modal-body
 			.row
 				.col-sm-3
-					%i.fa.fa-check.text-success.modal-icon.half-margin-bottom.half-margin-top
+					%i.fa.fa-check-circle.text-success.modal-icon.half-margin-bottom.half-margin-top
 				.col-sm-9
 					%h2.no-margin-bottom
 						Confirm Test Assignments?
 			%hr
-			%form.form-horizontal{role: "form"}
 				.form-group
-					%label.col-xs-10.control-label 
-						Send me a copy of each candidate email invitation
-					.col-xs-2
-						%input.margin-top{:type=>"checkbox"}
+					.col-sm-2
+						%input{:type=>"checkbox"}
+					.col-sm-10
+						%label.control-label 
+							Send me a copy of each candidate email invitation
+					.clearfix
 		.modal-footer.no-margin-top
-			%button.btn.btn-gray{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/tests/new/step_2", "data-target"=>"#newTestModalSelectCandidates"}
+			%a.cursor-pointer.half-margin-right{"data-dismiss" => "modal", "data-toggle"=>"modal", :href=>"/tests/new/step_3", "data-target"=>"#newTestModalFreeform"}
 				Back
 			%button.btn.btn-primary{"data-dismiss" => "modal"}
 				Confirm
