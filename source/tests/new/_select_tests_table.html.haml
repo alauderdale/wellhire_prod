@@ -1,20 +1,20 @@
 :javascript
 	$(document).ready(function() {
 
-		$('.popover-filter-toggle-1').click(function() {
-			$('.wh-popover-filter-inner-1').toggleClass('hidden');
+		$('.popover-filter-toggle-2').click(function() {
+			$('.wh-popover-filter-inner-2').toggleClass('hidden');
 			return false; 
 		});
 
-		$("#clear-popover-filter-1").click(function() {
-			$('.wh-popover-filter-inner-1 .yadcf-filter-reset-button').click();
+		$("#clear-popover-filter-2").click(function() {
+			$('.wh-popover-filter-inner-2 .yadcf-filter-reset-button').click();
 			return false; 
 		});
 
 		$('table').footable();
 
 
-		var whDatatable = $('#table2').dataTable({
+		var whDatatable = $('#table3').dataTable({
 			'iDisplayLength': 23,
 			'bPaginate': false,
 			'bInfo': false
@@ -29,11 +29,11 @@
 
 .clearfix{:style=>"position:relative;"}
 	.wh-table-filter-wrapper.pull-left.hidden-xs
-		%button.popover-filter-toggle-1.wh-table-filter-button.btn.btn-info{:rel=>"popover"}
+		%button.popover-filter-toggle-2.wh-table-filter-button.btn.btn-info{:rel=>"popover"}
 			Filter
 			%span.caret
 
-		.bottom.popover.hidden.wh-popover-filter-inner-1.wh-filter-show.wh-filter-inner.full-width{:style=>"display:block; top:50px;"}
+		.bottom.popover.hidden.wh-popover-filter-inner-2.wh-filter-show.wh-filter-inner.full-width{:style=>"display:block; top:50px;"}
 			.arrow{:style=>"left:13%;"}
 			.padded
 				.wh-filter-form-wrapper
@@ -45,17 +45,17 @@
 				%hr
 				.clearfix
 					.pull-left
-						%button.btn.btn-info#clear-popover-filter-1
+						%button.btn.btn-info#clear-popover-filter-2
 							Reset
 					.pull-right
-						%button.btn.btn-primary.popover-filter-toggle-1
+						%button.btn.btn-primary.popover-filter-toggle-2
 							Close
 
 	.wh-table-search-wrapper.pull-right
-		%input#popover-filter-1.form-control.wh-table-search{:placeholder=>"Search"}
+		%input#popover-filter-2.form-control.wh-table-search{:placeholder=>"Search"}
 
 .wh-table-wrapper
-	%table#table2.display.table.margin-top.border-bottom{"data-filter"=>"#popover-filter-2", border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+	%table#table3.display.table.margin-top.border-bottom{"data-filter"=>"#popover-filter-2", border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
 		%thead
 			%tr
 				%th
