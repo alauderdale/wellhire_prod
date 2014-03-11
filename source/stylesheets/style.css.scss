@@ -1219,8 +1219,11 @@ and (orientation : portrait) {
       overflow:scroll;
     }
   }
-  .filter-toggle{
-    margin-bottom:$baseline;
+  .wh-table-filter-button{
+    margin-bottom:$baseline!important;
+  }
+  .logo-sm{
+    top:15px;
   }
 }
 
