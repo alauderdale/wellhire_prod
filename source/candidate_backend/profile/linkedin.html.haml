@@ -9,6 +9,18 @@
 
 %section
 	.container
+		.alert.alert-basic
+			.media
+				.pull-left
+					%h1.social-font-name.half-margin-right.no-margin-bottom{:style=>"font-size:4em;"}
+						i
+				.media-body
+					%strong
+						Include your LinkedIn profile along with your assessments
+					Click 
+					%a{:href=>"/candidate_backend/profile/linkedin"}
+						here 
+					to be redirected to the LinkedIn website to provide your signin credentials 
 		.row
 			.col-lg-12
 				.page-header.no-margin-bottom
@@ -110,7 +122,7 @@
 						.col-sm-4
 						.col-sm-8
 							%p.pull-right
-								%a.btn.btn-lg.btn-success.margin-bottom{href:"show"}
+								%a.btn.btn-lg.btn-success.margin-bottom{href:"/candidate_backend/profile/show"}
 									Save Profile
 
 				
