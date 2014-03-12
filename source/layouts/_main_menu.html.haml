@@ -7,14 +7,14 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: "/"}
+      %a.navbar-brand{href: "/dashboard"}
         .logo.hidden-sm
         .logo-sm.visible-sm
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-left
         %li{:class => (current_page.data.activeclass === "dashboard") ? "active" : ""}
-          %a.navbar-item{href: "/"} 
+          %a.navbar-item{href: "/dashboard"} 
             %i.fa.fa-th-large
             Dashboard
         %li
@@ -48,7 +48,7 @@
             %li
               %a{href: "/account"} My Account
             %li
-              %a{href: "#"} Sign Out
+              %a{href: "/"} Sign Out
             %li
               %a{href: "/candidate_backend"} Candidate backend
             %li
