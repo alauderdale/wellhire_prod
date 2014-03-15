@@ -733,8 +733,8 @@ section{
 .logo{
   background:url(../images/public/logo.png) no-repeat;
   width: 174px;
-  height:37px;
-  background-size:100%;
+  height:47px;
+  @include background-size(100%);
 }
 
 //footer

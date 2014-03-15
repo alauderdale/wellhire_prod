@@ -808,15 +808,15 @@ section{
 .logo{
   background:url(../images/logo.png) no-repeat 100%;
   width: 124px;
-  height:25px;
-  background-size:100%;
-  margin-top:3px;
+  height:35px;
+  @include background-size(100%);
+  margin-top:0px;
 }
 
 .logo-sm{
   background:url(../images/logo_sm.png) no-repeat 100%;
   width: 42px;
-  height:22px;
+  height:32px;
   background-size:100%;
   position:relative;
   top:7px;
@@ -1173,7 +1173,7 @@ table{
     padding:$baseline/2 0;
   }
   .navbar-brand{
-    padding-top:8px;
+    padding-top:5px;
     .logo{
       width:90px;
     }
