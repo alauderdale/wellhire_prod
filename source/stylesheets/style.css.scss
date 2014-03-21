@@ -887,12 +887,15 @@ ul.pagination{
       .active{
         a{
           background-color:$primary-color;
+          &:hover{
+            background-color:$primary-color!important;
+          }
         }
       }
     a{
       border:none!important;
       &:hover{
-        background:transparent!important;
+        background:transparent;
       }
     }
   }
