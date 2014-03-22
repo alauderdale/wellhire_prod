@@ -721,7 +721,11 @@ section {
 .logo {
   background: url(../images/public/logo.png) no-repeat;
   width: 174px;
-  height: 37px;
+  height: 47px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -ms-background-size: 100%;
+  -o-background-size: 100%;
   background-size: 100%; }
 
 /* line 742, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
