@@ -806,11 +806,11 @@ section{
 }
 
 .logo{
-  background:url(../images/logo.png) no-repeat 100%;
-  width: 124px;
-  height:40px;
-  background-size: 96%;
-  margin-top:0px;
+  background:url(../images/logo.png) no-repeat;
+  width: 126px;
+  height:27px;
+  background-size: 95.9%;
+  margin-top:5px;
 }
 
 .logo-sm{
@@ -1178,7 +1178,8 @@ table{
   .navbar-brand{
     padding-top:5px;
     .logo{
-      width:87px;
+      width:82px;
+      margin-top:10px;
     }
   } 
 

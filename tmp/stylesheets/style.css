@@ -779,11 +779,11 @@ section {
 
 /* line 808, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
 .logo {
-  background: url(../images/logo.png) no-repeat 100%;
-  width: 124px;
-  height: 40px;
-  background-size: 96%;
-  margin-top: 0px; }
+  background: url(../images/logo.png) no-repeat;
+  width: 126px;
+  height: 27px;
+  background-size: 95.9%;
+  margin-top: 5px; }
 
 /* line 816, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
 .logo-sm {
@@ -1048,32 +1048,33 @@ table.table th {
     padding-top: 5px; }
     /* line 1180, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
     .navbar-brand .logo {
-      width: 87px; }
+      width: 82px;
+      margin-top: 10px; }
 
-  /* line 1185, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
+  /* line 1186, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
   body {
     padding-top: 70px; } }
 @media (max-width: 480px) {
-  /* line 1194, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
+  /* line 1195, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
   .pull-left-xs {
     float: left !important; } }
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 1207, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
+  /* line 1208, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
   .modal-scroll .modal-body {
     max-height: 450px !important;
     overflow: scroll; } }
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* line 1220, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
+  /* line 1221, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
   .modal-scroll .modal-body {
     max-height: 700px !important;
     overflow: scroll; }
 
-  /* line 1225, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
+  /* line 1226, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
   .wh-table-filter-button {
     margin-bottom: 24px !important; }
 
-  /* line 1228, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
+  /* line 1229, /Users/alauderdale/Desktop/wellhire_files/wellhire_product/source/stylesheets/style.css.scss */
   .logo-sm {
     top: 15px; } }
