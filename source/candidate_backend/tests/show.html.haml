@@ -44,16 +44,19 @@
 									%a.text-uppercase{:href=>"/candidate_backend/tests/overview"}
 										REVIEW MARKED QUESTIONS
 							.col-sm-8
-								%p.pull-right
-									%a.btn.btn-lg.btn-info.margin-bottom.half-margin-right{:href=>"/candidate_backend/tests/overview"}
-										%i.fa.fa-long-arrow-left
-										Prev
-									%button.btn.btn-lg.btn-info.margin-bottom.test-toggle-btn.half-margin-right{"data-toggle"=>"button"}
-										Mark For Review
-										%span.btn-icon
-									%a.btn.btn-lg.btn-success.margin-bottom{:href=>"/candidate_backend/tests/overview"}
-										Submit & Continue
-										%i.fa.fa-long-arrow-right
+								.pull-right
+									%p.pull-left
+										%a.btn.btn-lg.btn-info.margin-bottom.half-margin-right{:href=>"/candidate_backend/tests/overview"}
+											%i.fa.fa-long-arrow-left
+											Prev
+										.btn-group{"data-toggle"=>"buttons"}
+											%label.btn.btn-lg.btn-info.margin-bottom.test-toggle-btn.half-margin-right
+												%input{:type=>"checkbox"}
+													Mark For Review
+												%span.btn-icon
+										%a.btn.btn-lg.btn-success.margin-bottom{:href=>"/candidate_backend/tests/overview"}
+											Submit & Continue
+											%i.fa.fa-long-arrow-right
 
 				
 
