@@ -4,6 +4,8 @@
 //fonts
 
 
+
+
 @font-face {
     font-family: 'socialicoregular';
     src: url('../font/socialico-webfont.eot');
@@ -123,6 +125,8 @@ $medium-font-name:'museo_sans_500regular', Helvetica, Arial, sans-serif;
 $bold-font-name:'museo_sans_700regular', Helvetica, Arial, sans-serif;
 $extra-bold-font-name:'museo_sans_900regular', Helvetica, Arial, sans-serif;
 $social-font-name: 'socialicoregular';
+
+$icon-font-name: 'FontAwesome';
 // baseline
 
 $baseline: 24px;
@@ -688,9 +692,11 @@ a{
 
 .test-toggle-btn{
   .btn-icon{
+    margin-left:3px;
     &:after{
       width:10px;
-      content:"+";
+      font-family:$icon-font-name;
+      content:"\f096";
     }
   }
   &.active{
@@ -698,7 +704,8 @@ a{
     .btn-icon{
       width:20px;
       &:after{
-        content:"✓";
+        font-family:$icon-font-name;
+        content: "\f046";
       }
     }
   }
