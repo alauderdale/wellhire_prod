@@ -154,16 +154,26 @@
                     </div>
                   </div>
                   <div class='col-sm-8'>
-                    <p class='pull-right'>
-                      <button class='btn btn-lg btn-info margin-bottom test-toggle-btn half-margin-right' data-toggle='button'>
-                        Mark For Review
-                        <span class='btn-icon'></span>
-                      </button>
-                      <a class='btn btn-lg btn-success margin-bottom' href='/candidate_backend/tests/overview'>
-                        Submit & Continue
-                        <i class='fa fa-long-arrow-right'></i>
-                      </a>
-                    </p>
+                    <div class='pull-right'>
+                      <p class='pull-left'>
+                        <a class='btn btn-lg btn-info margin-bottom half-margin-right' href='/candidate_backend/tests/overview'>
+                          <i class='fa fa-long-arrow-left'></i>
+                          Prev
+                        </a>
+                        <div class='btn-group' data-toggle='buttons'>
+                          <label class='btn btn-lg btn-info margin-bottom test-toggle-btn half-margin-right'>
+                            <input type='checkbox'>
+                              Mark For Review
+                            </input>
+                            <span class='btn-icon'></span>
+                          </label>
+                        </div>
+                        <a class='btn btn-lg btn-success margin-bottom' href='/candidate_backend/tests/overview'>
+                          Submit & Continue
+                          <i class='fa fa-long-arrow-right'></i>
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

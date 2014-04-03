@@ -9,18 +9,7 @@
 
 %section
 	.container
-		.alert.alert-basic
-			.media
-				.pull-left
-					%h1.social-font-name.half-margin-right.no-margin-bottom{:style=>"font-size:4em;"}
-						i
-				.media-body
-					%strong
-						Include your LinkedIn profile along with your assessments
-					Click 
-					%a{:href=>"/candidate_backend/profile/linkedin"}
-						here 
-					to be redirected to the LinkedIn website to provide your signin credentials 
+		=partial"/candidate_backend/linkedin_alert" 
 		.row
 			.col-lg-12
 				.page-header.no-margin-bottom
