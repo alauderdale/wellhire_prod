@@ -949,6 +949,20 @@ footer{
     .chosen-container{
       width: auto!important;
     }
+    &.right{
+      top: -110px!important;
+      left: 87px;
+      .arrow{
+        left: -11px!important;
+        margin-top: -35px;
+        border-right-color:#bbb!important;
+        display:none;
+        &:after{
+          border-bottom-color:transparent!important;
+          border-right-color:tint($primary-color,95%)!important;
+        }
+      }
+    }
   }
 }
 

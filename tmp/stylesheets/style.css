@@ -876,210 +876,224 @@ footer {
   /* line 949, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .wh-table-filter-wrapper .wh-filter-show .chosen-container {
     width: auto !important; }
+  /* line 952, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  .wh-table-filter-wrapper .wh-filter-show.right {
+    top: -110px !important;
+    left: 87px; }
+    /* line 955, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+    .wh-table-filter-wrapper .wh-filter-show.right .arrow {
+      left: -11px !important;
+      margin-top: -35px;
+      border-right-color: #bbbbbb !important;
+      display: none; }
+      /* line 960, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+      .wh-table-filter-wrapper .wh-filter-show.right .arrow:after {
+        border-bottom-color: transparent !important;
+        border-right-color: #f2f9fb !important; }
 
-/* line 957, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 971, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 input.wh-table-search {
   background: url(../images/search.png) 10px center no-repeat;
   padding-left: 40px; }
 
-/* line 963, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 977, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .dataTables_filter {
   display: none !important; }
 
-/* line 967, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 981, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .dataTables_info {
   margin-top: 24px; }
 
-/* line 974, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 988, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 table.table ul.dropdown-menu {
   left: -85px !important; }
-/* line 977, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 991, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 table.table th {
   text-transform: uppercase;
   font-family: "museo_sans_100regular", Helvetica, Arial, sans-serif;
   background-color: #e5f3f8 !important;
   border-right: 1px solid #dddddd;
   color: #0089bc; }
-  /* line 983, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 997, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   table.table th:last-of-type {
     border-right: none; }
 
-/* line 990, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1004, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .vert-align-center {
   vertical-align: middle !important; }
 
-/* line 997, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1011, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .modal .modal-header {
   background-color: #fafafa;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px; }
-  /* line 1001, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1015, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .modal .modal-header h1 {
     color: #005f83; }
-/* line 1005, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1019, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .modal .modal-footer {
   background-color: #fafafa;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px; }
-/* line 1011, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1025, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .modal.modal-scroll .modal-body {
   max-height: 600px;
   overflow: scroll; }
 
-/* line 1018, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1032, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .modal-icon {
   font-size: 4em;
   position: relative; }
 
-/* line 1026, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1040, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .full-screen-modal {
   margin: 0;
   padding: 0; }
-  /* line 1029, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1043, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .full-screen-modal .modal-dialog {
     width: 100% !important;
     height: 100% !important;
     margin: 0;
     padding: 0;
     margin-top: -1px; }
-    /* line 1035, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+    /* line 1049, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
     .full-screen-modal .modal-dialog .modal-content {
       height: 100% !important;
       border-radius: 0; }
-      /* line 1040, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+      /* line 1054, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
       .full-screen-modal .modal-dialog .modal-content .modal-body {
         overflow: auto;
         height: 100% !important;
         padding-top: 52px;
         padding-bottom: 70px; }
-      /* line 1048, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+      /* line 1062, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
       .full-screen-modal .modal-dialog .modal-content .modal-header, .full-screen-modal .modal-dialog .modal-content .modal-footer {
         background-color: #001b25; }
-        /* line 1050, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+        /* line 1064, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
         .full-screen-modal .modal-dialog .modal-content .modal-header h1, .full-screen-modal .modal-dialog .modal-content .modal-header h2, .full-screen-modal .modal-dialog .modal-content .modal-header h3, .full-screen-modal .modal-dialog .modal-content .modal-header h4, .full-screen-modal .modal-dialog .modal-content .modal-header h5, .full-screen-modal .modal-dialog .modal-content .modal-header h6, .full-screen-modal .modal-dialog .modal-content .modal-header p, .full-screen-modal .modal-dialog .modal-content .modal-footer h1, .full-screen-modal .modal-dialog .modal-content .modal-footer h2, .full-screen-modal .modal-dialog .modal-content .modal-footer h3, .full-screen-modal .modal-dialog .modal-content .modal-footer h4, .full-screen-modal .modal-dialog .modal-content .modal-footer h5, .full-screen-modal .modal-dialog .modal-content .modal-footer h6, .full-screen-modal .modal-dialog .modal-content .modal-footer p {
           color: white; }
-      /* line 1054, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+      /* line 1068, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
       .full-screen-modal .modal-dialog .modal-content .close {
         color: white;
         text-shadow: none;
         opacity: 1;
         margin-top: 3px; }
 
-/* line 1066, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1080, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .front-modal {
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.4); }
 
-/* line 1073, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1087, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .progress-indacator {
   background: #00445e url(../images/test-links/progress_indicator_bg.png) repeat-x 0px 35px;
   padding: 0; }
-  /* line 1076, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1090, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .progress-indacator .label-default {
     color: black; }
-  /* line 1080, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1094, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .progress-indacator p .step-text {
     padding: 3px 8px;
     border-radius: 100px; }
-    /* line 1083, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+    /* line 1097, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
     .progress-indacator p .step-text.active {
       background-color: #002938; }
-    /* line 1086, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+    /* line 1100, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
     .progress-indacator p .step-text a {
       color: white;
       text-decoration: none; }
-      /* line 1089, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+      /* line 1103, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
       .progress-indacator p .step-text a:hover {
         text-decoration: underline; }
-  /* line 1095, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1109, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .progress-indacator .label {
     border: 4px solid #003d54; }
 
-/* line 1103, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1117, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .wh-activity-stream i {
   font-size: 2em;
   position: relative;
   top: 3px; }
-  /* line 1109, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1123, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .wh-activity-stream i.fa-check {
     color: #61cd40; }
-/* line 1113, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1127, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .wh-activity-stream .stream-item-text {
   padding-right: 100px; }
-/* line 1116, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1130, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .wh-activity-stream .stream-item-date {
   margin-top: 8px; }
 
-/* line 1123, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1137, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .large-icon {
   font-size: 4em; }
 
-/* line 1127, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1141, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .candidate-test-icon-default {
   color: #0089bc !important; }
 
-/* line 1130, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+/* line 1144, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
 .candidate-test-icon-success {
   color: green !important; }
 
 @media (max-width: 992px) {
-  /* line 1149, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1163, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .main-nav i {
     display: none !important; }
-  /* line 1152, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1166, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .main-nav a.navbar-item {
     padding: 24px 12px !important; } }
 @media (max-width: 768px) {
-  /* line 1167, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1181, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   h1.main-page-header {
     margin-bottom: 0 !important; }
 
-  /* line 1172, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1186, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   ul.nav-pills.sub-nav-links {
     font-size: .8em; }
 
-  /* line 1177, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1191, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .wh-table-search-wrapper {
     width: 100% !important;
     margin-bottom: 0; }
 
-  /* line 1182, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1196, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   section {
     padding: 12px 0; }
 
-  /* line 1185, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1199, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .navbar-brand {
     padding-top: 5px; }
-    /* line 1187, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+    /* line 1201, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
     .navbar-brand .logo {
       width: 82px;
       background-size: 99.9%;
       margin-top: 10px; }
 
-  /* line 1194, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1208, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   body {
     padding-top: 70px; } }
 @media (max-width: 480px) {
-  /* line 1203, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1217, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .pull-left-xs {
     float: left !important; } }
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 1216, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1230, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .modal-scroll .modal-body {
     max-height: 450px !important;
     overflow: scroll; } }
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* line 1229, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1243, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .modal-scroll .modal-body {
     max-height: 700px !important;
     overflow: scroll; }
 
-  /* line 1234, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1248, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .wh-table-filter-button {
     margin-bottom: 24px !important; }
 
-  /* line 1237, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
+  /* line 1251, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/style.css.scss */
   .logo-sm {
     top: 15px; } }
