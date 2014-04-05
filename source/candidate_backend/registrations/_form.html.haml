@@ -1,0 +1,49 @@
+%form.form-horizontal{role: "form"}
+	.form-group
+		%label.col-sm-3.control-label 
+			%span.text-danger
+				* 
+			Your Email
+		.col-sm-9
+			%input.form-control{placeholder: "Ex: john@doe.com"}
+	.form-group
+		%label.col-sm-3.control-label 
+			%span.text-danger
+				* 
+			Confirm Email
+		.col-sm-9
+			%input.form-control
+	.form-group
+		%label.col-sm-3.control-label 
+			%span.text-danger
+				* 
+			First Name
+		.col-sm-9
+			%input.form-control
+	.form-group
+		%label.col-sm-3.control-label 
+			%span.text-danger
+				* 
+			Last Name
+		.col-sm-9
+			%input.form-control
+	.form-group
+		%label.col-sm-3.control-label 
+			Phone Number
+		.col-sm-9
+			%input.form-control
+	.form-group
+		%label.col-sm-3.control-label 
+			Zip Code
+		.col-sm-9
+			%input.form-control
+	.form-group
+		.col-sm-12
+			%p
+				%small
+					Once you confirm your information, we'll send a PIN to your email address should you need to return in the future. Check your junk mail for a message from Wellhire Support in the event you do not receive it immediately. 
+	.form-group
+		.col-sm-12
+			%a.btn.btn-primary.pull-right{:href=>"","data-toggle"=>"modal", "data-target"=>"#confirmSignUpModal"}
+				Review & Confirm
+				%i.fa.fa-angle-double-right
