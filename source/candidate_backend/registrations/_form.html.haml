@@ -1,42 +1,83 @@
-%form.form-horizontal{role: "form"}
+:javascript
+	$(document).ready(function() {
+		$('#candidateregisterform').bootstrapValidator({
+			message: 'This value is not valid',
+			feedbackIcons: {
+				valid: 'fa fa-check',
+				invalid: 'fa fa-times',
+				validating: 'fa fa-refresh'
+			},
+			fields: {
+				email: {
+					message: 'The email is not valid',
+					validators: {
+						notEmpty: {
+							message: 'Email is required and cannot be empty'
+						},
+						emailAddress: {
+							message: 'The input is not a valid email address'
+						}
+					}
+				},
+				email_confirm: {
+					message: 'The email is not valid',
+					validators: {
+						notEmpty: {
+							message: 'confirm email is required and cannot be empty'
+						},
+						identical: {
+							field: 'email',
+							message: 'please make sure the emails match'
+						},
+						emailAddress: {
+							message: 'The input is not a valid email address'
+						}
+					}
+				}
+			}
+		});
+	});
+
+
+%form.form-horizontal#candidateregisterform{role: "form"}
 	.form-group
 		%label.col-sm-3.control-label 
 			%span.text-danger
 				* 
 			Your Email
 		.col-sm-9
-			%input.form-control{placeholder: "Ex: john@doe.com"}
+			%input.form-control{placeholder: "Ex: john@doe.com", name:"email", type:"text"}
 	.form-group
 		%label.col-sm-3.control-label 
 			%span.text-danger
 				* 
 			Confirm Email
 		.col-sm-9
-			%input.form-control
+			%input.form-control{placeholder: "Ex: john@doe.com", name:"email_confirm"}
 	.form-group
 		%label.col-sm-3.control-label 
 			%span.text-danger
 				* 
 			First Name
 		.col-sm-9
-			%input.form-control
+			%input.form-control{name:"first_name"}
 	.form-group
 		%label.col-sm-3.control-label 
 			%span.text-danger
 				* 
 			Last Name
 		.col-sm-9
-			%input.form-control
+			%input.form-control{name:"last_name"}
 	.form-group
 		%label.col-sm-3.control-label 
 			Phone Number
 		.col-sm-9
-			%input.form-control
+			%input.form-control{name:"phone"}
 	.form-group
 		%label.col-sm-3.control-label 
 			Zip Code
 		.col-sm-9
-			%input.form-control
+			%input.form-control{name:"zip"}
 	.form-group
 		.col-sm-12
 			%p
@@ -44,6 +85,7 @@
 					Once you confirm your information, we'll send a PIN to your email address should you need to return in the future. Check your junk mail for a message from Wellhire Support in the event you do not receive it immediately. 
 	.form-group
 		.col-sm-12
-			%a.btn.btn-primary.pull-right{:href=>"","data-toggle"=>"modal", "data-target"=>"#confirmSignUpModal"}
+			/ %button.btn.btn-primary.pull-right{:type=>"submit","data-toggle"=>"modal", "data-target"=>"#confirmSignUpModal"}
+			%button.btn.btn-primary.pull-right{:type=>"submit"}
 				Review & Confirm
 				%i.fa.fa-angle-double-right
