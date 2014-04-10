@@ -1,5 +1,8 @@
 :javascript
 	$(document).ready(function() {
+
+
+		//setup the form validation
 		$('#candidateregisterform').bootstrapValidator({
 			message: 'This value is not valid',
 			feedbackIcons: {
@@ -23,19 +26,57 @@
 					message: 'The email is not valid',
 					validators: {
 						notEmpty: {
-							message: 'confirm email is required and cannot be empty'
+							message: 'Confirm email is required and cannot be empty'
 						},
 						identical: {
 							field: 'email',
-							message: 'please make sure the emails match'
+							message: 'Please make sure the emails match'
 						},
 						emailAddress: {
 							message: 'The input is not a valid email address'
 						}
 					}
+				},
+				first_name: {
+					message: 'The input is not valid',
+					validators: {
+						notEmpty: {
+							message: 'First Name is required and cannot be empty'
+						}
+					}
+				},
+				last_name: {
+					message: 'The input is not valid',
+					validators: {
+						notEmpty: {
+							message: 'Last Name is required and cannot be empty'
+						}
+					}
+				},
+				phone: {
+					message: 'The input is not valid',
+					validators: {
+						phone: {
+							message: 'Please make sure you are using a valid phone'
+						}
+					}
+				},
+				zip: {
+					message: 'The input is not valid',
+					validators: {
+						zipCode: {
+							message: 'Please make sure you are using a valid zip code'
+						}
+					}
 				}
 			}
 		});
+
+		///make sure we dont show the modal until all is well
+			$('.confirm-button').click(function(){
+				$('#confirmSignUpModal').modal('show');
+			});
+
 	});
 
 
@@ -72,7 +113,7 @@
 		%label.col-sm-3.control-label 
 			Phone Number
 		.col-sm-9
-			%input.form-control{name:"phone"}
+			%input.form-control{name:"phone",placeholder: "Ex: 3334445555",}
 	.form-group
 		%label.col-sm-3.control-label 
 			Zip Code
@@ -85,7 +126,7 @@
 					Once you confirm your information, we'll send a PIN to your email address should you need to return in the future. Check your junk mail for a message from Wellhire Support in the event you do not receive it immediately. 
 	.form-group
 		.col-sm-12
-			/ %button.btn.btn-primary.pull-right{:type=>"submit","data-toggle"=>"modal", "data-target"=>"#confirmSignUpModal"}
-			%button.btn.btn-primary.pull-right{:type=>"submit"}
+			/ %a.btn.btn-primary.pull-right{:type=>"submit","data-toggle"=>"modal", "data-target"=>"#confirmSignUpModal"}
+			%button.btn.btn-primary.pull-right.confirm-button{:type=>"submit"}
 				Review & Confirm
 				%i.fa.fa-angle-double-right
