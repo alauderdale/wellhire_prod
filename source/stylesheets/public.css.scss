@@ -790,8 +790,8 @@ footer{
 //hero
 
 #home-hero{
-  background:url(../images/public/home_bg.jpg) $primary-color no-repeat scroll center top;
-  background-size: cover;
+  background:url(../images/public/home_bg.jpg) $primary-color no-repeat fixed center top;
+  @include background-size(cover);
   text-align:center;
   text-shadow:0 1px 6px rgba(0,0,0,.2);
   .btn{
@@ -1222,6 +1222,37 @@ footer{
 
 }
 
-@media (max-width: 320px) {
+//responsify
+
+
+//lg
+@media (max-width: 1200px) {
+
+
+}
+
+//md
+@media (max-width: 992px) {
+
+
+
+}
+
+
+//sm
+@media (max-width: 768px) {
+
+#home-hero{
+  background-attachment:scroll;
+}
+
+
+}
+
+
+//xs
+@media (max-width: 480px) {
+
+
 
 }
