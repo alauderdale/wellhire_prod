@@ -3,6 +3,7 @@
 
 
 		//setup the form validation
+
 		$('#candidateregisterform').bootstrapValidator({
 			message: 'This value is not valid',
 			feedbackIcons: {
@@ -16,6 +17,10 @@
 					validators: {
 						notEmpty: {
 							message: 'Email is required and cannot be empty'
+						},
+						identical: {
+							field: 'email_confirm',
+							message: 'Please make sure the emails match'
 						},
 						emailAddress: {
 							message: 'The input is not a valid email address'
@@ -52,30 +57,73 @@
 							message: 'Last Name is required and cannot be empty'
 						}
 					}
-				},
-				phone: {
-					message: 'The input is not valid',
-					validators: {
-						phone: {
-							message: 'Please make sure you are using a valid phone'
-						}
-					}
-				},
-				zip: {
-					message: 'The input is not valid',
-					validators: {
-						zipCode: {
-							message: 'Please make sure you are using a valid zip code'
-						}
-					}
 				}
 			}
 		});
 
-		///make sure we dont show the modal until all is well
-			$('.confirm-button').click(function(){
+		$('.confirm-button').click(function(){
+
+			if ($('#candidateregisterform').data('bootstrapValidator').isValid())
+		  {
+		  	//once things look good fire the modal
 				$('#confirmSignUpModal').modal('show');
-			});
+				return false;
+		  }
+		  else
+		  {
+		  	//if the form is incomplete show the user where
+			  $('#candidateregisterform').data('bootstrapValidator').validate();
+		  }
+
+		});
+
+
+		//make sure we show something if nothing is entered in phone and zip
+
+		var phoneInput = $('#phone').val();
+		if(phoneInput == ''){
+			$( "#phone_show" ).text( "not entered" );
+		}  
+
+		var zipInput = $('#zip').val();
+		if(phoneInput == ''){
+			$( "#zip_show" ).text( "not entered" );
+		}  
+
+		//display the input vals in the modal
+
+		$( "input#email" )
+		.keyup(function() {
+		var value = $( this ).val();
+		$( "#email_show" ).text( value );
+		})
+
+
+		$( "input#first_name" )
+		.keyup(function() {
+		var value = $( this ).val();
+		$( "#first_name_show" ).text( value );
+		})
+
+
+		$( "input#last_name" )
+		.keyup(function() {
+		var value = $( this ).val();
+		$( "#last_name_show" ).text( value );
+		})
+
+		$( "input#phone" )
+		.keyup(function() {
+		var value = $( this ).val();
+		$( "#phone_show" ).text( value );
+		})
+
+		$( "input#zip" )
+		.keyup(function() {
+		var value = $( this ).val();
+		$( "#zip_show" ).text( value );
+		})
+
 
 	});
 
@@ -87,38 +135,38 @@
 				* 
 			Your Email
 		.col-sm-9
-			%input.form-control{placeholder: "Ex: john@doe.com", name:"email", type:"text"}
+			%input.form-control#email{placeholder: "Ex: john@doe.com", name:"email", type:"text"}
 	.form-group
 		%label.col-sm-3.control-label 
 			%span.text-danger
 				* 
 			Confirm Email
 		.col-sm-9
-			%input.form-control{placeholder: "Ex: john@doe.com", name:"email_confirm"}
+			%input.form-control#email_confirm{placeholder: "Ex: john@doe.com", name:"email_confirm"}
 	.form-group
 		%label.col-sm-3.control-label 
 			%span.text-danger
 				* 
 			First Name
 		.col-sm-9
-			%input.form-control{name:"first_name"}
+			%input.form-control#first_name{name:"first_name"}
 	.form-group
 		%label.col-sm-3.control-label 
 			%span.text-danger
 				* 
 			Last Name
 		.col-sm-9
-			%input.form-control{name:"last_name"}
+			%input.form-control#last_name{name:"last_name"}
 	.form-group
 		%label.col-sm-3.control-label 
 			Phone Number
 		.col-sm-9
-			%input.form-control{name:"phone",placeholder: "Ex: 3334445555",}
+			%input.form-control#phone{name:"phone",placeholder: "Ex: 3334445555",}
 	.form-group
 		%label.col-sm-3.control-label 
 			Zip Code
 		.col-sm-9
-			%input.form-control{name:"zip"}
+			%input.form-control#zip{name:"zip"}
 	.form-group
 		.col-sm-12
 			%p
@@ -127,6 +175,6 @@
 	.form-group
 		.col-sm-12
 			/ %a.btn.btn-primary.pull-right{:type=>"submit","data-toggle"=>"modal", "data-target"=>"#confirmSignUpModal"}
-			%button.btn.btn-primary.pull-right.confirm-button{:type=>"submit"}
+			%button.btn.btn-primary.pull-right.confirm-button{ :type=>"submit"}
 				Review & Confirm
 				%i.fa.fa-angle-double-right
