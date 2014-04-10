@@ -52,6 +52,7 @@
                   
                   
                   	//setup the form validation
+                  
                   	$('#candidateregisterform').bootstrapValidator({
                   		message: 'This value is not valid',
                   		feedbackIcons: {
@@ -65,6 +66,10 @@
                   				validators: {
                   					notEmpty: {
                   						message: 'Email is required and cannot be empty'
+                  					},
+                  					identical: {
+                  						field: 'email_confirm',
+                  						message: 'Please make sure the emails match'
                   					},
                   					emailAddress: {
                   						message: 'The input is not a valid email address'
@@ -101,30 +106,73 @@
                   						message: 'Last Name is required and cannot be empty'
                   					}
                   				}
-                  			},
-                  			phone: {
-                  				message: 'The input is not valid',
-                  				validators: {
-                  					phone: {
-                  						message: 'Please make sure you are using a valid phone'
-                  					}
-                  				}
-                  			},
-                  			zip: {
-                  				message: 'The input is not valid',
-                  				validators: {
-                  					zipCode: {
-                  						message: 'Please make sure you are using a valid zip code'
-                  					}
-                  				}
                   			}
                   		}
                   	});
                   
-                  	///make sure we dont show the modal until all is well
-                  		$('.confirm-button').click(function(){
+                  	$('.confirm-button').click(function(){
+                  
+                  		if ($('#candidateregisterform').data('bootstrapValidator').isValid())
+                  	  {
+                  	  	//once things look good fire the modal
                   			$('#confirmSignUpModal').modal('show');
-                  		});
+                  			return false;
+                  	  }
+                  	  else
+                  	  {
+                  	  	//if the form is incomplete show the user where
+                  		  $('#candidateregisterform').data('bootstrapValidator').validate();
+                  	  }
+                  
+                  	});
+                  
+                  
+                  	//make sure we show something if nothing is entered in phone and zip
+                  
+                  	var phoneInput = $('#phone').val();
+                  	if(phoneInput == ''){
+                  		$( "#phone_show" ).text( "not entered" );
+                  	}  
+                  
+                  	var zipInput = $('#zip').val();
+                  	if(phoneInput == ''){
+                  		$( "#zip_show" ).text( "not entered" );
+                  	}  
+                  
+                  	//display the input vals in the modal
+                  
+                  	$( "input#email" )
+                  	.keyup(function() {
+                  	var value = $( this ).val();
+                  	$( "#email_show" ).text( value );
+                  	})
+                  
+                  
+                  	$( "input#first_name" )
+                  	.keyup(function() {
+                  	var value = $( this ).val();
+                  	$( "#first_name_show" ).text( value );
+                  	})
+                  
+                  
+                  	$( "input#last_name" )
+                  	.keyup(function() {
+                  	var value = $( this ).val();
+                  	$( "#last_name_show" ).text( value );
+                  	})
+                  
+                  	$( "input#phone" )
+                  	.keyup(function() {
+                  	var value = $( this ).val();
+                  	$( "#phone_show" ).text( value );
+                  	})
+                  
+                  	$( "input#zip" )
+                  	.keyup(function() {
+                  	var value = $( this ).val();
+                  	$( "#zip_show" ).text( value );
+                  	})
+                  
                   
                   });
                 </script>
@@ -137,7 +185,7 @@
                       Your Email
                     </label>
                     <div class='col-sm-9'>
-                      <input class='form-control' name='email' placeholder='Ex: john@doe.com' type='text'>
+                      <input class='form-control' id='email' name='email' placeholder='Ex: john@doe.com' type='text'>
                     </div>
                   </div>
                   <div class='form-group'>
@@ -148,7 +196,7 @@
                       Confirm Email
                     </label>
                     <div class='col-sm-9'>
-                      <input class='form-control' name='email_confirm' placeholder='Ex: john@doe.com'>
+                      <input class='form-control' id='email_confirm' name='email_confirm' placeholder='Ex: john@doe.com'>
                     </div>
                   </div>
                   <div class='form-group'>
@@ -159,7 +207,7 @@
                       First Name
                     </label>
                     <div class='col-sm-9'>
-                      <input class='form-control' name='first_name'>
+                      <input class='form-control' id='first_name' name='first_name'>
                     </div>
                   </div>
                   <div class='form-group'>
@@ -170,7 +218,7 @@
                       Last Name
                     </label>
                     <div class='col-sm-9'>
-                      <input class='form-control' name='last_name'>
+                      <input class='form-control' id='last_name' name='last_name'>
                     </div>
                   </div>
                   <div class='form-group'>
@@ -178,7 +226,7 @@
                       Phone Number
                     </label>
                     <div class='col-sm-9'>
-                      <input class='form-control' name='phone' placeholder='Ex: 3334445555'>
+                      <input class='form-control' id='phone' name='phone' placeholder='Ex: 3334445555'>
                     </div>
                   </div>
                   <div class='form-group'>
@@ -186,7 +234,7 @@
                       Zip Code
                     </label>
                     <div class='col-sm-9'>
-                      <input class='form-control' name='zip'>
+                      <input class='form-control' id='zip' name='zip'>
                     </div>
                   </div>
                   <div class='form-group'>
@@ -224,41 +272,31 @@
                           <dt>
                             Candidate Email:
                           </dt>
-                          <dd>
-                            john@doe.com
-                          </dd>
+                          <dd id='email_show'></dd>
                         </div>
                         <div class='half-margin-bottom'>
                           <dt>
                             First Name:
                           </dt>
-                          <dd>
-                            john
-                          </dd>
+                          <dd id='first_name_show'></dd>
                         </div>
                         <div class='half-margin-bottom'>
                           <dt>
                             Last Name:
                           </dt>
-                          <dd>
-                            Doe
-                          </dd>
+                          <dd id='last_name_show'></dd>
                         </div>
                         <div class='half-margin-bottom'>
                           <dt>
                             Phone Number:
                           </dt>
-                          <dd>
-                            970.333.3333
-                          </dd>
+                          <dd id='phone_show'></dd>
                         </div>
                         <div class='half-margin-bottom'>
                           <dt>
                             Zip Code:
                           </dt>
-                          <dd>
-                            88888
-                          </dd>
+                          <dd id='zip_show'></dd>
                         </div>
                       </dl>
                     </div>
