@@ -20,7 +20,7 @@
     <script src="../javascripts/lib/bootstrap.js" type="text/javascript"></script>
     <script src="../javascripts/public.js" type="text/javascript"></script>
   </head>
-  <body class='sign_up sign_up_index'>
+  <body class='thank_you thank_you_index'>
     <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class='container'>
@@ -71,191 +71,28 @@
       </div>
     </nav>
     <!-- end menu -->
-    <section class='no-padding-top'>
+    <section class='padding-top'>
       <div class='container'>
         <div class='row'>
           <div class='col-lg-12'>
-            <div class='page-header margin-bottom inline-block full-width'>
+            <div class='well white-bg double-padded double-margin-bottom text-center'>
               <div class='row'>
-                <div class='col-sm-6'>
-                  <h2 class='no-margin-bottom'>
-                    Let's Get Started
-                  </h2>
+                <div class='col-sm-2'></div>
+                <div class='col-sm-8'>
+                  <img class="img-responsive margin-bottom" src="../images/public/welcome_2.png" />
                 </div>
-                <div class='col-sm-6'>
-                  <p class='no-margin-bottom half-margin-top text-right'>
-                    Already a member?
-                    <a href='/log_in'>
-                      Log In Instead
-                    </a>
-                  </p>
-                </div>
+                <div class='col-sm-2'></div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class='row'>
-          <div class='col-lg-12'>
-            <div class='off-white-bg double-padded double-margin-bottom text-center'>
-              <h5>
-                Simple Billing. Free 2-Day Trial.
-              </h5>
-              <p>
-                <strong class='primary-text-color'>
-                  $9.99
-                </strong>
-                per month.
-                <strong>
-                  2
-                </strong>
-                Completed Tests Per Month.
-                <strong class='primary-text-color'>
-                  $19.99
-                </strong>
-                for each additional test.
-                <strong>
-                  Includes all Wellhire features, prioritized support, risk free. Cancel any time.
-                </strong>
+              <h1 class='half-margin-bottom'>
+                Welcome to wellhire
+              </h1>
+              <p class='regular-font-name lead'>
+                Let's get started with yout Free 2-Day Trial.
               </p>
+              <a class='btn btn-primary' href='/dashboard'>
+                COntinue to Trial
+              </a>
             </div>
-          </div>
-        </div>
-        <div class='row' id='sign-up'>
-          <div class='col-sm-8'>
-            <div class='double-margin-bottom'>
-              <p class='double-margin-bottom'>
-                The Basics
-              </p>
-              <form class='form-horizontal' role='form'>
-                <!-- email -->
-                <div class='form-group has-success'>
-                  <lebel class='col-sm-4 control-label'>
-                    Email
-                  </lebel>
-                  <div class='col-sm-8'>
-                    <input class='input-lg form-control' placeholder='ex:John@doe.com' type='email'>
-                  </div>
-                </div>
-                <!-- first name -->
-                <div class='form-group has-error'>
-                  <lebel class='col-sm-4 control-label'>
-                    First Name
-                  </lebel>
-                  <div class='col-sm-8'>
-                    <input class='input-lg form-control'>
-                  </div>
-                </div>
-                <!-- last name -->
-                <div class='form-group has-warning'>
-                  <lebel class='col-sm-4 control-label'>
-                    Last Name
-                  </lebel>
-                  <div class='col-sm-8'>
-                    <input class='input-lg form-control'>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class='double-margin-bottom'>
-              <p class='double-margin-bottom'>
-                Payment Information
-              </p>
-              <form class='form-horizontal' role='form'>
-                <!-- card type -->
-                <div class='form-group'>
-                  <lebel class='col-sm-4 control-label'>
-                    Card Type
-                  </lebel>
-                  <div class='col-sm-8'>
-                    <select class='input-lg form-control'>
-                      <option>
-                        Visa
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <!-- card number -->
-                <div class='form-group'>
-                  <lebel class='col-sm-4 control-label'>
-                    Card Number
-                  </lebel>
-                  <div class='col-sm-8'>
-                    <input class='input-lg form-control'>
-                  </div>
-                </div>
-                <!-- expiration date -->
-                <div class='form-group'>
-                  <lebel class='col-sm-4 control-label'>
-                    Expiration Date
-                  </lebel>
-                  <div class='col-sm-8'>
-                    <div class='row'>
-                      <div class='col-sm-6'>
-                        <select class='input-lg form-control margin-bottom'>
-                          <option>
-                            01-Jan
-                          </option>
-                        </select>
-                      </div>
-                      <div class='col-sm-6'>
-                        <select class='input-lg form-control'>
-                          <option>
-                            2016
-                          </option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- card type -->
-                <div class='form-group'>
-                  <lebel class='col-sm-4 control-label'>
-                    CVV2 Code
-                  </lebel>
-                  <div class='col-sm-8'>
-                    <input class='input-lg form-control'>
-                  </div>
-                </div>
-                <div class='form-group'>
-                  <div class='col-sm-12'>
-                    <a class='btn btn-primary pull-right' href='/thank_you'>
-                      Sign Up
-                    </a>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class='col-sm-1'></div>
-          <div class='col-sm-3'>
-            <div class='testimonial double-margin-bottom double-margin-top'>
-              <div class='padded testimonial-bub double-margin-bottom'>
-                <p>
-                  Lorem ipsum dolor sit amet, consecur aiscing elit.
-                </p>
-              </div>
-              <div class='row'>
-                <div class='col-xs-4'>
-                  <img class='img-circle full-width-image' src='images/public/avatar.png'>
-                </div>
-                <div class='col-xs-8'>
-                  <h5 class='no-margin-bottom'>
-                    John Smith
-                  </h5>
-                  <h6>
-                    Title
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <h5>
-              If its free to start, why do we ask?
-            </h5>
-            <p>
-              Should you decide to use Wellhire beyond the free trial period,
-              we'll use this payment method to charge your account and avoid
-              any disruption to your service.
-            </p>
           </div>
         </div>
       </div>
