@@ -920,22 +920,46 @@ footer{
   #pricing{
     background:url(../images/public/pricing-clouds.png) center no-repeat $primary-color;
   }
-p.best-val-label{
-  background-color:$secondary-color;
-  margin-bottom:-20px;
-  float: left;
-  width: 100%;
-  padding:$baseline/6 0;
-  position:relative;
-  font-size:.6em;
-  font-family:$extra-bold-font-name!important;
-  color:white;
-}
 .price-tier{
-  border:1px solid $gray-color;
+  border:3px solid $gray-color;
+  @include transition-duration(.2s);
+    &:hover{
+      border-color:$tertiary-color!important;
+    }
     p{
       font-size:.75em!important;
       line-height:20px;
+      &.best-val-label{
+        background-color:$primary-color;
+        margin-bottom:-20px;
+        float: left;
+        width: 100%;
+        padding:$baseline/6 0;
+        position:relative;
+        font-size:.6em;
+        font-family:$extra-bold-font-name!important;
+        color:white;
+      }
+    }
+    &.price-selectable{
+      cursor:pointer;
+    }
+    &.price-selected, &.price-selected:hover{
+      border-color:$success-color!important;
+    }
+    &.price-selected{
+      &:before{
+        content:'✓';
+        text-align:center;
+        padding:5px 10px;
+        color:white;
+        background-color:$success-color;
+        position: absolute;
+        top: -15px;
+        left:3px;
+        border-radius:100px;
+        z-index: 9999;
+      }
     }
   .price-table{
     h1{
@@ -949,9 +973,6 @@ p.best-val-label{
     }
     .price-points{
       margin-top:-$baseline*3.5;
-    }
-    &.best-val{
-      border:3px solid $secondary-color;
     }
 }
 

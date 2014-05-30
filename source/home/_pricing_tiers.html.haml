@@ -1,8 +1,17 @@
+:javascript
+	$(document).ready(function(){
+		$('.price-selectable').click(function(){
+			$('.price-selectable').removeClass('price-selected');
+			$(this).addClass('price-selected');
+		});
+	});
+
+
 
 .row
 	-3.times do
 		.col-md-3
-			.double-margin-bottom.price-tier
+			.double-margin-bottom.price-tier.price-selectable
 				.off-white-bg.padded.price-table.no-padding-bottom.margin-bottom.double-padding-top
 					.text-center
 						.margin-bottom
@@ -29,9 +38,9 @@
 									UNLIMITED
 								Member Accounts.
 	.col-md-3
-		%p.text-center.best-val-label
-			Most Popular
-		.double-margin-bottom.price-tier.best-val
+		.double-margin-bottom.price-tier.best-val.price-selectable
+			%p.text-center.best-val-label
+				Most Popular
 			.off-white-bg.padded.price-table.no-padding-bottom.margin-bottom.double-padding-top
 				.text-center
 					.margin-bottom
