@@ -111,6 +111,7 @@ $yellow-color:#ffd266;
 $text-color: #555555;
 $dark-text-color: #4a4a4a;
 $black-color:#111111;
+$success-color:#a8d587;
 
 
 // font vars
@@ -918,20 +919,41 @@ footer{
 //pricing
   #pricing{
     background:url(../images/public/pricing-clouds.png) center no-repeat $primary-color;
-    .price-table{
-      h1{
-        font-family:$light-font-name;
-        color:$primary-color!important;
-        font-size:3em;
-      }
-      h2{
-        font-size:1.5em;
-      }
+  }
+p.best-val-label{
+  background-color:$secondary-color;
+  margin-bottom:-20px;
+  float: left;
+  width: 100%;
+  padding:$baseline/6 0;
+  position:relative;
+  font-size:.6em;
+  font-family:$extra-bold-font-name!important;
+  color:white;
+}
+.price-tier{
+  border:1px solid $gray-color;
+    p{
+      font-size:.75em!important;
+      line-height:20px;
+    }
+  .price-table{
+    h1{
+      font-family:$light-font-name;
+      color:$primary-color!important;
+      font-size:3em;
+    }
+    h2{
+      font-size:1.5em;
+    }
     }
     .price-points{
       margin-top:-$baseline*3.5;
     }
-  }
+    &.best-val{
+      border:3px solid $secondary-color;
+    }
+}
 
 //testimonials
 
