@@ -621,6 +621,10 @@ a{
       color:rgba(255,255,255,.7);
     }
   }
+  &.no-decoration{
+    text-decoration:none;
+    display:block!important;
+  }
 }
 
 //buttons
