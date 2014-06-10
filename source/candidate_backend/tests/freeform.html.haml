@@ -22,16 +22,21 @@
 					.test-freeform.margin-bottom
 						.row
 							.col-sm-6
-								%form.margin-bottom
-									.form-group
-										%h4
-											1. What's Your Favorite...
-										%textarea.form-control{:rows=>"5"}
-								%form.margin-bottom
-									.form-group
-										%h4
-											2. What's Your Favorite...
-										%textarea.form-control{:rows=>"5"}
+								-2.times do
+									%form.margin-bottom
+										.form-group
+											%h4
+												1. What's Your Favorite...
+											%textarea.form-control{:rows=>"5"}
+											.dotted-border.well.quarter-margin-top
+												%p
+													%i.fa.fa-video-camera
+													Answer with a video by 
+													%a{:href=>"#"}
+														Selecting files from your computer... 
+													or
+													%a{:href=>"#"}
+														Capturing a video now...
 							.col-sm-6
 				%hr
 				.test-footer
