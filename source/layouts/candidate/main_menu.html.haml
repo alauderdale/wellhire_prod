@@ -20,6 +20,10 @@
           %a.navbar-item{href: "/candidate_backend/profile/show"} 
             %i.fa.fa-user
             My Profile
+        %li{:class => (current_page.data.activeclass === "interview") ? "active" : ""}
+          %a.navbar-item{href: "/candidate_backend/interview/show"} 
+            %i.fa.fa-clipboard
+            My Interview
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
           %a.dropdown-toggle.navbar-item{"data-toggle" => "dropdown", href: "#"}
