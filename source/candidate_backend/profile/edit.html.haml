@@ -69,12 +69,38 @@
 							.col-xs-6
 								%input.form-control
 							.col-xs-3
-						.form-group
+						.form-group#video
 							%label.col-xs-3.control-label 
 								Interests
 							.col-xs-6
 								%textarea.form-control{:rows=>"4"}
 							.col-xs-3
+						%p.double-margin-bottom
+							About Me Video
+						.form-group
+							%label.col-xs-3.control-label 
+								video
+							.col-xs-6
+								=image_tag"/images/video-default.png",:class=>"img-rounded avatar-md video-placeholder"
+								%p.quarter-margin-bottom.quarter-margin-top
+									%a.btn.btn-default{"data-toggle"=>"modal", :href=>"/video/new", "data-target"=>"#videoModal"}
+										Record new video
+								%p
+									%small.text-info
+									Record a short video about yourself. Max length 2:00min
+						.form-group
+							%label.col-xs-3.control-label 
+								video
+							.col-xs-6
+								=image_tag"http://abshirepr.com/wp-content/uploads/2013/10/Bill-Kenney-headshot-1024x683.jpg",:class=>"img-rounded avatar-md"
+								%p.no-margin-bottom.quarter-margin-top
+									%i.fa.fa-video-camera.half-margin-bottom
+									Video From Jan. 20, 2014 4:00:22pm
+									%br
+									%a.btn.btn-info{:href=>"#"}
+										Delete
+									%a.btn.btn-default{"data-toggle"=>"modal", :href=>"/video/new", "data-target"=>"#videoModal"}
+										Record new video
 						%p.double-margin-bottom
 							Work Expierence
 						.form-group

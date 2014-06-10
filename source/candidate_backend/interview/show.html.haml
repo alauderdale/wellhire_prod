@@ -1,9 +1,9 @@
 ;;;
 
-"title": "Test: Business Essentials", 
+"title": "My Interview", 
 "layout": "candidate",
-"activeclass": "tests"
-	
+"activeclass": "interview"
+
 ;;;
 
 
@@ -13,12 +13,12 @@
 			.col-lg-12
 				.page-header
 					%h1.no-margin-bottom.pull-left
-						Test In Progress
+						My interview
 					.clearfix
 				.test-question-container.margin-top
 					.margin-bottom
 						%p
-							Freeform Questions
+							Interview Questions
 					.test-freeform.margin-bottom
 						.row
 							.col-sm-6
@@ -44,6 +44,17 @@
 												Video From Jan. 20, 2014 4:00:22pm
 												%a{:href=>"#"}
 													%i.fa.fa-times-circle.text-danger
+									%form.margin-bottom
+									.form-group
+										%h4
+											3. What's Your Favorite...
+										%textarea.form-control{:rows=>"5"}
+										.dotted-border.well.quarter-margin-top
+											%p.no-margin-bottom
+												%i.fa.fa-video-camera
+												Answer with a video by 
+												%a{"data-toggle"=>"modal", :href=>"/video/new", "data-target"=>"#videoModal"}
+													Capturing a video now...
 							.col-sm-6
 				%hr
 				.test-footer
@@ -51,10 +62,5 @@
 						.col-sm-4
 						.col-sm-8
 							%p.pull-right
-								%a.btn.btn-lg.btn-success.margin-bottom{:href=>"/candidate_backend/tests/feedback"}
-									Submit Responses & Give Feedback
-									%i.fa.fa-long-arrow-right
-
-
-
-
+								%a.btn.btn-lg.btn-success.margin-bottom{:href=>"/candidate_backend/"}
+									Save Interview
