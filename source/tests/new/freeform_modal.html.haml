@@ -1,3 +1,10 @@
+:javascript
+	$(document).ready(function(){
+	 	//tooltips
+		$('.wh-tooltip').tooltip();
+	});
+
+
 .margin-bottom.clearfix
 	.page-header
 		%h2
@@ -14,28 +21,22 @@
 				%input.form-control.half-margin-bottom
 				%a.btn.btn-default.pull-right{:href=>"onclick: return false;"}
 					Add Question
+				.checkbox
+					%label
+						%input{type: "checkbox"}/
+						Allow video response
+						%i.fa.fa-question-circle.wh-tooltip{"data-toggle"=>"tooltip", :title=>"Candidates can respond to your question by typing or by recording a video."}
 	%hr
 	%h5
 		Manage Questions
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Why would you be the best candidate for this position?
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Please list and explain your 5 greatest strengths?
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Please list and explain your biggest weakness.
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		What interests you most about our organization?
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Is there any additional information about you that you feel we should know?
+	-3.times do
+		.alert.alert-basic
+			%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
+				&times;
+			Why would you be the best candidate for this position?
+			.checkbox
+				%label
+					%input{type: "checkbox", checked:""}
+					Allow video response
 
 
