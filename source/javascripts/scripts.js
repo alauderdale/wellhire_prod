@@ -39,5 +39,8 @@ $(document).ready(function(){
 		}
 	});
 
+ 	//tooltips
+	$('.wh-tooltip').tooltip();
+
 
 });
