@@ -1169,6 +1169,16 @@ a.video-thumb{
   }
 }
 
+a.video-thumb-small{
+  max-width:50px;
+  img{
+    @include transition-duration(.3s);
+    &:hover{
+      opacity:.5;
+    }
+  }
+}
+
 
 //responsify
 
@@ -1182,15 +1192,21 @@ a.video-thumb{
 //md
 @media (max-width: 992px) {
 
-//navbar
-.main-nav{
-  i{
-    display:none!important;
+  //navbar
+  .main-nav{
+    i{
+      display:none!important;
+    }
+    a.navbar-item{
+      padding:$baseline $baseline/2!important;
+    }
   }
-  a.navbar-item{
-    padding:$baseline $baseline/2!important;
+
+  ul.nav-pills{
+    &.sub-nav-links{
+      font-size:.8em;
+    }
   }
-}
 
 
 }
