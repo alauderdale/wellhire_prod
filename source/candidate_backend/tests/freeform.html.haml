@@ -28,22 +28,21 @@
 											1. What's Your Favorite...
 										%textarea.form-control{:rows=>"5"}
 										.dotted-border.well.quarter-margin-top
-											%p.no-margin-bottom
-												%i.fa.fa-video-camera
-												Answer with a video by 
-												%a{"data-toggle"=>"modal", :href=>"/video/new", "data-target"=>"#videoModal"}
-													Capturing a video now...
+											%a.btn.btn-default{"data-toggle"=>"modal", :href=>"/video/new", "data-target"=>"#videoModal"}
+												Answer with a video
 									%form.margin-bottom
 									.form-group
 										%h4
 											2. What's Your Favorite...
 										%textarea.form-control{:rows=>"5"}
-										.dotted-border.alert.alert-success.quarter-margin-top
+										.alert.alert-success.quarter-margin-top
 											%p.no-margin-bottom
-												%i.fa.fa-video-camera
-												Video From Jan. 20, 2014 4:00:22pm
-												%a{:href=>"#"}
-													%i.fa.fa-times-circle.text-danger
+												%span.quarter-margin-right
+													=partial"shared/video_thumb_small"
+												%span{:style=>"position:relative; top:-12px;"}
+													Jan. 20, 2014 4:00:22
+													%a{:href=>"#"}
+														%i.fa.fa-times-circle.text-danger
 							.col-sm-6
 				%hr
 				.test-footer

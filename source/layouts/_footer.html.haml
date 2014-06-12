@@ -43,6 +43,13 @@
 #removeJobRoleModalConfirm.modal{"aria-hidden" => "true", role: "dialog"}
 	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to delete this job role?"}
 
+
+//interview questions
+#removeInterviewQuestionConfirm.modal{"aria-hidden" => "true", role: "dialog"}
+	=partial "shared/confirm_modal", :locals=>{:text =>"Are you sure you want to delete this interview question?"}
+#editInterviewQuestionModal.modal{"aria-hidden" => "true", role: "dialog"}
+#newInterviewQuestionModal.modal-scroll.modal{"aria-hidden" => "true", role: "dialog"}
+
 //tests
 #showTestModal.modal.front-modal{"aria-hidden" => "true", role: "dialog"}
 #newTestModalSelectTests.modal-scroll.modal{"aria-hidden" => "true", role: "dialog"}
