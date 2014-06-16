@@ -65,9 +65,15 @@
               3. Select freeform qustions
             </h2>
             <p class='no-margin-bottom'>
-              Please select and edit the questions you would like displayed for your candidate after they have completed the test.
+              Ask the questions that make the difference.
             </p>
           </div>
+          <script>
+            $(document).ready(function(){
+             	//tooltips
+            	$('.wh-tooltip').tooltip();
+            });
+          </script>
           <h5>
             Add a Question
           </h5>
@@ -81,6 +87,13 @@
                 <a class='btn btn-default pull-right' href='onclick: return false;'>
                   Add Question
                 </a>
+                <div class='checkbox'>
+                  <label>
+                    <input type='checkbox'>
+                    Allow video response
+                    <i class='fa fa-question-circle wh-tooltip' data-toggle='tooltip' title='Candidates can respond to your question by typing or by recording a video.'></i>
+                  </label>
+                </div>
               </div>
             </div>
           </form>
@@ -93,30 +106,36 @@
               &times;
             </button>
             Why would you be the best candidate for this position?
+            <div class='checkbox'>
+              <label>
+                <input checked='' type='checkbox'>
+                Allow video response
+              </label>
+            </div>
           </div>
           <div class='alert alert-basic'>
             <button aria-hidden='true' class='close' data-dismiss='alert' type='button'>
               &times;
             </button>
-            Please list and explain your 5 greatest strengths?
+            Why would you be the best candidate for this position?
+            <div class='checkbox'>
+              <label>
+                <input checked='' type='checkbox'>
+                Allow video response
+              </label>
+            </div>
           </div>
           <div class='alert alert-basic'>
             <button aria-hidden='true' class='close' data-dismiss='alert' type='button'>
               &times;
             </button>
-            Please list and explain your biggest weakness.
-          </div>
-          <div class='alert alert-basic'>
-            <button aria-hidden='true' class='close' data-dismiss='alert' type='button'>
-              &times;
-            </button>
-            What interests you most about our organization?
-          </div>
-          <div class='alert alert-basic'>
-            <button aria-hidden='true' class='close' data-dismiss='alert' type='button'>
-              &times;
-            </button>
-            Is there any additional information about you that you feel we should know?
+            Why would you be the best candidate for this position?
+            <div class='checkbox'>
+              <label>
+                <input checked='' type='checkbox'>
+                Allow video response
+              </label>
+            </div>
           </div>
         </div>
       </div>

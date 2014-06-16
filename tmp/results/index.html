@@ -12,6 +12,7 @@
     <link href="../stylesheets/lib/bootstrap/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/lib/bootstrapvalidator/bootstrapValidator.min.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/lib/font-awesome/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/fancybox/jquery.fancybox.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <link href='images/favicon.ico' rel='shortcut icon'>
     <!-- %script{:src => "http://code.jquery.com/jquery-latest.min.js", :type => "text/javascript"} -->
@@ -26,6 +27,8 @@
     <script src="../javascripts/lib/jquery.dataTables.js" type="text/javascript"></script>
     <script src="../javascripts/lib/datatables.bootstrap.pagination.js" type="text/javascript"></script>
     <script src="../javascripts/lib/highcharts.js" type="text/javascript"></script>
+    <script src="../javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="../javascripts/helpers/jquery.fancybox-media.js" type="text/javascript"></script>
     <script src="../javascripts/scripts.js" type="text/javascript"></script>
   </head>
   <body class='results results_index'>
@@ -293,13 +296,16 @@
                   <tr>
                     <td>
                       <a href='/results/show'>
-                        Sun Jan 27, 2008
+                        Sat Oct 24, 1992
                       </a>
                     </td>
                     <td>
                       <img class="half-margin-right avatar-sm img-circle" src="../images/no_avatar_sm.png" />
                       <a href='/candidates/show'>
-                        Brendon Brady
+                        Samuel Byrd
+                        <a class='half-margin-left no-underline-link fancybox-media' href='http://www.youtube.com/watch?v=opj24KnzrWo'>
+                          <i class='fa fa-video-camera'></i>
+                        </a>
                       </a>
                     </td>
                     <td>
@@ -325,13 +331,16 @@
                   <tr>
                     <td>
                       <a href='/results/show'>
-                        Mon Jan 25, 1999
+                        Tue Aug 05, 2008
                       </a>
                     </td>
                     <td>
                       <img class="half-margin-right avatar-sm img-circle" src="../images/no_avatar_sm.png" />
                       <a href='/candidates/show'>
-                        Gordon Olsen
+                        Elise Heath
+                        <a class='half-margin-left no-underline-link fancybox-media' href='http://www.youtube.com/watch?v=opj24KnzrWo'>
+                          <i class='fa fa-video-camera'></i>
+                        </a>
                       </a>
                     </td>
                     <td>
@@ -357,13 +366,16 @@
                   <tr>
                     <td>
                       <a href='/results/show'>
-                        Mon Aug 05, 2002
+                        Wed May 23, 2007
                       </a>
                     </td>
                     <td>
                       <img class="half-margin-right avatar-sm img-circle" src="../images/no_avatar_sm.png" />
                       <a href='/candidates/show'>
-                        Kerry Jones
+                        inn Robertson
+                        <a class='half-margin-left no-underline-link fancybox-media' href='http://www.youtube.com/watch?v=opj24KnzrWo'>
+                          <i class='fa fa-video-camera'></i>
+                        </a>
                       </a>
                     </td>
                     <td>
@@ -389,13 +401,16 @@
                   <tr>
                     <td>
                       <a href='/results/show'>
-                        Fri Jan 13, 1995
+                        Wed Jun 16, 1999
                       </a>
                     </td>
                     <td>
                       <img class="half-margin-right avatar-sm img-circle" src="../images/no_avatar_sm.png" />
                       <a href='/candidates/show'>
-                        Grady Goldman
+                        Yehudi Christensen
+                        <a class='half-margin-left no-underline-link fancybox-media' href='http://www.youtube.com/watch?v=opj24KnzrWo'>
+                          <i class='fa fa-video-camera'></i>
+                        </a>
                       </a>
                     </td>
                     <td>
@@ -421,13 +436,16 @@
                   <tr>
                     <td>
                       <a href='/results/show'>
-                        Wed Jun 18, 1997
+                        Sun Apr 09, 1995
                       </a>
                     </td>
                     <td>
                       <img class="half-margin-right avatar-sm img-circle" src="../images/no_avatar_sm.png" />
                       <a href='/candidates/show'>
-                        Lori Olsen
+                        Bryce Cross
+                        <a class='half-margin-left no-underline-link fancybox-media' href='http://www.youtube.com/watch?v=opj24KnzrWo'>
+                          <i class='fa fa-video-camera'></i>
+                        </a>
                       </a>
                     </td>
                     <td>
@@ -674,6 +692,35 @@
         </div>
       </div>
     </div>
+    <!-- /interview questions -->
+    <div aria-hidden='true' class='modal' id='removeInterviewQuestionConfirm' role='dialog'>
+      <div class='modal-dialog modal-sm'>
+        <div class='modal-content'>
+          <div class='modal-body no-padding-bottom'>
+            <div class='row'>
+              <div class='col-sm-3'>
+                <i class='fa fa-exclamation-circle text-danger modal-icon half-margin-bottom'></i>
+              </div>
+              <div class='col-sm-9'>
+                <p class='no-margin-bottom'>
+                  Are you sure you want to delete this interview question?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class='modal-footer'>
+            <a class='cursor-pointer half-margin-right' data-dismiss='modal'>
+              Cancel
+            </a>
+            <button class='btn btn-primary' data-dismiss='modal' type='button'>
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div aria-hidden='true' class='modal' id='editInterviewQuestionModal' role='dialog'></div>
+    <div aria-hidden='true' class='modal-scroll modal' id='newInterviewQuestionModal' role='dialog'></div>
     <!-- /tests -->
     <div aria-hidden='true' class='modal front-modal' id='showTestModal' role='dialog'></div>
     <div aria-hidden='true' class='modal-scroll modal' id='newTestModalSelectTests' role='dialog'></div>

@@ -12,6 +12,7 @@
     <link href="../../../stylesheets/lib/bootstrap/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../../../stylesheets/lib/bootstrapvalidator/bootstrapValidator.min.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../../../stylesheets/lib/font-awesome/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../../../stylesheets/fancybox/jquery.fancybox.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../../../stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <link href='images/favicon.ico' rel='shortcut icon'>
     <!-- %script{:src => "http://code.jquery.com/jquery-latest.min.js", :type => "text/javascript"} -->
@@ -26,6 +27,8 @@
     <script src="../../../javascripts/lib/jquery.dataTables.js" type="text/javascript"></script>
     <script src="../../../javascripts/lib/datatables.bootstrap.pagination.js" type="text/javascript"></script>
     <script src="../../../javascripts/lib/highcharts.js" type="text/javascript"></script>
+    <script src="../../../javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="../../../javascripts/helpers/jquery.fancybox-media.js" type="text/javascript"></script>
     <script src="../../../javascripts/scripts.js" type="text/javascript"></script>
   </head>
   <body class='candidate_backend candidate_backend_tests candidate_backend_tests_freeform candidate_backend_tests_freeform_index'>
@@ -39,7 +42,7 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
-          <a class='navbar-brand' href='/'>
+          <a class='navbar-brand' href='/candidate_backend'>
             <div class='logo'></div>
           </a>
         </div>
@@ -56,6 +59,12 @@
               <a class='navbar-item' href='/candidate_backend/profile/show'>
                 <i class='fa fa-user'></i>
                 My Profile
+              </a>
+            </li>
+            <li class=''>
+              <a class='navbar-item' href='/candidate_backend/interview/show'>
+                <i class='fa fa-clipboard'></i>
+                My Interview
               </a>
             </li>
           </ul>
@@ -119,14 +128,33 @@
                           1. What's Your Favorite...
                         </h4>
                         <textarea class='form-control' rows='5'></textarea>
+                        <div class='dotted-border well quarter-margin-top'>
+                          <a class='btn btn-default' data-target='#videoModal' data-toggle='modal' href='/video/new'>
+                            Answer with a video
+                          </a>
+                        </div>
                       </div>
-                    </form>
-                    <form class='margin-bottom'>
+                      <form class='margin-bottom'></form>
                       <div class='form-group'>
                         <h4>
                           2. What's Your Favorite...
                         </h4>
                         <textarea class='form-control' rows='5'></textarea>
+                        <div class='alert alert-success quarter-margin-top'>
+                          <p class='no-margin-bottom'>
+                            <span class='quarter-margin-right'>
+                              <a class='video-thumb-small img-thumbnail fancybox-media' href='http://www.youtube.com/watch?v=opj24KnzrWo'>
+                                <img class="img-responsive" src="http://abshirepr.com/wp-content/uploads/2013/10/Bill-Kenney-headshot-1024x683.jpg" />
+                              </a>
+                            </span>
+                            <span style='position:relative; top:-12px;'>
+                              Jan. 20, 2014 4:00:22
+                              <a href='#'>
+                                <i class='fa fa-times-circle text-danger'></i>
+                              </a>
+                            </span>
+                          </p>
+                        </div>
                       </div>
                     </form>
                   </div>
@@ -205,6 +233,7 @@
     <!-- /profile -->
     <div aria-hidden='true' class='modal' id='newPositionModal' role='dialog'></div>
     <div aria-hidden='true' class='modal' id='newDegreeModal' role='dialog'></div>
+    <div aria-hidden='true' class='modal' data-backdrop='static' id='videoModal' role='dialog'></div>
     <!-- end footer -->
   </body>
 </html>

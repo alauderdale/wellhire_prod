@@ -30,5 +30,15 @@ $(document).ready(function(){
   	html: true
   });
 
+ ///fancybox
+ 	$('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+
+
 
 });
