@@ -6,6 +6,10 @@
 
 	  {"title":"Wellhire Test Links", 
 	  	"link":"/job-links"
+	  },
+
+	  {"title":"Interview Questions", 
+	  	"link":"/interview-questions"
 	  }
 	]
 }

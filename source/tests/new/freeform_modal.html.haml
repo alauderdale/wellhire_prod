@@ -3,39 +3,8 @@
 		%h2
 			3. Select freeform qustions
 		%p.no-margin-bottom
-			Please select and edit the questions you would like displayed for your candidate after they have completed the test.
-	%h5
-		Add a Question
-	%form.form-horizontal{role: "form"}
-		.form-group
-			%label.col-xs-3.control-label 
-				Question:
-			.col-xs-9
-				%input.form-control.half-margin-bottom
-				%a.btn.btn-default.pull-right{:href=>"onclick: return false;"}
-					Add Question
-	%hr
-	%h5
-		Manage Questions
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Why would you be the best candidate for this position?
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Please list and explain your 5 greatest strengths?
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Please list and explain your biggest weakness.
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		What interests you most about our organization?
-	.alert.alert-basic
-		%button{:type=>"button", :class=>"close", "data-dismiss"=>"alert", "aria-hidden"=>"true"}
-			&times;
-		Is there any additional information about you that you feel we should know?
+			Ask the questions that make the difference.
+	=partial"shared/add_question"
+
 
 

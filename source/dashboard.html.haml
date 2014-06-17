@@ -2,7 +2,7 @@
 
 "title": "Dashboard", 
 "subnav_data": "dashboard_subnav",
-"description": "This is your hiring mission control, providing you with an overview of your candidate & testing progress.",
+"description": "This is your hiring mission control, providing you with an overview of your candidate activity.",
 "iconclass": "fa-th-large",
 "activeclass": "dashboard"
 	
@@ -23,6 +23,8 @@
 				.wh-activity-stream
 					-5.times do
 						=partial"/dashboard/activity_item"
+					=partial"/dashboard/activity_new_video_uploaded"
+					=partial"/dashboard/activity_new_video_uploaded_interview"
 					.wh-stream-item
 						.page-header.margin-top
 							%p
@@ -34,5 +36,6 @@
 					%h3.no-margin-bottom
 						Top Candidates
 				=partial"/shared/top_candidates_table"
+				
 
 

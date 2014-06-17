@@ -623,6 +623,9 @@ ul.social-nav{
   max-width:100%;
   height:auto;
 }
+img.video-placeholder{
+  background-color:$light-gray-color;
+}
 
 
 //links
@@ -1145,6 +1148,37 @@ table{
   color:green!important;
 }
 
+//videos capture
+
+.video-capture{
+  background-color:$light-gray-color;
+  width: 100%;
+  height:390px;
+  border:1px solid $gray-color;
+  background:url(../images/video-default.png) no-repeat center center;
+}
+
+a.video-thumb{
+  max-width:300px;
+  background:url(../images/video-play.png) $light-gray-color no-repeat center center;
+  img{
+    @include transition-duration(.3s);
+    &:hover{
+      opacity:.5;
+    }
+  }
+}
+
+a.video-thumb-small{
+  max-width:50px;
+  img{
+    @include transition-duration(.3s);
+    &:hover{
+      opacity:.5;
+    }
+  }
+}
+
 
 //responsify
 
@@ -1158,15 +1192,21 @@ table{
 //md
 @media (max-width: 992px) {
 
-//navbar
-.main-nav{
-  i{
-    display:none!important;
+  //navbar
+  .main-nav{
+    i{
+      display:none!important;
+    }
+    a.navbar-item{
+      padding:$baseline $baseline/2!important;
+    }
   }
-  a.navbar-item{
-    padding:$baseline $baseline/2!important;
+
+  ul.nav-pills{
+    &.sub-nav-links{
+      font-size:.8em;
+    }
   }
-}
 
 
 }

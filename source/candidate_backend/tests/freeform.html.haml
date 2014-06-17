@@ -27,11 +27,22 @@
 										%h4
 											1. What's Your Favorite...
 										%textarea.form-control{:rows=>"5"}
-								%form.margin-bottom
+										.dotted-border.well.quarter-margin-top
+											%a.btn.btn-default{"data-toggle"=>"modal", :href=>"/video/new", "data-target"=>"#videoModal"}
+												Answer with a video
+									%form.margin-bottom
 									.form-group
 										%h4
 											2. What's Your Favorite...
 										%textarea.form-control{:rows=>"5"}
+										.alert.alert-success.quarter-margin-top
+											%p.no-margin-bottom
+												%span.quarter-margin-right
+													=partial"shared/video_thumb_small"
+												%span{:style=>"position:relative; top:-12px;"}
+													Jan. 20, 2014 4:00:22
+													%a{:href=>"#"}
+														%i.fa.fa-times-circle.text-danger
 							.col-sm-6
 				%hr
 				.test-footer
@@ -43,5 +54,6 @@
 									Submit Responses & Give Feedback
 									%i.fa.fa-long-arrow-right
 
-				
+
+
 
