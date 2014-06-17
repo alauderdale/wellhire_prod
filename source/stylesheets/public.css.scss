@@ -183,7 +183,7 @@ p  {font-size: .9em; line-height:$baseline*1.1;}
 h1 { font-size: 2.4em; line-height:$baseline*2.1; color:shade($primary-color,50%);}
 h2 { font-size: 1.8em; line-height:$baseline*1.7;}
 h3 { font-size: 1.8em; line-height:$baseline*1.7; color:shade($primary-color,50%);}
-h4 { font-size: 1.5em; line-height:$baseline;}
+h4 { font-size: 1.5em; line-height:$baseline*1.2;}
 h5 { font-size: 1em; line-height:$baseline*1.2;}
 h6 { font-size: 0.9em; line-height:$baseline;}
 
@@ -695,6 +695,11 @@ section{
   &.contact-map{
     padding:$baseline*9 0;
   }
+  &#how-it-works{
+    img{
+      max-width:200px;
+    }
+  }
 }
 
 //header
@@ -867,6 +872,7 @@ footer{
 
  .rsGCaption {
   margin-top:5%;
+  min-height:200px;
   h3{
     color:$secondary-color;
     font-family:$medium-font-name;
