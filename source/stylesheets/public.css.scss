@@ -183,7 +183,7 @@ p  {font-size: .9em; line-height:$baseline*1.1;}
 h1 { font-size: 2.4em; line-height:$baseline*2.1; color:shade($primary-color,50%);}
 h2 { font-size: 1.8em; line-height:$baseline*1.7;}
 h3 { font-size: 1.8em; line-height:$baseline*1.7; color:shade($primary-color,50%);}
-h4 { font-size: 1.5em; line-height:$baseline;}
+h4 { font-size: 1.5em; line-height:$baseline*1.2;}
 h5 { font-size: 1em; line-height:$baseline*1.2;}
 h6 { font-size: 0.9em; line-height:$baseline;}
 
@@ -204,6 +204,10 @@ blockquote{
 
 .enhanced-font{
   font-size:1.2em;
+}
+
+.text-success{
+  color:$green-color;
 }
 
 .text-line{
@@ -695,6 +699,11 @@ section{
   &.contact-map{
     padding:$baseline*9 0;
   }
+  &#how-it-works{
+    img{
+      max-width:200px;
+    }
+  }
 }
 
 //header
@@ -867,6 +876,7 @@ footer{
 
  .rsGCaption {
   margin-top:5%;
+  min-height:200px;
   h3{
     color:$secondary-color;
     font-family:$medium-font-name;
@@ -1044,6 +1054,20 @@ footer{
   .min-counter{
     text-transform:none;
     font-size:.8em;
+  }
+}
+
+#calculatorResultsModal{
+  font-size:.8em;
+  ul{
+    margin-left:$baseline;
+    font-size:.75em;
+    margin-bottom:$baseline;
+    list-style-image:url(../images/public/check.png);
+    li{
+      margin-bottom:10px;
+      line-height:18px;
+    }
   }
 }
 
@@ -1267,6 +1291,32 @@ footer{
     }
   }
 
+}
+
+//pricing calculator
+
+.pricing-calculator{
+  .panel-heading{
+    background-color:$primary-color;
+    padding:$baseline;
+    h4{
+      color:white;
+    }
+  }
+  h5{
+    color:$secondary-color;
+  }
+  b{
+    font-size:.8em;
+  }
+}
+
+//sliders
+.slider{
+    width:100%!important;
+  .slider-track{
+    background:$primary-color!important;
+  }
 }
 
 //responsify
