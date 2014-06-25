@@ -1218,15 +1218,18 @@ footer {
 /* line 1312, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
 .pricing-calculator b {
   font-size: .8em; }
+/* line 1315, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
+.pricing-calculator .progress-value {
+  color: #a8d587; }
 
-/* line 1318, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
+/* line 1321, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
 .slider {
   width: 100% !important; }
-  /* line 1320, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
+  /* line 1323, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
   .slider .slider-track {
     background: #0089bc !important; }
 
 @media (max-width: 768px) {
-  /* line 1345, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
+  /* line 1348, /Users/alauderdale/Documents/wellhire_prod_merged/source/stylesheets/public.css.scss */
   #home-hero {
     background-attachment: scroll; } }

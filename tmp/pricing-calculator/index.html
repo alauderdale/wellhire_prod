@@ -76,7 +76,17 @@
     <script>
       $(document).ready(function(){
       
-      	$('.slider').slider();
+      	$('.slider').slider().on('slide', function(ev){
+      
+      		var val = $(this).data('slider').getValue();
+      		console.log(val);
+      
+      		$(this).closest('.row').find('.progress-value').empty();
+      		$(this).closest('.row').find('.progress-value').append( val);
+      
+      
+      
+      	});
       
       
       });
@@ -111,9 +121,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left progress-value'>
-                          100
-                        </b>
+                        <b class='half-margin-left progress-value'></b>
                       </div>
                     </div>
                   </div>
@@ -131,9 +139,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left progress-value'>
-                          100
-                        </b>
+                        <b class='half-margin-left progress-value'></b>
                       </div>
                     </div>
                   </div>
@@ -151,9 +157,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left progress-value progress-value'>
-                          100
-                        </b>
+                        <b class='half-margin-left progress-value progress-value'></b>
                       </div>
                     </div>
                   </div>
@@ -171,9 +175,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left progress-value'>
-                          100
-                        </b>
+                        <b class='half-margin-left progress-value'></b>
                       </div>
                     </div>
                   </div>
@@ -191,9 +193,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left progress-value'>
-                          100
-                        </b>
+                        <b class='half-margin-left progress-value'></b>
                       </div>
                     </div>
                   </div>

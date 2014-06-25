@@ -7,7 +7,17 @@
 :javascript
 	$(document).ready(function(){
 
-		$('.slider').slider();
+		$('.slider').slider().on('slide', function(ev){
+
+			var val = $(this).data('slider').getValue();
+			console.log(val);
+
+			$(this).closest('.row').find('.progress-value').empty();
+			$(this).closest('.row').find('.progress-value').append( val);
+
+
+
+		});
 
 
 	});
@@ -37,7 +47,7 @@
 										%input.span2.slider.full-width{"data-slider-max" => "100", "data-slider-min" => "0", "data-slider-orientation" => "horizontal", "data-slider-selection" => "after", "data-slider-step" => "5", "data-slider-tooltip" => "show", "data-slider-value" => "0", type: "text", value: ""}
 									.col-xs-1
 										%b.half-margin-left.progress-value
-											100
+											
 							.slider-question.double-margin-bottom
 								%p
 									What number of job interviews does your team conduct?
@@ -49,7 +59,7 @@
 										%input.span2.slider.full-width{"data-slider-max" => "100", "data-slider-min" => "0", "data-slider-orientation" => "horizontal", "data-slider-selection" => "after", "data-slider-step" => "5", "data-slider-tooltip" => "show", "data-slider-value" => "0", type: "text", value: ""}
 									.col-xs-1
 										%b.half-margin-left.progress-value
-											100
+											
 							.slider-question.double-margin-bottom
 								%p
 									How many job applications and/or resumes do you receive?
@@ -61,7 +71,7 @@
 										%input.span2.slider.full-width{"data-slider-max" => "100", "data-slider-min" => "0", "data-slider-orientation" => "horizontal", "data-slider-selection" => "after", "data-slider-step" => "5", "data-slider-tooltip" => "show", "data-slider-value" => "0", type: "text", value: ""}
 									.col-xs-1
 										%b.half-margin-left.progress-value.progress-value
-											100
+											
 							.slider-question.double-margin-bottom
 								%p
 									How many different job roles does your team recruit for?
@@ -73,7 +83,7 @@
 										%input.span2.slider.full-width{"data-slider-max" => "100", "data-slider-min" => "0", "data-slider-orientation" => "horizontal", "data-slider-selection" => "after", "data-slider-step" => "5", "data-slider-tooltip" => "show", "data-slider-value" => "0", type: "text", value: ""}
 									.col-xs-1
 										%b.half-margin-left.progress-value
-											100
+											
 							.slider-question.double-margin-bottom
 								%p
 									On average, how may days does it take for you to fill a position?
@@ -85,7 +95,7 @@
 										%input.span2.slider.full-width{"data-slider-max" => "100", "data-slider-min" => "0", "data-slider-orientation" => "horizontal", "data-slider-selection" => "after", "data-slider-step" => "5", "data-slider-tooltip" => "show", "data-slider-value" => "0", type: "text", value: ""}
 									.col-xs-1
 										%b.half-margin-left.progress-value
-											100
+											
 							%hr
 								.text-center
 									%a.btn.btn-primary{:href=>"","data-toggle"=>"modal", "data-target"=>"#calculatorResultsModal"}
