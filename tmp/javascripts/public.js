@@ -48,6 +48,6 @@ $(document).ready(function(){
     });
 
 	//slider
-	$('.slider').slider()
+	// $('.slider').slider()
 
 });

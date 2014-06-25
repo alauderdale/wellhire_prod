@@ -73,6 +73,14 @@
       </div>
     </nav>
     <!-- end menu -->
+    <script>
+      $(document).ready(function(){
+      
+      	$('.slider').slider();
+      
+      
+      });
+    </script>
     <section class='padding-top' style='background-color:#f2f2f2;'>
       <div class='container'>
         <div class='row'>
@@ -103,7 +111,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left'>
+                        <b class='half-margin-left progress-value'>
                           100
                         </b>
                       </div>
@@ -123,7 +131,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left'>
+                        <b class='half-margin-left progress-value'>
                           100
                         </b>
                       </div>
@@ -143,7 +151,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left'>
+                        <b class='half-margin-left progress-value progress-value'>
                           100
                         </b>
                       </div>
@@ -163,7 +171,7 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left'>
+                        <b class='half-margin-left progress-value'>
                           100
                         </b>
                       </div>
@@ -183,16 +191,18 @@
                         <input class='span2 slider full-width' data-slider-max='100' data-slider-min='0' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='5' data-slider-tooltip='show' data-slider-value='0' type='text' value=''>
                       </div>
                       <div class='col-xs-1'>
-                        <b class='half-margin-left'>
+                        <b class='half-margin-left progress-value'>
                           100
                         </b>
                       </div>
                     </div>
                   </div>
                   <hr>
-                    <a class='btn btn-primary pull-right' data-target='#calculatorResultsModal' data-toggle='modal' href=''>
-                      Calculate
-                    </a>
+                    <div class='text-center'>
+                      <a class='btn btn-primary' data-target='#calculatorResultsModal' data-toggle='modal' href=''>
+                        Calculate
+                      </a>
+                    </div>
                   </hr>
                 </div>
               </div>
@@ -212,21 +222,26 @@
                 Wellhire can save your team:
               </h5>
             </div>
+            <ul class='list-unstyled'>
+              <li>
+                <strong>
+                  X hours
+                </strong>
+                per month recruiting
+              </li>
+              <li>
+                <strong>
+                  $X
+                </strong>
+                per month in hiring costs included with your Wellhire registration
+              </li>
+            </ul>
+            <p class='bold-font-name primary-text-color'>
+              Included with your registration:
+            </p>
             <div class='row'>
               <div class='col-sm-6'>
                 <ul class='list-unstyled'>
-                  <li>
-                    <strong>
-                      X hours
-                    </strong>
-                    per month recruiting
-                  </li>
-                  <li>
-                    <strong>
-                      $X
-                    </strong>
-                    per month in hiring costs included with your Wellhire registration
-                  </li>
                   <li>
                     <strong>
                       Up to 50
@@ -245,16 +260,16 @@
                     </strong>
                     Wellhire candidate links each month
                   </li>
-                </ul>
-              </div>
-              <div class='col-sm-6'>
-                <ul class='list-unstyled'>
                   <li>
                     <strong>
                       Unlimited
                     </strong>
                     Video interviews
                   </li>
+                </ul>
+              </div>
+              <div class='col-sm-6'>
+                <ul class='list-unstyled'>
                   <li>
                     <strong>
                       Unlimited
@@ -277,6 +292,8 @@
                 </ul>
               </div>
             </div>
+          </div>
+          <div class='modal-footer padding-top padding-bottom'>
             <p class='text-center'>
               Register now for
               <span class='text-success extra-bold-font-name'>
@@ -287,8 +304,6 @@
                 Cancel any time.
               </span>
             </p>
-          </div>
-          <div class='modal-footer padding-top padding-bottom'>
             <a class='cursor-pointer half-margin-right' data-dismiss='modal' href='#'>
               Cancel
             </a>
