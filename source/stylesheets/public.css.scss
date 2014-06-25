@@ -206,6 +206,10 @@ blockquote{
   font-size:1.2em;
 }
 
+.text-success{
+  color:$green-color;
+}
+
 .text-line{
     width: 100%;
     height:5px;
@@ -1053,6 +1057,20 @@ footer{
   }
 }
 
+#calculatorResultsModal{
+  font-size:.8em;
+  ul{
+    margin-left:$baseline;
+    font-size:.75em;
+    margin-bottom:$baseline;
+    list-style-image:url(../images/public/check.png);
+    li{
+      margin-bottom:10px;
+      line-height:18px;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal-dialog {
     width: 70%;
@@ -1273,6 +1291,32 @@ footer{
     }
   }
 
+}
+
+//pricing calculator
+
+.pricing-calculator{
+  .panel-heading{
+    background-color:$primary-color;
+    padding:$baseline;
+    h4{
+      color:white;
+    }
+  }
+  h5{
+    color:$secondary-color;
+  }
+  b{
+    font-size:.8em;
+  }
+}
+
+//sliders
+.slider{
+    width:100%!important;
+  .slider-track{
+    background:$primary-color!important;
+  }
 }
 
 //responsify
