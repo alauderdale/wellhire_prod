@@ -937,6 +937,8 @@ footer{
 .price-tier{
   border:3px solid $gray-color;
   @include transition-duration(.2s);
+  min-height:600px;
+  background-color:white;
     &:hover{
       border-color:$tertiary-color!important;
     }
@@ -988,6 +990,15 @@ footer{
     .price-points{
       margin-top:-$baseline*3.5;
     }
+}
+
+
+//pricing sign up
+
+#pricing-sign-up{
+  .price-tier{
+    min-height:500px;
+  }
 }
 
 //testimonials
@@ -1099,6 +1110,20 @@ footer{
 
   .rsGCaption {
     min-height:200px;
+  }
+
+    //pricing sign up
+
+  #pricing-sign-up{
+    .price-tier{
+      min-height:520px;
+    }
+  }
+
+  #pricing{
+    .price-tier{
+      min-height:620px;
+    }
   }
 
 
