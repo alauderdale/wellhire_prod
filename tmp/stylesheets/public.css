@@ -1246,4 +1246,15 @@ footer {
 @media (max-width: 768px) {
   /* line 1373, /Users/alauderdale/Dropbox/clients/wellhire/wellhire_files/wellhire_product/source/stylesheets/public.css.scss */
   #home-hero {
-    background-attachment: scroll; } }
+    background-attachment: scroll; }
+
+  /* line 1377, /Users/alauderdale/Dropbox/clients/wellhire/wellhire_files/wellhire_product/source/stylesheets/public.css.scss */
+  a.tech-stars-logo {
+    bottom: 0;
+    margin: 0 auto; }
+    /* line 1381, /Users/alauderdale/Dropbox/clients/wellhire/wellhire_files/wellhire_product/source/stylesheets/public.css.scss */
+    a.tech-stars-logo img {
+      text-align: center !important;
+      float: none !important;
+      margin: 0 !important;
+      margin-top: 24px !important; } }

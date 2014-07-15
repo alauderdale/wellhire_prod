@@ -1374,12 +1374,27 @@ footer{
   background-attachment:scroll;
 }
 
+a.tech-stars-logo{
+
+  bottom:0;
+  margin:0 auto;
+  img{
+    text-align:center!important;
+     float: none!important;
+     margin:0!important;
+     margin-top:$baseline!important;
+  }
+}
+
+
 
 }
 
 
 //xs
 @media (max-width: 480px) {
+
+
 
 
 
