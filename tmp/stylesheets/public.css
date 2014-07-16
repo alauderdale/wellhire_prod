@@ -1258,3 +1258,12 @@ footer {
       float: none !important;
       margin: 0 !important;
       margin-top: 24px !important; } }
+/* line 1405, /Users/alauderdale/Dropbox/clients/wellhire/wellhire_files/wellhire_product/source/stylesheets/public.css.scss */
+#tech-stars-banner {
+  width: 90px;
+  height: 175px;
+  background: url(/images/public/tech_stars_banner.png) no-repeat;
+  background-size: 100%;
+  float: left;
+  position: fixed;
+  z-index: 99999; }
