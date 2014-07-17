@@ -17,10 +17,10 @@
           %a.navbar-item{href: "/dashboard"} 
             %i.fa.fa-th-large
             Dashboard
-        %li
-          %a.navbar-item{"data-toggle"=>"modal", :href=>"/job-links/new", "data-target"=>"#newJobLinkModal"}
-            %i.fa.fa-plus-circle
-            New Test Link
+        %li{:class => (current_page.data.activeclass === "job-listings") ? "active" : ""}
+          %a.navbar-item{:href=>"/job-listings"}
+            %i.fa.fa-clipboard
+            My Job Listings
         %li{:class => (current_page.data.activeclass === "candidates") ? "active" : ""}
           %a.navbar-item{href: "/candidates"} 
             %i.fa.fa-users

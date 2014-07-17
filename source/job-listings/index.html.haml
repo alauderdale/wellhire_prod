@@ -1,0 +1,31 @@
+;;;
+
+"title": "My Job Listings", 
+"subnav_data": "job_listings_subnav",
+"activeclass": "job-listings"
+	
+;;;
+
+
+
+
+%section
+	.container
+		.row
+			.col-lg-12
+				.alert.alert-success
+					%strong
+						Success!
+					Your job listing has been created
+		.row
+			.col-lg-12
+				=partial "/shared/subnav_with_links"
+		.row.margin-bottom
+			.col-lg-12
+				%a.btn.btn-default.btn-lg{:href=>"/job-listings/new"}
+					%i.fa.fa-plus-circle
+					Create Job Listing
+		.row
+			.col-lg-12
+				=partial "/job-listings/job_listings_table"
+

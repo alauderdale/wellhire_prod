@@ -39,6 +39,10 @@ $(document).ready(function(){
 		}
 	});
 
+		///tooltops
+	$("[rel='tooltip']").tooltip();
+
+
 
 
 });

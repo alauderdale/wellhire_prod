@@ -4,8 +4,6 @@
 //fonts
 
 
-
-
 @font-face {
     font-family: 'socialicoregular';
     src: url('../font/socialico-webfont.eot');
@@ -125,8 +123,6 @@ $medium-font-name:'museo_sans_500regular', Helvetica, Arial, sans-serif;
 $bold-font-name:'museo_sans_700regular', Helvetica, Arial, sans-serif;
 $extra-bold-font-name:'museo_sans_900regular', Helvetica, Arial, sans-serif;
 $social-font-name: 'socialicoregular';
-
-$icon-font-name: 'FontAwesome';
 // baseline
 
 $baseline: 24px;
@@ -182,12 +178,12 @@ h6{
   font-family:$light-font-name;
 }
 
-p  {font-size: 1em; line-height:$baseline;}
+p  {font-size: 1em; line-height:17px;}
 h1 { font-size: 2.4em; line-height:$baseline*2.1; color:shade($primary-color,50%);}
 h2 { font-size: 1.8em; line-height:$baseline*1.7;}
 h3 { font-size: 1.5em; line-height:$baseline*1.7; color:shade($primary-color,50%);}
 h4 { font-size: 1.3em; line-height:$baseline;}
-h5 { font-size: 1em; line-height:$baseline*1.2;}
+h5 { font-size: 1em; line-height:17px;}
 h6 { font-size: 0.9em; line-height:$baseline;}
 
 h1{
@@ -623,9 +619,6 @@ ul.social-nav{
   max-width:100%;
   height:auto;
 }
-img.video-placeholder{
-  background-color:$light-gray-color;
-}
 
 
 //links
@@ -695,11 +688,9 @@ a{
 
 .test-toggle-btn{
   .btn-icon{
-    margin-left:3px;
     &:after{
       width:10px;
-      font-family:$icon-font-name;
-      content:"\f096";
+      content:"+";
     }
   }
   &.active{
@@ -707,8 +698,7 @@ a{
     .btn-icon{
       width:20px;
       &:after{
-        font-family:$icon-font-name;
-        content: "\f046";
+        content:"✓";
       }
     }
   }
@@ -816,17 +806,17 @@ section{
 }
 
 .logo{
-  background:url(../images/logo.png) no-repeat;
-  width: 126px;
-  height:27px;
-  background-size: 124px;
-  margin-top:5px;
+  background:url(../images/logo.png) no-repeat 100%;
+  width: 124px;
+  height:25px;
+  background-size:100%;
+  margin-top:3px;
 }
 
 .logo-sm{
   background:url(../images/logo_sm.png) no-repeat 100%;
   width: 42px;
-  height:32px;
+  height:22px;
   background-size:100%;
   position:relative;
   top:7px;
@@ -897,15 +887,12 @@ ul.pagination{
       .active{
         a{
           background-color:$primary-color;
-          &:hover{
-            background-color:$primary-color!important;
-          }
         }
       }
     a{
       border:none!important;
       &:hover{
-        background:transparent;
+        background:transparent!important;
       }
     }
   }
@@ -951,20 +938,6 @@ footer{
     }
     .chosen-container{
       width: auto!important;
-    }
-    &.right{
-      top: -110px!important;
-      left: 87px;
-      .arrow{
-        left: -11px!important;
-        margin-top: -35px;
-        border-right-color:#bbb!important;
-        display:none;
-        &:after{
-          border-bottom-color:transparent!important;
-          border-right-color:tint($primary-color,95%)!important;
-        }
-      }
     }
   }
 }
@@ -1148,38 +1121,34 @@ table{
   color:green!important;
 }
 
-//videos capture
 
-.video-capture{
-  background-color:$light-gray-color;
-  width: 100%;
-  height:390px;
-  border:1px solid $gray-color;
-  background:url(../images/video-default.png) no-repeat center center;
-}
+//panels
 
-a.video-thumb{
-  max-width:300px;
-  background:url(../images/video-play.png) $light-gray-color no-repeat center center;
-  img{
-    @include transition-duration(.3s);
-    &:hover{
-      opacity:.5;
+.panel{
+  &.panel-form{
+    border:none;
+    box-shadow:none;
+    .panel-body{
+      padding:0;
+      border:none;
+    }
+    .panel-heading{
+      border:1px solid #bbb;
+      border-bottom:none;
+    }
+    textarea{
+      border-radius:0;
     }
   }
 }
 
-a.video-thumb-small{
-  max-width:50px;
-  img{
-    @include transition-duration(.3s);
-    &:hover{
-      opacity:.5;
-    }
+//wells
+
+.well{
+  &.well-dashed{
+    border:1px dashed;
   }
 }
-
-
 
 
 //responsify
@@ -1194,21 +1163,15 @@ a.video-thumb-small{
 //md
 @media (max-width: 992px) {
 
-  //navbar
-  .main-nav{
-    i{
-      display:none!important;
-    }
-    a.navbar-item{
-      padding:$baseline $baseline/2!important;
-    }
+//navbar
+.main-nav{
+  i{
+    display:none!important;
   }
-
-  ul.nav-pills{
-    &.sub-nav-links{
-      font-size:.8em;
-    }
+  a.navbar-item{
+    padding:$baseline $baseline/2!important;
   }
+}
 
 
 }
@@ -1239,11 +1202,9 @@ a.video-thumb-small{
     padding:$baseline/2 0;
   }
   .navbar-brand{
-    padding-top:5px;
+    padding-top:8px;
     .logo{
-      width:82px;
-      background-size: 99.9%;
-      margin-top:10px;
+      width:90px;
     }
   } 
 
@@ -1294,13 +1255,4 @@ and (orientation : portrait) {
     top:15px;
   }
 }
-
-//form zoom on divice fix
-
-
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
- select:focus, textarea:focus, input:focus {
- font-size: 16px;
-  }
- }
 
