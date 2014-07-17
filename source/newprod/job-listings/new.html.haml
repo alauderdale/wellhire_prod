@@ -1,0 +1,148 @@
+;;;
+
+"title": "New Job Listing", 
+"layout": "newprod"
+	
+;;;
+
+
+
+:javascript
+	$(document).ready(function(){
+
+		$('.show-moduel').click(function() {
+			$('.appear').removeClass('hidden');
+			return false; 
+		});
+
+		$('.remove').click(function() {
+			$(this).closest( '.well' ).addClass('hidden');
+			return false; 
+		});
+
+
+
+
+	});
+
+
+
+%section
+	.container
+		.row
+			.col-lg-12
+				.page-header
+					%h3.no-margin-bottom
+						Create a New Job Listing
+		.row
+			.col-md-9
+				%form{role: "form"}
+					.form-group
+						%label.control-label.quarter-margin-bottom
+							What position are you hiring for?
+						%input.input-lg.form-control{placeholder:"Job Title ex: Graphic Designer"}
+				.panel.panel-default.panel-form
+					.panel-heading
+						%p.no-margin-bottom
+							Description
+					.panel-body
+						%form{role: "form"}
+							%textarea.input-lg.form-control{:rows=>10}
+				%label.control-label.half-margin-bottom
+					Add Job Posting Modules
+				.panel.panel-default
+					.panel-body
+						%form{role: "form"}
+							.form-group
+								.row
+									.col-sm-2
+										%a.thumbnail.no-underline-link.show-moduel{:href=>"#",:onclick=>"return false;", :title=>"Create a text question for your candidate to answer", :rel=>'tooltip'}
+											.text-center.padded
+												%h1
+													%i.fa.fa-file-text-o
+												%p.no-margin-bottom
+													%small
+														Text Question
+									.col-sm-2
+										%a.thumbnail.no-underline-link{:href=>"#",:onclick=>"return false;", :title=>"Allow your candidate to upload a video response to a question", :rel=>'tooltip'}
+											.text-center.padded
+												%h1
+													%i.fa.fa-video-camera
+												%p.no-margin-bottom
+													%small
+														Video Question
+									.col-sm-2
+										%a.thumbnail.no-underline-link{:href=>"#",:onclick=>"return false;", :title=>"Insert a test for your candidate to complete", :rel=>'tooltip'}
+											.text-center.padded
+												%h1
+													%i.fa.fa-check
+												%p.no-margin-bottom
+													%small
+														Skill
+														%br
+														Test
+									.col-sm-2
+										%a.thumbnail.no-underline-link{:href=>"#",:onclick=>"return false;", :title=>"Select a list of skills to match with your candidate", :rel=>'tooltip'}
+											.text-center.padded
+												%h1
+													%i.fa.fa-file-text-o
+												%p.no-margin-bottom
+													%small
+														Skill Match
+									.col-sm-2
+										%a.thumbnail.no-underline-link{:href=>"#", :onclick=>"return false;", :title=>"Create a list of keywords to match with your candidate", :rel=>'tooltip'}
+											.text-center.padded
+												%h1
+													%i.fa.fa-bars
+												%p.no-margin-bottom
+													%small
+														Keyword Match
+									.col-sm-2
+										%a.thumbnail.no-underline-link{:href=>"#", :title=>"...", :rel=>'tooltip'}
+											.text-center.padded
+												%h1
+													%i.fa.fa-plus
+												%p.no-margin-bottom
+													%small
+														ATS Module
+						.panel.panel-default
+							.panel-body
+								.well.well-dashed.appear.hidden
+									.half-margin-top
+									.pull-right
+										%div{:href=>"#", :style=>"position:relative; bottom:5px;"}
+											%a.no-underline-link.half-margin-right{"data-toggle"=>"modal", :href=>"/newprod/job-listings/modules/question/edit", "data-target"=>"#editTextModuleModal"} 	
+												%i.fa.fa-edit
+											%a.no-underline-link.remove{:href=>"#",:onclick=>"return false;"}
+												%i.fa.fa-times
+									%p
+										%i.fa.fa-file-text-o.margin-right
+										Click 
+										%a{"data-toggle"=>"modal", :href=>"/newprod/job-listings/modules/question/edit", "data-target"=>"#editTextModuleModal"} 
+											edit 
+										to enter your question
+								.well.well-dashed.no-margin-bottom
+									.half-margin-top
+									.pull-right
+										%div{:href=>"#", :style=>"position:relative; bottom:5px;"}
+											%a.no-underline-link.half-margin-right{"data-toggle"=>"modal", :href=>"/newprod/job-listings/modules/question/edit", "data-target"=>"#editTextModuleModal"} 	
+												%i.fa.fa-edit
+											%a.no-underline-link.remove{:href=>"#",:onclick=>"return false;"}
+												%i.fa.fa-times
+									%p
+										%i.fa.fa-file-text-o.margin-right
+										%span.bold-font-name
+											What is your favorite color?
+								
+			.col-md-3
+				.panel.panel-default
+					.panel-heading
+						%h5.no-margin-bottom
+							Publish
+					.panel-body
+						%p.no-margin-bottom
+							%a.btn.btn-default.margin-right{:href=>"../"}
+								Save
+							%a.text-danger{:href=>"../"}
+								Cancel
+
