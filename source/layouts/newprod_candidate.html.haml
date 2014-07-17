@@ -1,0 +1,12 @@
+%html
+    %head
+        = partial "/layouts/main_scripts"
+    %body{:class => page_classes}
+        = partial "/layouts/newprod/candidate/main_menu"
+        /end menu
+        = partial "shared/alert"
+
+        = yield
+        /end main content
+        = partial "layouts/newprod/candidate/footer"
+        /end footer

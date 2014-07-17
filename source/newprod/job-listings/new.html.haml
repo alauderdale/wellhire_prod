@@ -36,21 +36,40 @@
 						Create a New Job Listing
 		.row
 			.col-md-9
+				.row
+					.col-sm-6
 				%form{role: "form"}
 					.form-group
-						%label.control-label.quarter-margin-bottom
-							What position are you hiring for?
 						%input.input-lg.form-control{placeholder:"Job Title ex: Graphic Designer"}
-				.panel.panel-default.panel-form
-					.panel-heading
-						%p.no-margin-bottom
-							Description
-					.panel-body
-						%form{role: "form"}
-							%textarea.input-lg.form-control{:rows=>10}
-				%label.control-label.half-margin-bottom
-					Add Job Posting Modules
+				.row
+					.col-sm-6
+						.panel.panel-default.panel-form
+							.panel-heading
+								%h5.no-margin-bottom
+									Description
+							.panel-body
+								%form{role: "form"}
+									%textarea.input-lg.form-control{:rows=>6}
+					.col-sm-6
+						.panel.panel-default
+							.panel-heading
+								%h5.no-margin-bottom
+									Video
+							.panel-body
+								%p
+									Add a video 
+								.well.well-dashed
+									.text-center
+										%i.fa.fa-video-camera
+								%a{"data-toggle"=>"modal", :href=>"/video/new", "data-target"=>"#videoModal"}
+									Record new video
 				.panel.panel-default
+					.panel-heading
+						%h5.no-margin-bottom
+							Add Job Posting Modules
+							%span.regular-font-name
+								&nbsp;
+								Click to add
 					.panel-body
 						%form{role: "form"}
 							.form-group

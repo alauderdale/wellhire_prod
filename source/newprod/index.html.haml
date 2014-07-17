@@ -1,6 +1,6 @@
 ;;;
 
-"title": "Job Listings", 
+"title": "My Job Listings", 
 "layout": "newprod",
 "subnav_data": "job_listings_subnav",
 "activeclass": "job-listings"
@@ -26,4 +26,7 @@
 				%a.btn.btn-default.btn-lg{:href=>"/newprod/job-listings/new"}
 					%i.fa.fa-plus-circle
 					Create Job Listing
+		.row
+			.col-lg-12
+				=partial "/newprod/job-listings/job_listings_table"
 
