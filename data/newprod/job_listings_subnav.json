@@ -2,6 +2,9 @@
 "link_title_list": [
 	  {"title":"My Job Listings", 
 	  	"link":"#"
+	  },
+	  {"title":"My Job", 
+	  	"link":"#"
 	  }
 	]
 }
